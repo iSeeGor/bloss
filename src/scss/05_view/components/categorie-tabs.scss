@@ -1,0 +1,129 @@
+/*============================================================================
+	#Categorie Tabs
+==============================================================================*/
+.categorie-tabs {
+
+	&__list {
+
+		display: flex;
+		flex-wrap: no-wrap;
+		justify-content: center;
+		margin: 0 -6px;
+	}
+
+	&__item {
+
+		margin: 0 6px;
+		flex: 1 1 100%;
+	}
+}
+
+.categorie-tab {
+
+	position: relative;
+	display: block;
+	background: $colorE9ECF0;
+	box-shadow: 0px 15px 11px -10px rgba(143, 164, 189, 0.15);
+	border-radius: 8px;
+	// overflow: hidden;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-decoration: none;
+	height: 98px;
+	transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+	border: none;
+	cursor: pointer;
+
+	&__icon {
+
+		width: 35px;
+		height: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		fill: $colorSecondary;
+		margin-bottom: 8px;
+		padding: 3px;
+
+		.icon {
+
+			width: 100%;
+			height: 100%;
+			fill: inherit;
+			transition: fill 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+
+	}
+
+	&__title {
+
+		color: $colorSecondary;
+		font-weight: normal;
+		transition: color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	&__close {
+
+		position: absolute;
+		top: -4px;
+		right: -4px;
+		width: 21px;
+		height: 21px;
+		background: $colorSecondary;
+		border-radius: 100%;
+		border: 1px solid white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transform: translateY(20px) rotate(360deg);
+		transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+		&::before,
+		&::after {
+
+			content: '';
+			width: 11px;
+			height: 1px;
+			background: white;
+			position: absolute;
+			transform: rotate(45deg);
+		}
+
+		&::after {
+
+			transform: rotate(-45deg);
+		}
+	}
+
+	&:hover {
+
+		transform: translateY(-6px);
+		box-shadow: 0px 15px 11px -10px rgba(143, 164, 189, 0.35);
+
+	}
+}
+
+.categorie-tab.is-selected {
+
+	background: $colorSecondary;
+
+	.categorie-tab__icon {
+
+		fill: white;
+	}
+
+	.categorie-tab__title {
+
+		color: white;
+	}
+
+	.categorie-tab__close {
+
+		opacity: 1;
+		transform: translateX(0) rotate(0);
+	}
+}

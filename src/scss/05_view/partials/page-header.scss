@@ -1,0 +1,27 @@
+/*============================================================================
+	#Page Header
+==============================================================================*/
+.page-header {
+
+	&__title {
+
+		font-size: 48px;
+		font-weight: normal;
+		line-height: 1.23;
+		text-align: center;
+		color: $colorSecondary;
+		margin: 8px 0 24px;
+	}
+
+	&__search {
+
+		display: flex;
+		justify-content: center;
+		margin: 24px 0 40px;
+	}
+
+	&__categorie-tabs {
+
+		margin: 40px 0;
+	}
+}

@@ -34,9 +34,11 @@
 ===================================================*/
 @import '05_view/components/breadcrumbs';
 @import '05_view/components/pagination';
+@import '05_view/components/sort-by';
 @import '05_view/components/menu';
 @import '05_view/components/search';
 @import '05_view/components/categorie-cards';
+@import '05_view/components/categorie-tabs';
 @import '05_view/components/cards';
 
 
@@ -46,6 +48,7 @@
 @import '05_view/partials/footer';
 @import '05_view/partials/hero';
 @import '05_view/partials/home-categories';
+@import '05_view/partials/page-header';
 
 // @import '05_view/pages/landing.scss';
 // @import '05_view/pages/landing-expert.scss';

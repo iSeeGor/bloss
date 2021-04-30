@@ -12,6 +12,16 @@
 	}
 }
 
+.cards-content {
+
+	&__sort {
+
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 10px;
+	}
+}
+
 
 .cards {
 

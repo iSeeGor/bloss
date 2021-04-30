@@ -1,13 +1,43 @@
 window.addEventListener('DOMContentLoaded', function(){
 	
 	animationInit();
-	hamburger();
-	categoryToggle();
-	testimonialSlider();
-	videoPlayer();
-	anchorSmoothScroll();
+	// hamburger();
+	// categoryToggle();
+	// testimonialSlider();
+	// videoPlayer();
+	// anchorSmoothScroll();
+
+	// Page
+	categorieTabs();
+	customSelect();
 
 });
+
+// Page
+const categorieTabs = () => {
+
+	document.querySelectorAll('.categorie-tab').forEach( tab => {
+
+		tab.addEventListener('click', tabsToggle)
+	});
+
+	function tabsToggle() {
+
+		this.classList.toggle('is-selected');
+	}
+}
+
+const customSelect = () => {
+
+	const choices = new Choices('.js-choice', {
+
+		searchEnabled: false,
+		itemSelectText: ''
+	});
+}
+
+
+// Landing
 
 const animationInit = () => {
 
