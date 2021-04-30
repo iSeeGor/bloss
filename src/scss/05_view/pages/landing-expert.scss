@@ -1,0 +1,192 @@
+/*============================================================================
+	#Landing Expert
+==============================================================================*/
+.landing-expert {
+
+	.section-hero::before {
+
+		background: linear-gradient(99.85deg, #34588D -2.44%, rgba(38, 64, 102, 0) 48.6%, #33588D 97.56%);
+		opacity: 0.2;
+	}
+
+	.hero-media__item::after {
+
+		box-shadow: 0px 12px 34px rgba(38, 64, 102, 0.3);
+	}
+
+	.about {
+
+		background: $colorPrimary;
+
+		.heart-separator {
+
+			fill: $colorSecondary;
+		}
+
+		&__deco {
+
+			opacity: 0.1;
+			border-color: white;
+		}
+
+		._deco-item {
+
+			background: white;
+			
+			&:first-child {
+				background: transparent;
+				border-color: white;
+			}
+		}
+	}
+
+	.section-video {
+
+		background: $colorSecondary;
+		position: relative;
+		z-index: 1;
+
+		.section__title {
+
+			color: white;
+		}
+
+		._deco-item {
+
+			border-color: $colorPrimary;
+		}
+	}
+
+	.services {
+	
+		background: $colorSecondary;
+		position: relative;
+		z-index: 1;	
+
+		._deco-item {
+
+			opacity: 0.03;
+		}
+	}
+
+	.service-block {
+
+		&__title {
+
+			color: white;
+		}
+
+		._deco-dots {
+
+			fill: $colorPrimary;
+		}
+	}
+
+	.blog-latest {
+
+		background: $colorSecondary;
+
+		.section__title {
+
+			color: white;
+		}
+	}
+
+	.lnews-card {
+
+		background: white;
+	}
+
+	.testimonials {
+
+		background: $colorPrimary;
+		margin-bottom: 90px;
+		// border-radius: 8px;
+
+		&__inner {
+
+			padding: 85px 0;
+			background: none;
+		}
+
+		.section__header {
+
+			margin-bottom: 25px;
+		}
+
+		.section__title {
+
+			color: $colorSecondary;
+		}
+	}
+	
+	.testimonial-item {
+
+		color: $colorSecondary;
+	}
+
+	.testimonial-slider {
+
+		&__pagination {
+
+			margin: 0;
+		}
+	}
+	
+}
+
+@media (min-width: 1440px) {
+
+	.landing-expert  {
+
+		.sing-up {
+
+			&__inner {
+
+				border-radius: 410px 37px 37px 410px;
+			}
+
+			&__media {
+
+				margin-left: -40px;
+			}
+
+			&__body {
+				padding: 40px 100px 30px 65px;
+			}
+		}
+	}
+}
+
+@include _1024 {
+
+	.landing-expert  {
+
+		.testimonials {
+
+			background: none;
+
+			&__inner {
+
+				background: $colorPrimary;
+				padding: 85px 0 45px;
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+}
+
+@include _575 {
+
+	.landing-expert {
+
+		.testimonials {
+
+			&__inner {
+
+				padding-top: 60px;
+			}
+		}
+	}
+}

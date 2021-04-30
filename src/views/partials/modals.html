@@ -1,0 +1,35 @@
+<div class="modals site__modals">
+
+	<!-- Feedback -->
+	<div class="modal-main" id="modal-main">
+		<div class="modal-main__container">
+			<div class="modal-main__header">
+				<div class="modal-main__title">Перезвоните мне</div>
+				<div class="modal-main__description">Для получения подробной информации заполните форму и наш менеджер свяжется с Вами в ближайшее время</div>
+			</div>
+			<div class="modal-main__body">
+				<form class="form modal-form js-validate" autocomplete="off">
+					<div class="form__row">
+						<div class="form__group">
+							<input class="form__input" type="text" name="mm-name" placeholder="Ваше имя" required>
+						</div>
+					</div>
+					<div class="form__row">
+						<div class="form__group">
+							<input class="form__input js-phone-mask" type="text" name="mm-phone" placeholder="Ваш телефон" required>
+						</div>
+					</div>
+					<div class="form__row">
+						<button class="button button-primary" >Оставить заявку</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<button class="button moda-close" data-fancybox-close>
+			<svg class="_icon">
+				<use xlink:href="symbol/sprite.svg#plus"></use>
+			</svg>
+		</button>
+	</div>
+
+</div>

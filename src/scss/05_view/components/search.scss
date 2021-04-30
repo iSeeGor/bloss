@@ -1,0 +1,39 @@
+/*============================================================================
+	#Search
+==============================================================================*/
+
+.site-search {
+
+	max-width: 937px;
+	width: 100%;
+
+	&__form {
+
+		display: flex;
+	}
+
+	&__input {
+		
+		padding: 18px 44px 18px 24px;
+	}
+
+	&__button {
+
+		flex: 0 0 auto;
+		margin-left: -40px;
+		background: $colorSecondary;
+		border-radius: 16px;
+		fill: white;
+		width: 82px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+		&:hover {
+
+			fill: $colorSecondary;
+			background: $colorPrimary;
+		}
+	}
+}

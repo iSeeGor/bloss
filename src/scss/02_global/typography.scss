@@ -1,0 +1,241 @@
+/*============================================================================
+	#Typography
+==============================================================================*/
+html {
+	font-size: 100%;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $colorBody;
+	font-family: $fontPrimary;
+	font-size: 16px;
+	font-weight: $regular;
+	line-height: 1.4;
+	// letter-spacing: 0rem;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h3,
+h4,
+h5,
+h6  {
+	font-family: $fontHeadings;
+	font-weight: $bold;
+	margin: 0;
+	color: $colorBase;
+}
+
+h1 {
+
+	font-size: 42px;
+	line-height: 1.185;
+}
+
+h2 {
+	font-size: 32px;
+	line-height: 1.185;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 1.185;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 1.185;
+}
+
+p {
+
+	margin: 22px 0;
+}
+
+.typography {
+
+	> * {
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h3,
+	h4,
+	h5,
+	h6  {
+		
+		font-weight: $regular;
+		margin: 20px 0 30px;
+		color: #4f0328;
+	}
+
+	h1 {
+
+		font-size: 36px;
+	}
+
+	h2 {
+
+		font-size: 30px;
+	}
+
+	h3 {
+	
+		font-size: 24px;
+	}
+	
+	h4 {
+
+		font-size: 20px;
+	}
+
+	h5 {
+
+		font-size: 18px;
+	}
+
+	strong {
+
+		font-weight: $semiBold;
+	}
+
+	a {
+
+		text-decoration: none;
+		color: $colorBase;
+
+		&:hover {
+
+			text-decoration: underline;
+		}
+	}
+
+	p {
+		margin: 0 0 25px 0;
+		// line-height: 1.5; 
+	}
+
+	ul, ol {
+
+		list-style-type: none;
+		margin: 0 0 30px 0;
+		padding: 0;
+
+		li {
+
+			position: relative;
+			margin: 10px 0 10px;
+		}
+
+	}
+
+	ul {
+		
+		li {
+
+			&::before {
+
+				content: '';
+				display: inline-block;
+				margin-right: 13px;
+				height: 8px;
+				width: 8px;
+				border-radius: 100%;
+				background: $colorBase;
+
+			}
+
+		}
+	}
+
+	ol {
+
+		counter-reset: section;  
+
+		li {
+
+			&::before {
+				counter-increment: section;   
+				content: counter(section) '. ';
+				font-weight: $bold;
+				
+			}
+		}
+	}
+
+	blockquote {
+
+		position: relative;
+		z-index: 1;
+		color: #4f0328;
+		margin: 0;
+		padding: 35px 30px;
+
+		p {
+			position: relative;
+			
+			&:last-child {
+
+				margin: 0;
+			}
+
+			&::after,
+			&::before {
+
+				content: '';
+				position: absolute;
+				width: 56px;
+				height: 43px;
+				background: url(../icons/quotes.svg) no-repeat;
+				background-position: center;
+				background-size: 100%;
+				z-index: -1;
+				
+			}
+
+			&::before {
+
+				top: -20px;
+				left: -50px;
+				transform: rotate(180deg);
+			}
+
+			&::after {
+
+				bottom: -20px;
+				right: -50px;
+			}
+		}
+		
+		&::before {
+
+			content: '';
+			height: 100%;
+			width: calc(100% + 80px);
+			position: absolute;
+			top: 0;
+			left: -40px;
+			background: #f5ede6;
+			border-bottom-left-radius:60px;
+			border-top-right-radius: 60px;
+			z-index: -1;
+
+		}
+	}
+
+}

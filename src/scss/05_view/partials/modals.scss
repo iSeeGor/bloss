@@ -1,0 +1,119 @@
+/*============================================================================
+	#Modals
+==============================================================================*/
+.site__modals {
+	display: none;
+}
+
+.site__fancybox {
+
+	.fancybox-bg {
+
+		background: #2b0317;
+		opacity: .95;
+	}	
+}
+
+.moda-close {
+
+	padding: 10px;
+	// background: #000;
+
+	._icon {
+
+		width: 28px;
+		height: 28px;
+		fill: $colorBase;
+		transform: rotate(45deg);
+		transition: transform 0.2s ease-out;
+	}
+
+	&:hover {
+
+		._icon {
+
+			transform: rotate(135deg);
+		}
+	}
+}
+
+.modal-main {
+
+	max-width: 450px;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+	background: url('../images/modal/modal-bg.jpg') repeat center;
+
+	&__header {
+		
+		padding: 50px 45px 30px;
+		color: white;
+		text-align: center;
+		background: #7f003e;
+		mix-blend-mode: multiply;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		pointer-events: none;
+
+		&::before {
+
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 345px;
+			height: 345px;
+			background: url('../images/modal/header-bg.jpg') no-repeat center;
+			z-index: -1;
+		}
+		
+	}
+
+	&__title {
+
+		font-size: 22px;
+		line-height: 30px;
+		margin-bottom: 12px;
+	}
+
+	&__description {
+
+		color: #cdaebb;
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	&__body {
+
+		padding: 20px 45px 25px;
+	}
+
+	.button-primary {
+
+		background: #7f003e;
+		width: 100%;
+		margin-top: 20px;
+		border-radius: 4px;
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: $semiBold;
+		padding: 10px 30px 12px;
+
+		&:hover {
+
+			background: $colorBase;
+		}
+	}
+
+	.moda-close {
+
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		z-index: 2;
+		
+	}
+}
+

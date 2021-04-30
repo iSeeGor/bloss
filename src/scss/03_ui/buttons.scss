@@ -1,0 +1,238 @@
+/*============================================================================
+	#Button
+==============================================================================*/
+
+.button,
+.button-primary,
+.button-secondary {
+	display: inline-block;
+	border: 0;
+	background: none;
+	padding: 0;
+	text-decoration: none;
+	text-align: center;
+	color: $colorBase;
+	cursor: pointer;
+	
+}
+
+.button-primary {
+
+	position: relative;
+	font-family: $fontSecondary;
+	font-size: 18px;
+	line-height: 1.2;
+	font-weight: $bold;
+	color: $colorSecondary;
+	border-radius: 16px;
+	padding: 13px 20px 12px 20px;
+	z-index: 1;
+	margin-top: -4px;
+
+	&::before,
+	&::after {
+
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 16px;
+		z-index: -1;
+	}
+
+	&::after {
+
+		box-shadow: inset 0 0 0 2px $colorSecondary;
+	}
+
+	&::before {
+
+		background: $colorPrimary;
+		transform: translate(-2px, 4px);
+		transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	&:hover {
+
+		// color: $colorPrimary;
+		
+		&::after {
+		
+			// box-shadow: inset 0 0 0 2px $colorPrimary;
+		}
+
+		&::before {
+
+			// background: $colorSecondary;
+			transform: translate(0px, 0px);
+		}
+	}
+
+	&--dark {
+		
+		color: $colorPrimary;
+
+		&::after {
+
+			box-shadow: inset 0 0 0 2px $colorPrimary;
+		}
+
+		&::before {
+
+			background: $colorSecondary;
+		}
+	} 
+}
+
+.button-primary._dark {
+
+	color: $colorPrimary;
+
+	&::after {
+
+		box-shadow: inset 0 0 0 2px $colorPrimary;
+	}
+
+	&::before {
+
+		background: $colorSecondary;
+	}
+}
+
+.button-secondary {
+
+	position: relative;
+	font-family: $fontPrimary;
+	font-size: 18px;
+	line-height: 1.2;
+	font-weight: $bold;
+	color: $colorSecondary;
+	border-radius: 16px;
+	padding: 13px 20px 12px 20px;
+	z-index: 1;
+	background: $colorPrimary;
+	width: 100%;
+	max-width: 300px;
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+	&:hover {
+
+		// color: white;
+		box-shadow: 0 0 20px 6px rgba(245, 193, 188, 0.4);
+	}
+}
+
+.button-secondary--white {
+
+	background: white;
+	color: $colorSecondary;
+	border: 1px solid $colorSecondary;
+
+	&:hover {
+
+		color: $colorPrimary;
+		border-color: $colorPrimary;
+		box-shadow: none;
+	}
+}
+
+.button-play {
+
+	width: 152px;
+	height: 152px;
+	border: 3px solid $colorPrimary;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+
+	&::before {
+
+		margin-left: 15px;
+		content: '';
+		position: absolute;
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 31px 0 31px 51px;
+		border-color: transparent transparent transparent $colorPrimary;
+
+	}
+
+}
+
+.swiper-button {
+
+	width: 42px;
+	height: 42px;
+	background: $colorPrimary;
+	border-radius: 100%;
+
+	&._prev {
+
+		transform: rotate(180deg);
+
+		.icon {
+
+			// margin: ;
+			transform: rotate(180deg);
+			margin-left: -3px;
+		}
+	}
+
+	&._next {
+
+		.icon {
+
+			margin-left: 3px;
+		}
+	}
+
+	.icon {
+
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		fill: none;
+		width: 12px;
+		height: 22px;
+		stroke: $colorSecondary;
+		stroke-width: 3px;
+	}
+
+	&._disabled {
+
+		cursor: default;
+		opacity: 0.4;
+	}
+
+	&:not(._disabled):hover {
+	
+		._icon {
+
+		}
+
+		box-shadow: 0 0 18px 20px rgba(245, 193, 188, 0.3) ;
+	}
+}
+
+.swiper-button {
+
+	&._dark {
+
+		background: $colorSecondary;
+
+		.icon {
+
+			stroke: $colorPrimary;
+		}
+
+		&:not(._disabled):hover {
+
+			box-shadow: 0 0 18px 20px rgba(38, 64, 102, 0.3);
+		}	
+	}
+}
