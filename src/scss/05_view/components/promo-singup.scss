@@ -1,0 +1,42 @@
+/*============================================================================
+	#Promo SingUp
+==============================================================================*/
+.promo-singup {
+
+	background: $colorSecondary;
+	border-radius: 16px;
+
+	&__inner {
+
+		padding: 80px 126px 60px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__content {
+
+		color: white;
+		flex: 0 0 480px;
+		max-width: 480px;
+	}
+
+	&__title {
+
+		@include H1_Desktop;
+		color: white;
+		margin-bottom: 18px;
+	}
+
+	&__description {
+
+		@include Text18_Desktop;
+		color: white;
+		max-width: 345px;
+	}
+
+	&__form {
+
+		flex: 0 0 400px;
+		margin: 0 auto;
+	}
+}

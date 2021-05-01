@@ -1,5 +1,24 @@
-@mixin someName() {
+@mixin H1_Desktop() {
 	
+    font-family: $fontHeadings;
+    font-size: 48px;
+    font-weight: $regular;
+    line-height: 1.23;
+}
+
+@mixin H4_Desktop() {
+	
+    font-family: $fontHeadings;
+    font-size: 24px;
+    font-weight: $regular;
+    line-height: 1.5;
+}
+
+@mixin Text18_Desktop() {
+	
+    font-size: 18px;
+    font-weight: $medium;
+    line-height: 1.4;
 }
  
 

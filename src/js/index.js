@@ -10,6 +10,8 @@ window.addEventListener('DOMContentLoaded', function(){
 	// Page
 	categorieTabs();
 	customSelect();
+	reviewsSlider();
+	accordionHandler();
 
 });
 
@@ -29,10 +31,55 @@ const categorieTabs = () => {
 
 const customSelect = () => {
 
+	if(!document.querySelector('.js-choice')) return;
+
 	const choices = new Choices('.js-choice', {
 
 		searchEnabled: false,
 		itemSelectText: ''
+	});
+}
+
+const reviewsSlider = () => {
+
+	let slider;
+
+	slider = new Swiper('.reviews-slider .swiper-container', {
+	
+		spaceBetween: 60,
+		effect: 'fade',
+		speed : 1600,
+
+		navigation : {
+
+			prevEl: '.reviews-slider .button-nav--prev',
+			nextEl: '.reviews-slider .button-nav--next',
+			disabledClass: 'is-disabled'
+		},
+
+		pagination: {
+
+			el: '.reviews-slider__counter',
+			type: 'custom',
+			renderCustom: function (swiper, current, total) {
+				
+				(current <= 9) ? current = '0' + current : current;
+				(total <= 9) ? total = '0' + total : total;
+
+				return '<span class="_current">' + current + '</span><span class="_total">/ ' + total + '</span>';
+			}
+
+			
+		},
+	})
+}
+
+const accordionHandler = () => {
+
+	$('.accordion-item').on('click', function(){
+
+		$(this).find('.accordion-item__body').slideToggle(400);
+		$(this).toggleClass('is-active');
 	});
 }
 

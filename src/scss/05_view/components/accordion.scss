@@ -1,0 +1,87 @@
+/*============================================================================
+	#Accordion
+==============================================================================*/
+.accordion {
+
+	&__row {
+
+		position: relative;
+	}
+
+	&__title {
+
+		margin: 40px 0 24px;
+		@include H4_Desktop;
+		color: $color8D9AAE;
+	}
+}
+
+.accordion-item {
+
+	background: $colorF4F5F7;
+	border-radius: 16px;
+	margin-bottom: 8px;
+	overflow: hidden;
+
+	.icon {
+
+		flex: 0 0 auto;
+		width: 18px;
+		height: 18px;
+		transform: rotate(90deg);
+		margin-left: 20px;
+		fill: $colorSecondary;
+		transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+		
+	}
+
+	&__header {
+
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 24px;
+		transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+		cursor: pointer;
+
+		&:hover {
+
+			background: $colorE9ECF0;
+		}
+	}
+
+	&__title {
+
+		@include Text18_Desktop;
+		color: $color8D9AAE;
+		transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	&__body {
+
+		display: none;
+		padding: 24px 24px 24px;
+	}
+
+	&__message {
+
+	}
+}
+
+.accordion-item.is-active {
+
+	.accordion-item__header {
+
+		background: $colorC1C1C3;
+	}
+
+	.accordion-item__title {
+
+		color: $colorSecondary;
+	}
+
+	.icon {
+		transform: rotate(270deg);
+	}
+}

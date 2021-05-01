@@ -110,11 +110,11 @@
 	font-weight: $bold;
 	color: $colorSecondary;
 	border-radius: 16px;
-	padding: 13px 20px 12px 20px;
+	padding: 13px 30px 12px 30px;
 	z-index: 1;
 	background: $colorPrimary;
-	width: 100%;
-	max-width: 300px;
+	// width: 100%;
+	min-width: 300px;
 	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 	&:hover {
@@ -165,57 +165,41 @@
 
 }
 
-.swiper-button {
+.button-nav {
 
 	width: 42px;
 	height: 42px;
 	background: $colorPrimary;
 	border-radius: 100%;
-
-	&._prev {
-
-		transform: rotate(180deg);
-
-		.icon {
-
-			// margin: ;
-			transform: rotate(180deg);
-			margin-left: -3px;
-		}
-	}
-
-	&._next {
-
-		.icon {
-
-			margin-left: 3px;
-		}
-	}
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 	.icon {
 
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		fill: none;
-		width: 12px;
-		height: 22px;
-		stroke: $colorSecondary;
-		stroke-width: 3px;
+		width: 20px;
+		height: 20px;
+		fill: $colorSecondary;
+		margin-left: 2px;
 	}
 
-	&._disabled {
+	&--prev {
+
+		transform: rotate(180deg);
+	}
+
+	&.is-disabled {
 
 		cursor: default;
 		opacity: 0.4;
 	}
 
-	&:not(._disabled):hover {
+	&:not(.is-disabled):hover {
 	
-		._icon {
-
-		}
-
-		box-shadow: 0 0 18px 20px rgba(245, 193, 188, 0.3) ;
+		box-shadow: 0 0 20px 10px rgba(245, 193, 188, 0.3) ;
 	}
 }
 

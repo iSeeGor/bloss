@@ -40,6 +40,9 @@
 @import '05_view/components/categorie-cards';
 @import '05_view/components/categorie-tabs';
 @import '05_view/components/cards';
+@import '05_view/components/reviews-slider';
+@import '05_view/components/accordion';
+@import '05_view/components/promo-singup';
 
 
 /* views
@@ -49,6 +52,10 @@
 @import '05_view/partials/hero';
 @import '05_view/partials/home-categories';
 @import '05_view/partials/page-header';
+@import '05_view/partials/section-about';
+@import '05_view/partials/advantage-cards';
+
+@import '05_view/pages/home';
 
 // @import '05_view/pages/landing.scss';
 // @import '05_view/pages/landing-expert.scss';

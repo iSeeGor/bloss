@@ -1,13 +1,90 @@
 window.addEventListener('DOMContentLoaded', function(){
 	
 	animationInit();
-	hamburger();
-	categoryToggle();
-	testimonialSlider();
-	videoPlayer();
-	anchorSmoothScroll();
+	// hamburger();
+	// categoryToggle();
+	// testimonialSlider();
+	// videoPlayer();
+	// anchorSmoothScroll();
+
+	// Page
+	categorieTabs();
+	customSelect();
+	reviewsSlider();
+	accordionHandler();
 
 });
+
+// Page
+const categorieTabs = () => {
+
+	document.querySelectorAll('.categorie-tab').forEach( tab => {
+
+		tab.addEventListener('click', tabsToggle)
+	});
+
+	function tabsToggle() {
+
+		this.classList.toggle('is-selected');
+	}
+}
+
+const customSelect = () => {
+
+	if(!document.querySelector('.js-choice')) return;
+
+	const choices = new Choices('.js-choice', {
+
+		searchEnabled: false,
+		itemSelectText: ''
+	});
+}
+
+const reviewsSlider = () => {
+
+	let slider;
+
+	slider = new Swiper('.reviews-slider .swiper-container', {
+	
+		spaceBetween: 60,
+		effect: 'fade',
+		speed : 1600,
+
+		navigation : {
+
+			prevEl: '.reviews-slider .button-nav--prev',
+			nextEl: '.reviews-slider .button-nav--next',
+			disabledClass: 'is-disabled'
+		},
+
+		pagination: {
+
+			el: '.reviews-slider__counter',
+			type: 'custom',
+			renderCustom: function (swiper, current, total) {
+				
+				(current <= 9) ? current = '0' + current : current;
+				(total <= 9) ? total = '0' + total : total;
+
+				return '<span class="_current">' + current + '</span><span class="_total">/ ' + total + '</span>';
+			}
+
+			
+		},
+	})
+}
+
+const accordionHandler = () => {
+
+	$('.accordion-item').on('click', function(){
+
+		$(this).find('.accordion-item__body').slideToggle(400);
+		$(this).toggleClass('is-active');
+	});
+}
+
+
+// Landing
 
 const animationInit = () => {
 

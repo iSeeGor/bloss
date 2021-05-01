@@ -140,3 +140,27 @@
 		}
 	}
 }
+
+.promo-form {
+
+	.form__row {
+
+		margin-bottom: 16px;
+
+		&--submit {
+
+			margin-top: 24px;
+		}
+	}
+
+	.form__input {
+
+		border-color: $color8D9AAE;
+		color: white;
+
+		&:focus {
+
+			box-shadow: 0 0 10px 4px rgba(141, 154, 174, 0.3);
+		}
+	}
+}

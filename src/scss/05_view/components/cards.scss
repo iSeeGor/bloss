@@ -18,7 +18,12 @@
 
 		display: flex;
 		justify-content: flex-end;
-		margin-bottom: 10px;
+		margin-bottom: 8px;
+	}
+
+	&--persone {
+
+		margin-bottom: 35px;
 	}
 }
 
@@ -383,7 +388,7 @@
 	&__media {
 
 		margin: 0;
-		padding-top: 76.7%;
+		padding-top: 85.5%;
 		position: relative;
 		overflow: hidden;
 	}
@@ -406,7 +411,7 @@
 
 	&__body {
 
-		padding: 24px 27px;
+		padding: 8px 16px;
 	}
 
 	&__title {
@@ -414,7 +419,7 @@
 		font-size: 24px;
 		font-weight: normal;
 		line-height: 1.5;
-		margin-bottom: 8px;
+		margin-bottom: 6px;
 	}
 
 	&__title-link {
@@ -444,7 +449,7 @@
 
 	&__footer {
 
-		padding: 0 27px 24px;
+		padding: 8px 16px 16px;
 	}
 
 	&__meta {
@@ -470,7 +475,8 @@
 			width: 16px;
 			height: 16px;
 			fill: $colorSecondary;
-			margin-left: 4px;
+			margin-left: 6px;
+			margin-top: -2px;
 		}
 
 		.icon-star {
@@ -490,4 +496,53 @@
 		box-shadow: 0px 4px 27px -6px rgba(38, 64, 102, 0.3);
 	}
 
+}
+
+.info-card {
+
+	background: white;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0px 4px 27px -6px rgba(38, 64, 102, 0.19);
+
+
+	&__inner {
+
+		padding: 24px 48px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__icon {
+
+		height: 100px;
+		width: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(245, 193, 188, 0.1);
+		border-radius: 100%;
+		border: 2px solid $colorPrimary;
+		margin-bottom: 24px;		
+	}
+
+	&__title {
+
+		font-family: $fontHeadings;
+		font-size: 24px;
+		font-weight: normal;
+		line-height: 1.5;
+		color: $colorSecondary;
+		margin-bottom: 8px;
+		text-align: center;
+	} 
+
+	&__message {
+
+		font-size: 16px;
+		line-height: 1.375;
+		color: $color8D9AAE;
+		text-align: center;
+	} 
 }

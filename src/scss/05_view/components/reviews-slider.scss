@@ -1,0 +1,144 @@
+/*============================================================================
+	#Reviews Slider
+==============================================================================*/
+
+.reviews-slider {
+
+	position: relative;
+
+	&__control {
+		
+		display: flex;
+		align-items: center;
+		position: absolute;
+		left: 420px;
+		bottom: 92px;
+		z-index: 1;
+
+		.button-nav {
+
+			flex: 0 0 auto;
+		}
+	}
+
+	&__counter {
+
+		margin: 0 17px;
+		width: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		._current {
+			color: white;
+			font-size: 24px;
+			margin-right: 4px;
+		}
+
+		._total {
+
+			font-size: 12px;
+			color: $color8D9AAE;
+		}
+	}
+	
+}
+
+.reviews-slider {
+
+	.swiper-container {
+
+		overflow: inherit;
+	}
+
+	.swiper-slide {
+
+		opacity: 0 !important;
+
+		.rewies-slide__media {
+
+			transform: translateX(-100px);
+			transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+		}
+
+		.rewies-slide__body {
+
+			transform: translateX(100px);
+			transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+		}
+	}
+
+	.swiper-slide-active {
+
+		opacity: 1 !important;
+
+		.rewies-slide__media {
+
+			transform: translateX(0px);
+		}
+
+		.rewies-slide__body {
+
+			transform: translateX(0px);
+		}
+	}
+}
+
+
+.rewies-slide {
+
+	box-sizing: border-box;
+
+	&__inner {
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__media {
+
+		width: 420px;
+		height: 433px;
+		overflow: hidden;
+		margin: 0;
+		border-radius: 16px;
+		flex: 0 0 auto;
+	}
+
+	&__image {
+
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__body {
+
+		padding: 40px 120px 40px 60px;
+		height: 323px;
+		background: $colorSecondary;
+		border-radius: 8px;
+		color: white;
+		margin-left: -60px;
+	}
+
+	&__name {
+
+		@include H4_Desktop;
+		margin-bottom: 16px;
+	}
+
+	&__message {
+
+		@include Text18_Desktop;
+		height: 100px;
+		-webkit-box-orient: vertical;
+		display: block;
+		display: -webkit-box;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		-webkit-line-clamp: 4;
+	}
+
+}

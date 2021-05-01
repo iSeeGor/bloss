@@ -44,6 +44,11 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 40px;
+
+		&--center {
+
+			justify-content: center;
+		}
 	}
 
 	&__title {
@@ -57,6 +62,45 @@
 		&--center {
 		
 			text-align: center;
+		}
+	}
+}
+
+.page-main {
+
+	padding-bottom: 60px;
+	position: relative;
+	z-index: 1;
+
+	&__pagination {
+
+
+	}
+
+	&__deco {
+
+		._item {
+			
+			position: absolute;
+			display: block;
+			opacity: 0.05;
+			width: 870px;
+			height: 870px;
+			border: 72px solid $colorSecondary;
+			border-radius: 100%;
+			z-index: -1;
+		}
+
+		._item:first-child {
+
+			top: 320px;
+			right: -180px;
+		}
+
+		._item:nth-child(2) {
+
+			top: 1540px;
+			left: -230px;
 		}
 	}
 }
