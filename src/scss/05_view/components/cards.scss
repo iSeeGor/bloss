@@ -2,16 +2,6 @@
 	#Cards
 ==============================================================================*/
 
-.section-cards {
-
-	margin-bottom: 70px;
-
-	&--news {
-
-		margin-bottom: 90px;
-	}
-}
-
 .cards-content {
 
 	&__sort {
@@ -35,6 +25,12 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -30px;
+		margin-bottom: -40px;
+
+		&--persone {
+
+			margin-bottom: -60px;
+		}
 	}
 	
 	&__col {
@@ -165,7 +161,7 @@
 	&__media {
 
 		margin: 0;
-		padding-top: 68.35%;
+		padding-top: 93.5%;
 		position: relative;
 		overflow: hidden;
 	}
@@ -214,7 +210,7 @@
 
 	&__body {
 
-		padding: 24px 16px;
+		padding: 8px 16px 16px;
 	}
 
 	&__title {
@@ -222,21 +218,21 @@
 		font-size: 18px;
 		font-weight: normal;
 		line-height: 1.5;
-		margin-bottom: 8px;
-		padding: 0 2px;
+		margin-bottom: 4px;
+		// padding: 0 2px;
 	}
 
 	&__title-link {
 
 		text-decoration: none;
 		color: black;
-		height: 54px;
+		height: 27px;
 		-webkit-box-orient: vertical;
 		display: block;
 		display: -webkit-box;
 		text-overflow: ellipsis;
 		overflow: hidden;
-		-webkit-line-clamp: 2;
+		-webkit-line-clamp: 1;
 
 		&:hover {
 
@@ -253,12 +249,12 @@
 		display: -webkit-box;
 		text-overflow: ellipsis;
 		overflow: hidden;
-		-webkit-line-clamp: 3;
+		-webkit-line-clamp: 1;
 	}
 
 	&__footer {
 
-		padding: 0 16px 24px;
+		padding: 0 16px 16px;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
@@ -267,13 +263,13 @@
 	&__info {
 
 		display: flex;
-		padding: 0 4px;
+		// padding: 0 4px;
 	}
 
 	&__avatar {
 
 		flex: 0 0 auto;
-		margin-right: 16px;
+		margin-right: 12px;
 		height: 47px;
 		width: 47px;
 		border-radius: 100%;
@@ -348,7 +344,7 @@
 			width: 11px;
 			height: 11px;
 			fill: $color8D9AAE;
-			margin-right: 8px;
+			margin-right: 4px;
 		}
 	}
 

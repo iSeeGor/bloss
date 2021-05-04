@@ -16,7 +16,7 @@
 .container {
 
 	max-width: 1410px;
-	padding: 0 15px;
+	padding: 0 16px;
 	margin: 0 auto;
 }
 
@@ -37,6 +37,8 @@
 // }
 
 .section {
+
+	margin-bottom: 120px;
 	
 	&__header {
 		
@@ -62,6 +64,54 @@
 		&--center {
 		
 			text-align: center;
+		}
+	}
+
+	&__deco {
+		
+		> * {
+
+			position: absolute;
+		}
+
+		._deco-round {
+			
+			width: 718px;
+			height: 718px;
+			border: 72px solid $colorSecondary;
+			opacity: .05;
+			border-radius: 100%;
+			z-index: -1;
+		}
+	}
+
+	&--deco {
+
+		.container {
+		
+			position: relative;
+		}
+	}
+
+	&--content-cards {
+
+		._deco-round {
+
+			width: 870px;
+			height: 870px;
+			top: 130px;
+    		right: -510px;
+		}
+	}
+
+	&--home-reviews {
+
+		._deco-round {
+
+			width: 520px;
+			height: 520px;
+			top: -260px;
+			right: -370px;
 		}
 	}
 }
@@ -225,6 +275,12 @@
 
 	}
 
+}
+
+.mfp-bg {
+
+	background: $colorGeneral;
+	opacity: .8;
 }
 
 

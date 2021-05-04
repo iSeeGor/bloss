@@ -43,10 +43,12 @@
 @import '05_view/components/reviews-slider';
 @import '05_view/components/accordion';
 @import '05_view/components/promo-singup';
+@import '05_view/components/social';
 
 
 /* views
 ===================================================*/
+@import '05_view/partials/mobile';
 @import '05_view/partials/header';
 @import '05_view/partials/footer';
 @import '05_view/partials/hero';

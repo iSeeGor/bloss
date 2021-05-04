@@ -58,12 +58,18 @@
 						<a class="button-primary button-primary--dark header-main__button" href="#">Log in</a>
 						<a class="button-primary header-main__button" href="#">Sign up for free</a>
 					</div>
+					<div class="header-main__social">
+						@@include('../components/social.html', {
+
+							class: 'social--dark'
+						})
+					</div>
 				</div>
 				<div class="header-bottom header__bottom">
 					<nav class="header-bottom__nav">
 						<ul class="menu menu-categoties">
 							<li class="current-menu-item"><a href="#">Trying to Conceive</a></li>
-							<li>
+							<li class="menu-item-has-children">
 								<a href="#">Pregnancy</a>
 
 								<ul class="sub-menu">
@@ -83,6 +89,21 @@
 				</div>
 			</div>
 		</header>
+		
+		<div class="mobile-header">
+			<div class="container">
+				<div class="mobile-header__logo">
+					<a href="/" class="site-logo site-logo--mobile">
+						<img src="images/logo.svg" alt="Bloss Logo">
+					</a>
+				</div>
+				<div class="mobile-header__hambuger hamburger hamburger--collapse">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		
 

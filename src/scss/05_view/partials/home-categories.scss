@@ -4,11 +4,11 @@
 
 .home-categories {
 
-	padding-bottom: 118px;
 
 	&__container {
 
 		max-width: 982px;
+		position: relative;
 	}
 
 	&__search {
@@ -30,5 +30,11 @@
 	&__title {
 
 		text-align: center;
+	}
+
+	._deco-round {
+
+		top: 230px;
+    	left: -440px;
 	}
 }

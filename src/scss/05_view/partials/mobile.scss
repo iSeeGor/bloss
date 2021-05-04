@@ -1,0 +1,26 @@
+/*============================================================================
+	#Mobile 
+==============================================================================*/
+
+.mobile-header {
+
+	display: none;
+	padding: 4px 0;
+	position: relative;
+	z-index: 101;
+
+	.container {
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+@include _1024 {
+
+	.mobile-header {
+
+		display: block;
+	}
+}

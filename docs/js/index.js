@@ -1,7 +1,8 @@
 window.addEventListener('DOMContentLoaded', function(){
 	
 	animationInit();
-	// hamburger();
+	hamburger();
+	mobileMenu();
 	// categoryToggle();
 	// testimonialSlider();
 	// videoPlayer();
@@ -12,10 +13,36 @@ window.addEventListener('DOMContentLoaded', function(){
 	customSelect();
 	reviewsSlider();
 	accordionHandler();
+	heroVideo();
 
 });
 
 // Page
+const fakeSuccess = () => {
+
+	if(!document.querySelector('.promo-singup__success')) return;
+
+	document.querySelector('.promo-singup__success').style.visibility = 'visible';
+	
+	setTimeout(() => {
+		
+		document.querySelector('.promo-singup__success').style.visibility = 'hidden';
+		
+		if(!document.querySelectorAll('.form input')) return;
+		document.querySelectorAll('.form input').forEach(input => {
+
+			input.value = '';
+		});
+
+		if(!document.querySelectorAll('.form textarea')) return;
+		document.querySelectorAll('.form textarea').forEach(textarea => {
+
+			textarea.value = '';
+		});
+		
+	}, 4000);
+}
+
 const categorieTabs = () => {
 
 	document.querySelectorAll('.categorie-tab').forEach( tab => {
@@ -83,6 +110,36 @@ const accordionHandler = () => {
 	});
 }
 
+const heroVideo = () => {	
+
+	let video = $('.modal-hero__video').get(0);
+	
+	$('.modal-hero__play').on('click', function(){
+
+		video.play();
+		$(this).hide()
+	});
+
+	video.onpause = function() {
+		$('.modal-hero__play').show();
+	};
+
+	$('.js-hero-modal').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		// focus: '#username',
+		modal: true
+	});
+
+	$(document).on('click', '.js-close-modal', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+
+		video.pause();
+		video.currentTime = 0;
+	});
+
+}
 
 // Landing
 
@@ -103,6 +160,15 @@ const animationInit = () => {
 
 }
 
+const mobileMenu = () => {
+
+	$('.menu-item-has-children > a').on('click', function(){
+
+		$(this).parent().toggleClass('is-collapsed');
+		$(this).parent().find('.sub-menu').slideToggle(400);
+	})
+}
+
 const hamburger = () => {
 
 	if(!document.querySelector('.hamburger')) return;
@@ -110,7 +176,7 @@ const hamburger = () => {
 	document.querySelector('.hamburger').addEventListener('click', function(e) {
 		this.classList.toggle('is-active');
 
-		document.querySelector('.header').classList.toggle('is-active');
+		document.querySelector('.header').classList.toggle('is-visible');
 		document.body.classList.toggle('overflow');
 	});
 }

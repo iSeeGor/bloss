@@ -28,6 +28,7 @@
 	padding: 13px 20px 12px 20px;
 	z-index: 1;
 	margin-top: -4px;
+	width: 300px;
 
 	&::before,
 	&::after {
@@ -132,8 +133,8 @@
 
 	&:hover {
 
-		color: $colorPrimary;
-		border-color: $colorPrimary;
+		color: white;
+		background: $colorSecondary;
 		box-shadow: none;
 	}
 }
@@ -163,6 +164,71 @@
 
 	}
 
+}
+
+.button-play--white {
+
+	width: 180px;
+	height: 180px;
+	background: rgba(255, 255, 255, 0.3);
+	border-color: white;
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+	&::before {
+
+		margin-left: 22px;
+		border-width: 37px 0 37px 62px;
+		border-color: transparent transparent transparent white;
+		transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+
+	&:hover {
+
+		border-color: $colorPrimary;
+		background: rgba(245, 193, 188, 0.3);
+
+		&::before {
+
+			border-color: transparent transparent transparent $colorPrimary	;
+		}
+	}
+
+}
+
+.button-close {
+
+	width: 38px;
+	height: 38px;
+	background: $colorSecondary;
+	border-radius: 100%;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+	cursor: pointer;
+
+	&:hover {
+		
+		transform: rotate(180deg);
+		// box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.8);
+	}
+
+	&::before,
+	&::after {
+
+		content: '';
+		width: 20px;
+		height: 2px;
+		background: white;
+		position: absolute;
+		transform: rotate(45deg);
+	}
+
+	&::after {
+
+		transform: rotate(-45deg);
+	}
 }
 
 .button-nav {

@@ -6,6 +6,11 @@
 
 	max-width: 149px;
 	display: block;
+
+	&--mobile {
+
+		max-width: 122px;
+	}
 }
 
 .header {
@@ -47,6 +52,12 @@
 		justify-content: flex-end;
 	}
 
+	&__social {
+
+		display: none;
+		padding: 36px 0;
+	}
+
 	&__search {
 
 		margin-right: 10px;
@@ -84,6 +95,113 @@
 
 		display: flex;
 		justify-content: center;
+	}
+}
+
+@include _1024 {
+
+	.header {
+
+		// display: none;
+		visibility: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: none;
+		padding-top: 60px;
+		transition: background 0.8s cubic-bezier(0.165, 0.84, 0.44, 1),
+		visibility 0s .8s linear;
+
+		.container {
+
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			overflow: auto;
+			transform: scale(1.2);
+			opacity: 0;
+			transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+
+		&__main {
+
+			border: none;
+		}
+
+		&__bottom {
+
+			order: -1;
+			padding-bottom: 12px;
+		}
+
+		&.is-visible {
+
+			visibility: visible;
+			background: white;
+			transition:background 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), visibility 0s 0s linear;
+
+			.container {
+
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+
+	.header-main {
+
+		flex-direction: column;
+
+		&__logo,
+		&__search {
+
+			display: none;
+		}
+
+		&__menu {
+
+			padding-bottom: 24px;
+		}
+
+		&__social {
+
+			display: block;
+		}
+	}
+
+	.header-bottom__nav {
+
+		padding: 40px 0;
+	}
+}
+
+@include _485 {
+
+	.header-main {
+
+		&__controls {
+
+			width: 100%;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__button {
+
+			width: 100%;
+			flex: 0 0 100%;
+
+			&:last-of-type {
+				margin-left: 0px;
+				margin-top: 16px;
+			}
+		}
+	}
+
+	.header-bottom__nav {
+    	padding: 32px 0 16px;
 	}
 }
 

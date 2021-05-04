@@ -24,10 +24,13 @@ ul.menu {
 		transition: color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 		display: block;
 		padding: 10px 0;
-		
-		&:hover {
 
-			color: $colorPrimary;
+		@media (min-width: 1024px){
+
+			&:hover {
+
+				color: $colorPrimary;
+			}
 		}
 		
 	}
@@ -91,17 +94,21 @@ ul.menu li > .sub-menu {
 	}
 }
 
-ul.menu > li:hover > a {
+@media (min-width: 1024px){
 
-	color: $colorPrimary;
-}
- 
-ul.menu li:hover > .sub-menu {
+	ul.menu > li:hover > a {
 
-	visibility: visible;
-	opacity: 1;
-	transform: translateX(0);
+		color: $colorPrimary;
+	}
+
+	ul.menu li:hover > .sub-menu {
+
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
+
 
 ul.menu li > .sub-menu li a:hover {
 
@@ -152,11 +159,116 @@ ul.menu-categoties {
 	}
 }
 
-.menu-categoties > li:hover > a::after {
+@media (min-width: 1024px) {
+
+	.menu-categoties > li:hover > a::after {
 	
-	transform: translateY(0);
-	opacity: 1;
-} 
+		transform: translateY(0);
+		opacity: 1;
+	} 
+}
+
+@include _1024 {
+
+	ul.menu li > .sub-menu {
+
+		position: static;
+		visibility: visible;
+		opacity: 1;
+		transform: none;
+		background: none;
+		box-shadow: none;
+		transition: none;
+		display: none;
+	}
+
+	ul.menu-categoties {
+
+		flex-direction: column;
+		text-align: center;
+
+		> li > a {
+
+			font-weight: $medium;
+			font-size: 18px;
+			padding: 8px 30px;
+			display: inline-block;
+		}
+
+		li.menu-item-has-children > a {
+
+			position: relative;
+
+			&::after,
+			&::before {
+
+				content: '';
+				position: absolute;
+				right: 0;
+				left: auto;
+				bottom: auto;
+				top: 50%;
+				height: 2px;
+				width: 10px;
+				opacity: 1;
+				background: $colorSecondary;
+				transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+			}
+
+			&::after {
+
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	ul.menu-categoties li.menu-item-has-children.is-collapsed > a {
+
+		&::after {
+
+			transform: rotate(0);
+		}
+
+	}
+
+	ul.header-menu {
+
+		> li {
+
+			margin: 0 8px;
+			color: $colorBody;
+		}
+
+		> li:hover > a {
+
+			color: $colorGeneral;
+			opacity: 1;
+		}
+
+		a {
+
+			padding: 4px 0;
+			opacity: 0.5;
+		}
+
+		> li.current-menu-item a {
+
+			opacity: 1;
+			color: $colorGeneral;
+		}
+	}
+}
+
+@include _485 {
+
+	ul.header-menu {
+
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+
 
 // .header-menu {
 

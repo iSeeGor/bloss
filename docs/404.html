@@ -58,12 +58,41 @@
 						<a class="button-primary button-primary--dark header-main__button" href="#">Log in</a>
 						<a class="button-primary header-main__button" href="#">Sign up for free</a>
 					</div>
+					<div class="header-main__social">
+														<div class="social social--dark">
+									<a class="social__item" href="#">
+										<svg class="icon _facebook">
+											<use xlink:href="symbol/sprite.svg#icon-facebook"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _instagram">
+											<use xlink:href="symbol/sprite.svg#icon-instagram"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _twitter">
+											<use xlink:href="symbol/sprite.svg#icon-twitter"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _linkedin">
+											<use xlink:href="symbol/sprite.svg#icon-linkedin"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _youtube">
+											<use xlink:href="symbol/sprite.svg#icon-youtube"></use>
+										</svg>
+									</a>
+								</div>
+					</div>
 				</div>
 				<div class="header-bottom header__bottom">
 					<nav class="header-bottom__nav">
 						<ul class="menu menu-categoties">
 							<li class="current-menu-item"><a href="#">Trying to Conceive</a></li>
-							<li>
+							<li class="menu-item-has-children">
 								<a href="#">Pregnancy</a>
 
 								<ul class="sub-menu">
@@ -83,6 +112,21 @@
 				</div>
 			</div>
 		</header>
+		
+		<div class="mobile-header">
+			<div class="container">
+				<div class="mobile-header__logo">
+					<a href="/" class="site-logo site-logo--mobile">
+						<img src="images/logo.svg" alt="Bloss Logo">
+					</a>
+				</div>
+				<div class="mobile-header__hambuger hamburger hamburger--collapse">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		
 
@@ -136,7 +180,7 @@
 								<a class="footer-email" href="mailto:info@bloss.life">info@bloss.life</a>
 							</li>
 							<li class="footer-contacts__item">
-								<div class="social">
+																<div class="social @@class">
 									<a class="social__item" href="#">
 										<svg class="icon _facebook">
 											<use xlink:href="symbol/sprite.svg#icon-facebook"></use>
@@ -150,6 +194,16 @@
 									<a class="social__item" href="#">
 										<svg class="icon _twitter">
 											<use xlink:href="symbol/sprite.svg#icon-twitter"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _linkedin">
+											<use xlink:href="symbol/sprite.svg#icon-linkedin"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _youtube">
+											<use xlink:href="symbol/sprite.svg#icon-youtube"></use>
 										</svg>
 									</a>
 								</div>
@@ -178,6 +232,54 @@
 		</footer>
 
 	</div>
+
+	<div class="modals site__modals">
+
+	<!-- Hero Video Modal -->
+	<div id="modal-hero" class="modal-hero">
+		<div class="modal-hero__container">
+			<video class="modal-hero__video" controls preload="metadata" poster="images/hero-video-image.jpg">
+				<source src="intro.mp4" type="video/mp4">
+			</video>
+			<button class="modal-hero__play button button-play button-play--white"></button>
+		</div> 
+
+		<button class="modal-hero__close button-close js-close-modal"></button>
+	</div>
+
+	<!-- Feedback -->
+	<div class="modal-main" id="modal-main">
+		<div class="modal-main__container">
+			<div class="modal-main__header">
+				<div class="modal-main__title">Перезвоните мне</div>
+				<div class="modal-main__description">Для получения подробной информации заполните форму и наш менеджер свяжется с Вами в ближайшее время</div>
+			</div>
+			<div class="modal-main__body">
+				<form class="form modal-form js-validate" autocomplete="off">
+					<div class="form__row">
+						<div class="form__group">
+							<input class="form__input" type="text" name="mm-name" placeholder="Ваше имя" required>
+						</div>
+					</div>
+					<div class="form__row">
+						<div class="form__group">
+							<input class="form__input js-phone-mask" type="text" name="mm-phone" placeholder="Ваш телефон" required>
+						</div>
+					</div>
+					<div class="form__row">
+						<button class="button button-primary" >Оставить заявку</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<button class="button moda-close" data-fancybox-close>
+			<svg class="_icon">
+				<use xlink:href="symbol/sprite.svg#plus"></use>
+			</svg>
+		</button>
+	</div>
+
+</div>
 
 	<script src="js/vendor.js"></script>
 	<script src="js/index.js"></script>

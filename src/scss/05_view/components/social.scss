@@ -1,0 +1,78 @@
+/*============================================================================
+	#Social
+==============================================================================*/
+.social {
+
+	display: flex;
+
+	&--dark-gray {
+
+		.social__item {
+
+			fill: $color8D9AAE;
+		}
+	}
+
+	&--dark {
+
+		
+		.social__item:hover {
+		
+			fill: $colorSecondary;
+		}
+	}
+
+	&__item {
+
+		margin-right: 16px;
+		display: block;
+		fill: #D4D9E0;
+
+		&:last-child {
+
+			margin-right: 0;
+		}
+
+		&:hover {
+
+			fill: $colorPrimary;
+		}
+	}
+
+	.icon {
+
+		fill: inherit;
+		transition: fill 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+		vertical-align: middle;
+
+		&._facebook {
+
+			height: 24px;
+			width: 24px;
+		}
+
+		&._instagram {
+
+			height: 24px;
+			width: 24px;
+		}
+
+		&._twitter {
+
+			height: 24px;
+			width: 24px;
+		}
+
+		&._linkedin {
+
+			height: 24px;
+			width: 24px;
+		}
+
+		&._youtube {
+
+			height: 18px;
+			width: 24px;
+		}
+	}
+}
