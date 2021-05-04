@@ -1,14 +1,14 @@
 window.addEventListener('DOMContentLoaded', function(){
-	
+
+	// COMMON
 	animationInit();
+	anchorSmoothScroll();
+	
+	// MOBILE
 	hamburger();
 	mobileMenu();
-	// categoryToggle();
-	// testimonialSlider();
-	// videoPlayer();
-	// anchorSmoothScroll();
 
-	// Page
+	// HOME PAGE
 	categorieTabs();
 	customSelect();
 	reviewsSlider();
@@ -17,7 +17,6 @@ window.addEventListener('DOMContentLoaded', function(){
 
 });
 
-// Page
 const fakeSuccess = () => {
 
 	if(!document.querySelector('.promo-singup__success')) return;
@@ -142,8 +141,6 @@ const heroVideo = () => {
 
 }
 
-// Landing
-
 const animationInit = () => {
 
 	AOS.init({
@@ -181,6 +178,24 @@ const hamburger = () => {
 		document.body.classList.toggle('overflow');
 	});
 }
+
+const anchorSmoothScroll = () => {
+
+	$(document).on('click', 'a[href^="#"]', function (event) {
+	event.preventDefault();
+
+	$('html, body').animate({
+			scrollTop: $($.attr(this, 'href')).offset().top
+		}, 1400);
+	});
+}
+window.addEventListener('DOMContentLoaded', function(){
+	
+	// categoryToggle();
+	// testimonialSlider();
+	// videoPlayer();
+
+});
 
 const categoryToggle = () => {
 
@@ -240,16 +255,5 @@ const videoPlayer = () => {
 		player.src = player.dataset.src;
 		document.querySelector('.video-player__movie').load();
 
-	});
-}
-
-const anchorSmoothScroll = () => {
-
-	$(document).on('click', 'a[href^="#"]', function (event) {
-	event.preventDefault();
-
-	$('html, body').animate({
-			scrollTop: $($.attr(this, 'href')).offset().top
-		}, 2000);
 	});
 }

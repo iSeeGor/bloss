@@ -286,3 +286,51 @@
 		}	
 	}
 }
+
+@include _1200 {
+
+	
+	.button-play--white {
+
+		width: 140px;
+		height: 140px;
+
+		&::before {
+
+			margin-left: 15px;
+			border-width: 27px 0 27px 42px;
+		} 
+	}
+}
+
+@include _1024 {
+
+	
+	.button-play--white {
+
+		width: 100px;
+		height: 100px;
+
+		&::before {
+		
+			margin-left: 10px;
+			border-width: 17px 0 17px 27px;
+		} 
+	}
+}
+
+@include _485 {
+
+	
+	.button-play--white {
+
+		width: 60px;
+		height: 60px;
+
+		&::before {
+		
+			margin-left: 8px;
+			border-width: 11px 0 11px 17px;
+		} 
+	}
+}

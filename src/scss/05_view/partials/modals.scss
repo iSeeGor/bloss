@@ -41,3 +41,12 @@
 		top: -52px;
 	}
 }
+
+@include _485 {
+
+	.modal-hero {
+		
+		padding: 0;
+	}
+	
+}
