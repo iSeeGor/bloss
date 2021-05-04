@@ -6,7 +6,11 @@
 	.section__header {
 
 		justify-content: center;
-		margin-bottom: 60px;
+	}
+
+	.section__body {
+
+		padding-top: 20px;
 	}
 
 	._deco-round {
@@ -18,4 +22,37 @@
 		left: -470px;
 	}
 
+}
+
+@include _1200 {
+
+	.advantage-cards {
+
+		.section__body {
+
+			padding-top: 0;
+		}
+	}
+}
+
+@include _1024 {
+
+	.advantage-cards {
+
+		.cards__grid {
+
+			justify-content: center;
+		}
+	}
+}
+
+@include _395 {
+
+	.info-card {
+		
+		&__title {
+
+			font-size: 20px;
+		}
+	}
 }

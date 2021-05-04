@@ -243,6 +243,7 @@
 
 	&__text {
 
+		height: 22px;
 		color: black;
 		-webkit-box-orient: vertical;
 		display: block;
@@ -374,7 +375,6 @@
 
 .card-person {
 
-	width: 420px;
 	border-radius: 16px;
 	overflow: hidden;
 	background: white;
@@ -499,6 +499,7 @@
 	background: white;
 	border-radius: 16px;
 	overflow: hidden;
+	height: 100%;
 	box-shadow: 0px 4px 27px -6px rgba(38, 64, 102, 0.19);
 
 
@@ -541,4 +542,189 @@
 		color: $color8D9AAE;
 		text-align: center;
 	} 
+}
+
+@include _1400 {
+
+	.cards {
+
+		&__grid {
+
+			margin: 0 -16px;
+			margin-bottom: -32px;
+		}
+
+		&__col {
+
+			margin: 0 16px 32px;
+			flex: 0 0 calc(100% / 3 - 32px);
+		}
+	}
+}
+
+@include _1200 {
+
+	.card {
+
+		position: relative;
+
+		&__media {
+
+			padding-top: 75%;
+		}
+
+		&__title-link {
+
+			-webkit-line-clamp: 3;
+			height: 81px;
+		}
+
+		&__text {
+
+			-webkit-line-clamp: 4;
+			height: 88px;
+		}
+
+		&__footer {
+
+			flex-wrap: wrap;
+		}
+
+		&__info {
+
+			flex: 0 0 100%;
+			margin-bottom: 16px;
+		} 
+
+		&__tax {
+
+			font-size: 16px;
+			min-width: 120px;
+			padding: 6px;
+		}	
+	}
+}
+
+@include _1024 {
+
+	.cards {
+
+		&__grid {
+
+			margin: 0 -8px -24px;
+		}
+
+		&__col {
+
+			margin: 0 8px 24px;
+			flex: 0 0 calc(100% / 3 - 16px);
+		} 
+	}
+
+	.card {
+
+		&__categorie {
+
+			padding: 0 10px;
+			font-size: 14px;
+			line-height: 36px;
+    		min-width: 120px;
+		}
+
+		&__tax {
+
+			font-size: 14px;
+			line-height: 34px;
+			padding: 0;
+		}
+
+	}
+
+	.info-card {
+
+		&__inner {
+
+			padding: 24px 36px;
+		}
+	}
+}
+
+@include _892 {
+
+	.cards {
+
+		&__grid {
+
+			// flex: ;
+		}
+
+		&__col {
+
+			flex: 0 0 calc(100% / 2 - 16px);
+		}
+	}
+}
+
+@include _575 {
+
+	.cards {
+
+		&__grid {
+
+			justify-content: center;
+		}
+
+		&__col {
+
+			flex: 1 1 auto;
+			max-width: 420px;
+		}
+	}
+}
+
+@include _485 {
+
+	.card {
+
+		&__categorie {
+
+			font-size: 12px;
+			line-height: 26px;
+			min-width: auto;
+			padding: 0 16px;
+		}
+
+		&__title-link {
+			-webkit-line-clamp: 3;
+			font-size: 16px;
+			height: 72px;
+		}
+
+		&__user-name {
+
+			font-size: 16px;
+		}
+	}
+}
+
+@include _395 {
+
+	.card-person {
+
+		&__media {
+
+			padding-top: 78%;
+		}
+
+		&__title {
+
+			font-size: 22px;
+			margin-bottom: 4px;
+		}
+
+		&__categories {
+
+			font-size: 17px;
+		}
+	}
 }

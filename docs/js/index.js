@@ -76,6 +76,7 @@ const reviewsSlider = () => {
 		spaceBetween: 60,
 		effect: 'fade',
 		speed : 1600,
+		autoHeight: true,
 
 		navigation : {
 

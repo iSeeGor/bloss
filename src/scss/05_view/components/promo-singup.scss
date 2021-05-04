@@ -20,6 +20,7 @@
 		color: white;
 		flex: 0 0 480px;
 		max-width: 480px;
+		margin-right: 40px;
 	}
 
 	&__title {
@@ -56,6 +57,7 @@
 		align-items: center;
 		flex-direction: column;
 		visibility: hidden;
+		padding: 40px;
 	}
 
 	&__success-icon {
@@ -77,5 +79,114 @@
 		@include H1_Desktop;
 		max-width: 670px;
 		text-align: center;
+	}
+}
+
+@include _1200 {
+
+	.promo-singup {
+
+		&__inner {
+
+			padding: 80px 70px 68px;
+		}
+
+		&__title,
+		&__success-msg {
+
+			font-size: 42px;
+		}
+
+		&__form {
+
+			flex: 1 0 auto;
+		}
+	}
+}
+
+@include _1024 {
+
+	.promo-singup {
+
+		&__content {
+
+			flex: 0 0 420px;
+			max-width: 100%;
+		}
+	}
+
+}
+
+@include _892 {
+
+	.promo-singup {
+
+		&__content {
+
+			flex: 0 0 300px;
+		}
+
+		&__title {
+
+			font-size: 32px;
+		}
+
+		&__success-msg {
+			font-size: 36px;
+		}
+	}
+}
+
+@include _768 {
+
+	.promo-singup {
+
+		&__inner {
+			padding: 50px 40px 50px;
+			flex-direction: column;
+		}
+
+		&__content {
+
+			flex: 0 0 auto;
+			margin-right: 0;
+			margin-bottom: 40px;
+		}
+
+		&__form {
+
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
+
+@include _575 {
+
+	.promo-singup {
+
+		margin: 0 -16px;
+	}
+}
+
+@include _395 {
+
+	.promo-singup {
+
+		margin: 0 -16px;
+
+		&__inner {
+
+			padding: 30px 26px 40px;
+		}
+	}
+}
+
+
+@media (max-width: 374px) {
+
+	.promo-singup {
+
+		margin: 0 -8px;
 	}
 }

@@ -7,7 +7,7 @@
 
 	&__container {
 
-		max-width: 982px;
+		max-width: 984px;
 		position: relative;
 	}
 
@@ -36,5 +36,61 @@
 
 		top: 230px;
     	left: -440px;
+	}
+}
+
+@include _1024 {
+
+	.home-categories {
+
+		&__header {
+
+			margin-bottom: 32px;
+		}
+
+		&__search {
+
+			padding: 60px 0;
+		}
+	}
+}
+
+@include _892 {
+
+	.home-categories {
+
+		&__header {
+
+			margin-bottom: 26px;
+		}
+
+		&__search {
+
+			padding: 40px 0;
+		}
+	}
+}
+
+@include _575 {
+
+	.home-categories {
+
+		&__header {
+
+			margin-bottom: 22px;
+		}
+
+	}
+}
+
+@include _575 {
+
+	.home-categories {
+
+		&__header {
+
+			margin-bottom: 18px;
+		}
+
 	}
 }

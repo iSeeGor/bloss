@@ -60,6 +60,7 @@
 		color: $colorSecondary;
 		font-weight: normal;
 		transition: color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		text-align: center;
 	}
 
 	&:hover {
@@ -76,6 +77,87 @@
 		.categorie-card__title {
 
 			color: white;
+		}
+	}
+}
+
+@include _1024 {
+
+	.categorie-card {
+
+		width: 190px;
+		height: 130px;
+	}
+}
+
+@include _892 {
+
+	.categorie-cards {
+
+		&__list {
+
+			margin: -8px;
+		}
+
+		&__item {
+
+			margin: 8px;
+			flex: 0 0 calc(100% / 4 - 16px);
+		}
+	}
+
+	.categorie-card {
+
+		width: auto;
+	}
+}
+
+@include _768 {
+
+	.categorie-cards {
+
+		&__item {
+
+			flex: 0 0 calc(100% / 3 - 16px);
+		}
+	}
+
+	.categorie-card {
+
+		height: 124px;
+	}
+}
+
+@include _575 {
+
+	.categorie-cards {
+
+		&__list {
+
+			margin: -4px -12px;
+		}
+
+		&__item {
+
+			margin: 8px 4px;
+			flex: 0 0 calc(100% / 3 - 8px);
+		}
+	}
+}
+
+@include _485 {
+
+	.categorie-cards {
+
+		&__list {
+
+			margin: -4px;
+		}
+
+		&__item {
+
+			margin: 8px 4px;
+			flex: 1 1 calc(100% / 2 - 8px);
 		}
 	}
 }

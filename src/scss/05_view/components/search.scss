@@ -47,3 +47,19 @@
 		}
 	}
 }
+
+@include _892 {
+
+	.site-search {
+
+		&__input {
+
+			padding: 13px 76px 13px 24px;
+		}
+
+		&__button {
+
+			width: 70px;
+		}
+	}
+}

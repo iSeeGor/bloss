@@ -17,7 +17,8 @@
 	&__content {
 
 		max-width: 490px;
-
+		margin-right: 80px;
+		margin-bottom: 40px;
 	}
 
 	&__media {
@@ -124,11 +125,205 @@
 		font-size: 18px;
 		font-weight: $medium;
 		line-height: 1.4;
+		position: relative;
+
+		&:last-child {
+
+			&::after {
+
+				display: none;
+			}
+		}
+		
+		&::after {
+
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			width: 360px;
+			background: $color8D9AAE;
+			opacity: .2;
+		}
 
 	}
 
 	&__item .icon {
 
 		margin-right: 24px;
+		flex: 0 0 auto;
+		align-self: flex-start;
 	} 
 }
+
+@include _1200 {
+
+	.section-about {
+
+		padding-top: 80px;
+
+		&__media {
+
+			margin-right: 20px;
+			display: flex;
+			align-items: center;
+		}
+
+		&__content {
+
+			margin-right: 40px;
+		}
+
+		._deco-item:first-child {
+
+			left: 0;
+		}
+	}
+
+	.block-checklist {
+
+		&__header {
+
+			margin-bottom: 28px;
+		}
+	}
+}
+
+@include _1024 {
+
+	.section-about {
+
+		&__content {
+
+			max-width: 390px;
+		}
+
+		._deco-item:first-child {
+
+			border-width: 16px;
+			left: 60px;
+		}
+	}
+
+	.block-checklist {
+
+		&__header {
+
+			margin-bottom: 24px;
+		}
+	}
+
+	.custom-list {
+
+		&__item {
+
+			font-size: 16px;
+			padding: 8px 0;
+
+			&::after {
+
+				width: 100%;
+			}
+		}
+	}
+}
+
+@include _768 {
+
+	.section-about {
+
+		&__inner {
+			max-width: 485px;
+			margin: 0 auto;
+			flex-direction: column;
+		}
+
+		&__content {
+
+			max-width: 100%;
+			margin-right: 0;
+		}
+
+		._deco-item:nth-child(3) {
+
+			width: 5vw;
+			height: 5vw;
+		}
+
+		._deco-item:nth-child(2) {
+
+			height: 16vw;
+			width: 16vw;
+		}
+
+		._deco-item:first-child {
+
+			width: 20vw;
+			height: 20vw;
+			left: -50px;
+		}
+
+		._deco-dots {
+			width: 120px;
+			height: 150px;
+		}
+	}
+
+	.custom-list__item {
+    
+		padding: 16px 0;
+		font-size: 18px;
+	}
+}
+
+
+@include _575 {
+
+	.section-about {
+
+		padding-top: 40px;
+
+		&__media {
+
+			margin-right: 0;
+		}
+
+		._deco-item:first-child {
+			width: 25vw;
+			height: 25vw;
+			left: -20px;
+		}
+
+		._deco-dots {
+			width: 90px;
+			height: 100px;
+			left: 30px;
+		}
+	}
+}
+
+@include _485 {
+
+	.section-about {
+	
+		._deco-item:first-child {
+			width: 30vw;
+			height: 30vw;
+			border-width: 10px;
+		}
+	}
+}
+
+@include _395 {
+
+	.custom-list {
+
+		&__item {
+
+			font-size: 16px;
+
+		}
+	}
+}
+
