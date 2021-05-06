@@ -5,9 +5,14 @@
 .mobile-header {
 
 	display: none;
-	padding: 4px 0;
+	padding: 8px 0;
 	position: relative;
 	z-index: 101;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: white;
 
 	.container {
 

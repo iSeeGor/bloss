@@ -1,0 +1,112 @@
+/*============================================================================
+	#Product Cards
+==============================================================================*/
+
+.product-small {
+
+	display: flex;
+	border-radius: 16px;
+	overflow: hidden;
+	border: 1px solid #D4D9E0;
+	text-decoration: none;
+	color: $colorSecondary;
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+	&:hover {
+
+		border-color: $colorSecondary;
+	}
+
+	&__media {
+
+		width: 80px;
+		height: 80px;
+		border-radius: 16px;
+		overflow: hidden;
+		// margin-right: 14px;
+	}
+
+	&__image {
+
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__main {
+		
+		padding: 12px 16px;
+		flex: 1 1 calc(100% - 80px);
+	}
+
+	&__title {
+
+		color: $colorSecondary;
+		font-size: 18px;
+		font-weight: normal;
+		line-height: 1.5;
+		margin-bottom: 4px;
+		-webkit-box-orient: vertical;
+		display: block;
+		display: -webkit-box;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		-webkit-line-clamp: 1;
+	}
+
+	&__bottom {
+	
+		display: flex; 
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
+	&__meta {
+
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__meta-item {
+
+		display: flex;
+		align-items: center;
+		margin-right: 16px;
+		
+		.icon {
+
+			width: 12px;
+			height: 12px;
+			fill: $color8D9AAE;
+			margin-right: 8px;
+		}
+
+		.icon-heart-small {
+
+			width: 11px;
+			height: 11px;
+		}
+
+		font-size: 12px;
+		color: $color8D9AAE;
+	}
+
+	&__price  {
+
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__price-title {
+
+		color: $color8D9AAE;
+		font-size: 14px;
+		margin-right: 4px;
+	}
+
+	&__price-value {
+
+		@include Text18_Desktop;
+		color: $colorSecondary;
+	}
+}

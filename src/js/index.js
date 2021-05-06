@@ -15,6 +15,11 @@ window.addEventListener('DOMContentLoaded', function(){
 	accordionHandler();
 	heroVideo();
 
+	// EXPERT
+	profileTabs();
+	profileReviewSlider();
+	reviewStarRaiting();
+
 });
 
 const fakeSuccess = () => {
@@ -124,6 +129,10 @@ const heroVideo = () => {
 		$('.modal-hero__play').show();
 	};
 
+	video.onplay = function() {
+		$('.modal-hero__play').hide();
+	};
+
 	$('.js-hero-modal').magnificPopup({
 		type: 'inline',
 		preloader: false,
@@ -189,3 +198,81 @@ const anchorSmoothScroll = () => {
 		}, 1400);
 	});
 }
+
+const profileTabs = () => {
+
+	let tabButtons = document.querySelectorAll('.profile-tabs__tab-button');
+	let tabsContent = document.querySelectorAll('.profile-tabs__content-tab');
+	
+	if(!tabButtons) return;
+
+	tabButtons.forEach((tab, index) => {
+
+		tab.addEventListener('click', function(){
+			let element = this;
+			tabHandler(element, index);
+		});
+	});
+
+	function tabHandler(element, index) {
+
+		tabButtons.forEach(tab => tab.classList.remove('is-active'));
+		element.classList.add('is-active');
+
+		tabsContent.forEach((el, index) => {
+			el.classList.remove('is-active');	
+		})
+
+		tabsContent[index].classList.add('is-active');	
+	}
+}
+
+const profileReviewSlider = () => {
+
+	let slider;
+
+	slider = new Swiper('.profile-review__slider', {
+
+		slidesPerView: 2,
+		spaceBetween: 60,
+		speed: 1400,
+
+		navigation : {
+
+			prevEl: '.review-slider__control .button-nav--prev',
+			nextEl: '.review-slider__control .button-nav--next',
+			disabledClass: 'is-disabled'
+		},
+
+		pagination: {
+
+			el: '.review-slider__control .slider-control__counter',
+			type: 'custom',
+			renderCustom: function (swiper, current, total) {
+				
+				(current <= 9) ? current = '0' + current : current;
+				(total <= 9) ? total = '0' + total : total;
+
+				return '<span class="_current">' + current + '</span><span class="_total">/ ' + total + '</span>';
+			}
+
+			
+		},
+	});
+}
+
+const reviewStarRaiting = () => {
+
+	let stars = document.querySelectorAll('.rating__star');
+
+	if(!stars) return;
+	
+	stars.forEach(star => {
+
+		star.addEventListener('click', function(){
+
+			stars.forEach(item => item.classList.remove('is-active'));
+			this.classList.add('is-active');
+		})
+	});
+}	

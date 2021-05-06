@@ -215,46 +215,6 @@
     background-repeat: repeat !important;
 }
 
-.star-rating {
-
-	position: relative;
-
-	.icon-star {
-
-		width: 24px;
-		height: 24px;
-		margin-right: 12px;
-		flex: 0 0 auto;
-
-		&._clear {
-
-			fill: transparent;
-			stroke: #000;
-		}
-
-		&:last-child {
-
-			margin-right: 0;
-		}
-	}
-
-	&__row {
-
-		display: flex;
-		position: relative;
-		z-index: 2;
-		overflow: hidden;
-
-		&._clear {
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 1;
-		}
-	}
-}
-
 .glass-overflow-in,
 .glass-overflow-out {
 	
@@ -301,7 +261,38 @@
 	opacity: .8;
 }
 
+.slider-control {
+	display: flex;
+	align-items: center;
+
+	&__counter {
+
+		margin: 0 17px;
+		width: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		._current {
+			color: $colorSecondary;
+			font-size: 24px;
+			margin-right: 4px;
+		}
+
+		._total {
+
+			font-size: 12px;
+			color: $color8D9AAE;
+		}
+	}
+}
+
 @include _1024 {
+
+.site {
+
+	padding-top: 65px;
+}
 
 	.block-title {
 

@@ -1,0 +1,313 @@
+/*============================================================================
+	#Profile Page
+==============================================================================*/
+.user-profile {
+
+	padding-bottom: 60px;
+
+	&__header {
+
+		height: 280px;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__bg-image {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+
+		img {
+
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__breadcrumbs {
+
+		.container {
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__body {
+		position: relative;
+		z-index: 1;
+		margin-top: -47px;
+		margin-bottom: 60px;
+	}
+
+	&__tabs {
+
+		margin-bottom: 20px;
+	}
+}
+
+.profile-data {
+
+	&__inner {
+
+		display: flex;
+	}
+
+	&__media {
+
+		width: 360px;
+		height: 360px;
+		border-radius: 16px;
+		overflow: hidden;
+		flex: 0 0 auto;
+		margin-right: 60px;
+	}
+
+	&__image {
+
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__body {
+
+		margin-top: 47px;
+		flex-grow: 1;
+		padding-top: 14px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__head {
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0;
+		position: relative;
+	}
+
+	&__rating {
+
+		.icon-star {
+
+			fill: $colorPrimary;
+		}
+
+		.icon-star._clear {
+
+			stroke: $colorPrimary;
+		}
+	}
+
+	&__head-control {
+
+		position: absolute;
+		right: 0;
+		display: flex;
+		bottom: -50px;
+
+		.button {
+
+			margin-left: 16px;
+		}
+	}
+
+	&__bio {
+
+		padding-right: 260px
+	}
+
+	&__title {
+
+		@include H1_Desktop;
+		color: $colorSecondary;
+		margin-bottom: 8px;
+	}
+
+	&__meta {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 16px;
+	}
+
+	&__meta-item {
+
+		display: flex;
+		align-items: center;
+		color: $color8D9AAE;
+		@include Text18_Desktop;
+		position: relative;
+		margin-bottom: 8px;
+
+		&:not(:last-child){
+
+			margin-right: 16px;
+		}
+
+		&--categories {
+
+			.icon {
+
+				margin-right: 12px;
+				align-self: flex-start;
+			}
+		}
+
+		&--tags {
+
+			padding-left: 24px;
+			position: relative;
+
+			&::after {
+
+				content: '';
+				position: absolute;
+				height: 8px;
+				width: 8px;
+				background: $colorSecondary;
+				top: 8px;
+				left: 0;
+				border-radius: 100%;
+			} 
+		}
+	}
+
+	&__controls {
+
+		margin-top: auto;
+		padding: 16px 0;
+		display: flex;
+		
+		> * {
+
+			margin-right: 12px;
+		}
+	}
+
+	&__button-book {
+
+		font-family: $fontPrimary;
+		max-width: 322px;
+		width: 100%;
+		color: white;
+	}
+
+	&__chat {
+
+		max-width: 215px;
+		width: 100%;
+	}
+}
+
+.profile-tabs {
+
+	&__header {
+
+		margin-bottom: 16px;
+		padding-bottom: 10px;
+	}
+
+	&__tab-button {
+
+		font-family: $fontHeadings;
+		font-size: 24px;
+		color: $color8D9AAE;
+		position: relative;
+		padding-bottom: 10px;
+		transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+		&:not(:last-child) {
+
+			margin-right: 28px;
+		}
+
+		&::before {
+
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			background: $color8D9AAE;
+			opacity: 0;
+			transform: translateY(-10px);
+			transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+		}
+
+		&:hover::before {
+
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		&.is-active {
+
+			color: $colorSecondary;
+
+			&::before {
+
+				opacity: 1;
+				transform: translateY(0);
+				background: $colorSecondary;
+			}
+		}
+	}
+
+	&__content-tab {
+
+		position: absolute;
+		visibility: hidden;
+		opacity: 0;
+		transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+		transform: translateY(20px);
+		box-shadow: 0px 4px 27px -6px rgba(38, 64, 102, 0.19);
+		border-radius: 16px;
+		padding: 24px 24px;
+		
+
+		&.is-active {
+
+			position: relative;
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+
+	&__list {
+
+		display: flex;
+
+		.custom-list {
+
+			flex: 1 1 100%;
+		}
+	}
+}
+
+.profile-products {
+
+	&__grid {
+
+		display: flex;
+		flex-wrap: wrap;
+		margin: -8px;
+	}
+
+	&__col {
+		
+		flex: 0 0 calc(100% / 3 - 8px);
+		margin: 4px;
+	}
+}

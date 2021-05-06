@@ -14,6 +14,13 @@
     line-height: 1.5;
 }
 
+@mixin Text16_Desktop() {
+	
+    font-size: 16px;
+    font-weight: $regular;
+    line-height: 1.38;
+}
+
 @mixin Text18_Desktop() {
 	
     font-size: 18px;

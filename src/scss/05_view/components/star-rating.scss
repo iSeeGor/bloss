@@ -1,0 +1,58 @@
+/*============================================================================
+	#Star Rating
+==============================================================================*/
+.star-rating {
+
+	position: relative;
+	display: inline-block;
+
+	.icon-star {
+
+		width: 24px;
+		height: 24px;
+		margin-right: 12px;
+		flex: 0 0 auto;
+
+		&._clear {
+
+			fill: transparent;
+			stroke: #000;
+		}
+
+		&:last-child {
+
+			margin-right: 0;
+		}
+	}
+
+	&__row {
+
+		display: flex;
+		position: relative;
+		z-index: 2;
+		overflow: hidden;
+
+		&._fill {
+
+			background: white;
+		}
+
+		&._clear {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+	}
+}
+
+.star-rating--small {
+
+	.icon-star {
+
+		width: 18px;
+		height: 18px;
+		margin-right: 8px;
+	}
+}

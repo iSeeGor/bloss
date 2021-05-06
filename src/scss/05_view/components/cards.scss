@@ -251,6 +251,11 @@
 		text-overflow: ellipsis;
 		overflow: hidden;
 		-webkit-line-clamp: 1;
+
+		p {
+
+			margin: 0;
+		}
 	}
 
 	&__footer {
@@ -359,6 +364,12 @@
 		padding: 4px 10px;
 		border: 1px solid $colorSecondary;
 		border-radius: 8px;
+
+		&--pink {
+
+			background: $colorPrimary;
+			border-color: $colorPrimary;
+		}
 	} 
 
 	&:hover {
@@ -387,6 +398,17 @@
 		padding-top: 85.5%;
 		position: relative;
 		overflow: hidden;
+
+		img {
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
 	}
 
 	&__image-link {
@@ -394,16 +416,7 @@
 		display: block;
 	}
 
-	&__image {
 
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-		transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
-	}
 
 	&__body {
 
@@ -484,7 +497,7 @@
 
 	&:hover {
 
-		.card-person__image {
+		.card-person__media img {
 
 			transform: scale(1.1);
 		}

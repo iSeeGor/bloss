@@ -44,6 +44,9 @@
 @import '05_view/components/accordion';
 @import '05_view/components/promo-singup';
 @import '05_view/components/social';
+@import '05_view/components/star-rating';
+@import '05_view/components/product-cards';
+@import '05_view/components/profile-review';
 
 
 /* views
@@ -58,6 +61,7 @@
 @import '05_view/partials/advantage-cards';
 
 @import '05_view/pages/home';
+@import '05_view/pages/profile-page';
 
 // @import '05_view/pages/landing.scss';
 // @import '05_view/pages/landing-expert.scss';

@@ -1,0 +1,224 @@
+/*============================================================================
+	#Profile Review
+==============================================================================*/
+
+.profile-review {
+
+	padding-top: 5px;
+
+	.section__title {
+
+		font-size: 42px;
+	}
+
+	.section__body {
+
+		margin: -20px -25px;
+		padding-bottom: 80px;
+	}
+
+	&__slider {
+
+		// overflow: visible;
+		padding: 25px;
+	}
+}
+
+.review-card {
+
+	overflow: hidden;
+	// max-width: 660px;
+	border-radius: 16px;
+	background: white;
+	box-shadow: 0px 4px 27px -6px rgba(38, 64, 102, 0.19);
+
+	&__inner {
+
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__header {
+
+		display: flex;
+		margin-bottom: 24px;
+	}
+
+	&__media {
+
+		flex: 0 0 auto;
+		width: 60px;
+		height: 60px;
+		border-radius: 100%;
+		overflow: hidden;
+		margin-right: 16px;
+
+		img {
+
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__info {
+
+		flex: 1 1 auto;
+	}
+
+	&__name {
+
+		@include Text18_Desktop;
+		color: black;
+		margin-bottom: 8px;
+	}
+
+	&__date {
+
+		font-size: 12px;
+		color: $color8D9AAE;
+	}
+	
+	&__body {
+
+		margin-bottom: 24px;
+	} 
+
+	&__rating {
+
+		color: $colorSecondary;
+		fill: $colorSecondary;
+		display: flex;
+		align-items: center;
+
+		.icon {
+
+			width: 17px;
+			height: 17px;
+			margin-left: 4px;
+			margin-bottom: 2px;
+		}
+	}
+
+}
+
+.review-form {
+
+	background: $colorF4F5F7;
+	border-radius: 16px;
+	overflow: hidden;
+	padding-bottom: 20px;
+
+	&__inner {
+
+		padding: 40px 60px;
+	}
+
+	&__title {
+
+		font-size: 42px;
+		font-weight: normal;
+		line-height: 1.5;
+		color: $colorSecondary;
+		margin-bottom: 20px;
+	}
+
+	&__row {
+
+		margin-bottom: 24px;
+	}
+
+	&__label {
+
+		color: $colorSecondary;
+		opacity: .5;
+		margin-bottom: 10px;
+	}
+
+	&__text {
+
+		border-radius: 16px;
+		border: 1px solid $colorSecondary;
+		padding: 12px 22px;
+		min-height: 88px;
+		resize: vertical;
+		background: transparent;
+		width: 100%;
+
+		&::placeholder {
+
+			color: $colorSecondary;
+			opacity: .5;
+			transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+
+		&:focus::placeholder {
+
+			opacity: 0;
+		} 
+	}
+
+	&__submit {
+
+		width: 100%;
+		max-width: 400px;
+	}
+}
+
+.rating {
+
+	&__stars {
+
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+
+	}
+
+	a {
+
+		padding: 0 7px;
+
+		&:last-child {
+
+			padding-left: 0;
+		}
+	}
+
+	a:hover {
+
+		.icon {
+
+			fill: $colorSecondary;
+		}
+	}
+
+	a:hover ~ a {
+
+		.icon {
+
+			fill: $colorSecondary;
+		}
+	}
+
+	a.is-active ~ a,
+	a.is-active {
+
+		.icon {
+
+			fill: $colorSecondary
+		}
+	}	
+
+
+	.icon {
+
+		width: 28px;
+		height: 28px;
+		fill: transparent;
+		stroke: $colorSecondary;
+		stroke-width: 1;
+
+	}
+}

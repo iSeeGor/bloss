@@ -84,7 +84,12 @@
 
 	.page-numbers.prev {
 
+		margin-left: -72px;
 		transform: rotate(180deg);
+	}
+	.page-numbers.next {
+
+		margin-right: -72px;
 	}
 
 	.page-numbers.prev,

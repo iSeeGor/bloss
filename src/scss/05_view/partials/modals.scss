@@ -42,6 +42,15 @@
 	}
 }
 
+@include _1024 {
+
+	.modal-hero__play {
+
+		visibility: hidden;
+		display: none;
+	}
+}
+
 @include _485 {
 
 	.modal-hero {

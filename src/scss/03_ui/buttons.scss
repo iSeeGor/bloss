@@ -84,6 +84,18 @@
 
 			background: $colorSecondary;
 		}
+	}
+
+	&--icon {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.icon {
+
+			margin-right: 16px;
+		}
 	} 
 }
 
@@ -136,6 +148,21 @@
 		color: white;
 		background: $colorSecondary;
 		box-shadow: none;
+	}
+}
+
+.button-secondary--blue {
+
+	background: $colorSecondary;
+	color: white;
+	// border: 1px solid $colorSecondary;
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+	&:hover {
+
+		box-shadow: none;
+		color: $colorSecondary;
+		background: $colorPrimary;
 	}
 }
 
@@ -284,6 +311,74 @@
 
 			box-shadow: 0 0 18px 20px rgba(38, 64, 102, 0.3);
 		}	
+	}
+}
+
+.button-report {
+
+	background: rgba(255, 255, 255, 0.4);
+	border-radius: 8px;
+	color: black;
+	line-height: 1.4;
+	padding: 5px 10px;
+
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+	&:hover {
+
+		background: white;
+	}
+	
+}
+
+.button-share {
+
+	padding: 7px 42px 7px;
+	font-size: 18px;
+	line-height: 1.4;
+	font-weight: $bold;
+	color: $colorSecondary;
+	display: flex;
+	align-items: center;
+	border-radius: 16px;
+	border: 1px solid $colorSecondary;
+	transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+	.icon {
+
+		fill: $colorSecondary;
+		margin-right: 16px;
+		transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	&:hover {
+
+		.icon {
+
+			fill: white;
+		}
+
+		color: white;
+		background: $colorSecondary;
+	}
+}
+
+.button-wishlist {
+
+	.icon {
+
+		fill: $colorSecondary;
+		width: 40px;
+		height: 40px;
+		transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	&:hover {
+
+		.icon {
+
+			fill: $colorPrimary;
+		}
 	}
 }
 
