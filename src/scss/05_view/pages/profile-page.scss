@@ -311,3 +311,256 @@
 		margin: 4px;
 	}
 }
+
+@include _1400 {
+
+	.profile-data {
+
+		&__button-book,
+		&__chat {
+
+			max-width: inherit;
+			width: auto;
+			flex: 0 0 auto;
+			padding-left: 40px;
+			padding-right: 40px;
+		} 
+	}
+}
+
+@include _1200 {
+
+	.user-profile {
+
+		&__header {
+
+			height: 240px;
+		}
+		
+		
+	}
+
+	.profile-data {
+
+		&__media {
+
+			width: 340px;
+			height: 340px;
+			margin-right: 40px;
+		}
+
+		&__bio {
+			padding-right: 0;
+		}
+
+		&__head {
+
+			padding: 4px 0;
+		}
+
+		&__head-control {
+
+			position: static;
+		}
+
+		&__controls {
+
+			flex-wrap: wrap;
+		}
+
+		&__title {
+
+			font-size: 44px;
+			line-height: 1.3;
+		}
+
+		&__button-book,
+		&__chat {
+
+			margin-bottom: 16px;
+		}
+	}
+
+	.profile-products {
+
+		&__col {
+			flex: 0 0 calc(100% / 2 - 8px);
+		} 
+	}
+}
+
+@include _1024 {
+
+	.user-profile {
+
+		&__header {
+
+			height: 200px;
+		}
+	}
+
+	.profile-data {
+
+		&__media {
+			width: 280px;
+			height: 280px;
+			margin-right: 24px;
+		}
+
+		&__controls {
+
+			padding: 0;
+			margin-top: 24px;
+		}
+
+		// &__title {
+		// 	font-size: 38px;
+		// 	line-height: 1.4;
+		// }
+	}
+}
+
+@include _768 {
+
+	.user-profile {
+
+		&__header {
+
+			height: 170px;
+		}
+
+		&__body {
+
+			margin-top: -100px;
+		}
+	}
+
+	.profile-data {
+
+		max-width: 480px;
+		margin: 0 auto;
+
+		&__inner {
+
+			flex-direction: column;
+		}
+
+		&__body {
+
+			margin-top: 10px;
+		}
+
+		&__media {
+
+			margin-right: 0;
+			margin: 0 auto;
+			width: 320px;
+			height: 320px;
+		}
+
+		&__meta-item {
+
+			flex: 0 0 100%;
+		}
+
+		&__meta-item--tags {
+
+			padding-left: 0;
+			&::after {
+
+				display: none;
+			}
+		}
+	}
+
+	.profile-products {
+
+		&__col {
+			flex: 0 0 calc(100% / 1 - 8px);
+		} 
+	}
+
+	.profile-tabs {
+
+		&__header {
+
+			display: flex;
+			width: 100%;
+			overflow: scroll;
+		}
+	}
+
+	.profile-tabs {
+
+		&__list {
+
+			flex-wrap: wrap;
+		}
+	}
+
+}
+
+@include _485 {
+
+	.profile-data {
+
+		&__media {
+
+			width: 284px;
+			height: 284px;
+		}
+
+		&__button-book,
+		&__chat {
+
+			width: 100%;
+		}
+	}
+
+	.user-profile {
+
+		&__breadcrumbs {
+			
+			padding: 16px 0;
+
+			.container {
+
+				justify-content: flex-end;
+			}
+
+			.breadcrumb {
+
+				display: none;
+			}
+		}
+	}
+
+	.profile-tabs {
+
+		&__content-tab {
+
+			padding: 16px;
+		}
+	}
+}
+
+@include _395 {
+
+	.profile-data {
+
+		&__title {
+
+			margin-top: 8px;
+			font-size: 36px;
+			line-height: 1.4;
+		}
+
+		&__button-book,
+		&__chat {
+
+			padding-left: 20px;
+			padding-right: 20px;
+			// font-size: 16px;
+		}
+	}
+}

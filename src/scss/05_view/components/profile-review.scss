@@ -222,3 +222,127 @@
 
 	}
 }
+
+@include _1400 {
+
+	.review-form {
+
+		margin: 0 -16px;
+	}
+}
+
+@include _768 {
+
+	.profile-review {
+
+		.section__header {
+
+			position: relative;
+		}
+
+		.slider-control {
+
+			position: absolute;
+			right: 30px;
+			bottom: -110px;
+			z-index: 20;
+		}
+
+		.slider-control__counter {
+
+			width: 70px;
+		}
+	}
+
+	.review-card {
+
+		&__inner {
+
+			padding: 30px;
+		}
+
+		&__header {
+
+			padding-right: 200px;
+		}
+	}
+
+	.review-form {
+
+		padding-bottom: 0;
+
+		&__inner {
+			padding: 40px 40px;
+		}
+	}
+}
+
+@include _575 {
+
+	.profile-review {
+
+		.section__header {
+
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.slider-control {
+
+			position: static;
+			margin-top: 20px;
+		}
+
+		.slider-control__counter {
+
+			width: 100px;
+		}
+	}
+
+	.review-card {
+
+		&__header {
+
+			padding-right: 0;
+		}
+	}
+
+	.review-form {
+
+
+		&__inner {
+			padding: 40px 20px;
+		}
+	}
+}
+
+@include _485 {
+
+	.review-form {
+
+		&__submit {
+
+			max-width: 100%;
+		}
+
+		&__text {
+
+			min-height: 168px;
+		}
+	}
+}
+
+@media (max-width: 374px) {
+
+	.review-form {
+
+		&__title {
+
+			font-size: 38px;
+			margin-bottom: 10px;
+		}
+
+		margin: 0 -8px;
+	}
+}

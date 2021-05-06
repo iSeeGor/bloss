@@ -234,7 +234,7 @@ const profileReviewSlider = () => {
 	slider = new Swiper('.profile-review__slider', {
 
 		slidesPerView: 2,
-		spaceBetween: 60,
+		spaceBetween: 30,
 		speed: 1400,
 
 		navigation : {
@@ -258,6 +258,24 @@ const profileReviewSlider = () => {
 
 			
 		},
+
+		breakpoints: {
+
+			320 : {
+				spaceBetween: 30,
+				slidesPerView: 1,
+			},
+
+			1024 : {
+
+				slidesPerView: 2,
+			},
+
+			1200 : {
+
+				spaceBetween: 60,
+			}
+		}
 	});
 }
 

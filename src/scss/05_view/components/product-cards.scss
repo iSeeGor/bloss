@@ -110,3 +110,61 @@
 		color: $colorSecondary;
 	}
 }
+
+@include _485 {
+
+	.product-small {
+
+		&__title {
+
+			-webkit-line-clamp: 1;
+			font-size: 16px;
+			line-height: 1.2;
+		}
+
+		&__main {
+			padding: 8px 12px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__bottom {
+
+			// flex-wrap: wrap;
+			// justify-content: flex-end;
+			margin-top: auto;
+		}
+
+		&__price-title {
+
+			font-size: 12px;
+		}
+
+		&__price-value {
+
+			font-size: 14px;
+		}
+	}
+}
+
+@include _395 {
+
+	.product-small {
+
+		&__bottom {
+
+			flex-wrap: wrap;
+			// justify-content: flex-end;
+		}
+
+		&__meta-item {
+
+			margin-right: 8px;
+
+			.icon {
+
+				margin-right: 4px;
+			}
+		}
+	}
+}
