@@ -70,7 +70,7 @@
 		margin-right: 60px;
 	}
 
-	&__image {
+	&__media img {
 
 		width: 100%;
 		height: 100%;
@@ -285,15 +285,102 @@
 		}
 	}
 
-	&__list {
+	&__typography {
 
-		display: flex;
+		@include Text18_Desktop;
+		color: $colorSecondary;
+		padding: 8px;
+		max-width: 840px;
 
-		.custom-list {
+		h1, h2, h3, h4, h5, h6, {
 
-			flex: 1 1 100%;
+			color: $colorSecondary;
+			font-weight: normal;
+			margin: 0 0 8px 0;
+		}
+
+		p {
+
+			margin-bottom: 24px;
 		}
 	}
+
+}
+
+.profile-location {
+
+	&__header {
+
+		margin-bottom: 16px;
+	}
+
+	&__title {
+
+		@include H4_Desktop;
+		color: $colorSecondary;
+	}
+
+	.icon {
+
+		width: 18px;
+		height: 18px;
+		fill: $colorSecondary;
+		position: absolute;
+		top: 4px;
+		left: 0;
+	}
+
+	.icon-marker,
+	.icon-phone {
+
+		width: 20px;
+		height: 20px;
+	}
+
+	&__contact-list {
+
+
+	}
+
+	&__item {
+
+		padding-left: 36px;
+		position: relative;
+		margin-bottom: 16px;
+
+		&:last-child {
+
+			// margin-bottom: 0;
+		}
+	}
+
+	&__item-title {
+
+		@include Text18_Desktop;
+		color: $colorSecondary;
+	}
+
+	&__item-body  {
+
+		margin-top: 8px;
+
+		&--worktime {
+
+			display: flex;
+			flex-direction: column;
+		}
+
+		._worktime-item {
+
+			margin-bottom: 4px;
+			color: $color8D9AAE;
+
+			&:last-child {
+
+				margin-bottom: 0;
+			}
+		}
+	} 
 }
 
 .profile-products {
@@ -488,6 +575,7 @@
 			width: 100%;
 			overflow: scroll;
 		}
+
 	}
 
 	.profile-tabs {
@@ -498,6 +586,24 @@
 		}
 	}
 
+}
+
+@include _575 {
+
+	.profile-tabs {
+
+		&__typography {
+
+			font-size: 16px;
+			font-weight: normal;
+			padding: 0;
+		}
+	}
+
+	.profile-location__item-title {
+
+		font-size: 16px;
+	}
 }
 
 @include _485 {

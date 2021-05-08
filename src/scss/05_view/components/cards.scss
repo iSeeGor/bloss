@@ -282,7 +282,7 @@
 		overflow: hidden;
 	}
 
-	&__avatar-image {
+	&__avatar img {
 
 		height: 100%;
 		width: 100%;
@@ -391,6 +391,7 @@
 	background: white;
 	box-shadow: 0px 4px 27px -6px rgba(38, 64, 102, 0.19);
 	transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+	// height: 100%;
 
 	&__media {
 
@@ -689,7 +690,7 @@
 
 		&__col {
 
-			flex: 1 1 auto;
+			flex: 1 1 420px;
 			max-width: 420px;
 		}
 	}

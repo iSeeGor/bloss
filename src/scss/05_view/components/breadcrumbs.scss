@@ -8,6 +8,7 @@
 	&__list {
 
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 	}
 
@@ -30,6 +31,10 @@
 		&--current {
 
 			color: $colorSecondary;
+			max-width: 60%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 
 		&:not(.breadcrumb__item--current):hover {
@@ -51,5 +56,61 @@
 			height: 16px;
 			fill: $colorC1C1C3;
 		}
+	}
+}
+
+@include _1024 {
+
+	.breadcrumb {
+
+		padding: 16px 0px;
+	}
+}
+
+@include _768 {
+
+	.breadcrumb {
+
+		&__item {
+
+			font-size: 14px;
+
+			.icon-home {
+
+				width: 18px;
+				height: 18px;
+			}
+		}
+
+		&__separator {
+
+			margin: 0 10px;
+
+			.icon {
+
+				width: 14px;
+    			height: 14px;
+			}
+		} 
+	}
+}
+
+@include _485 {
+
+	.breadcrumb {
+
+		&__item {
+
+			font-size: 12px;
+		}
+
+		&__separator {
+
+			.icon {
+
+				width: 12px;
+    			height: 12px;
+			}
+		} 
 	}
 }

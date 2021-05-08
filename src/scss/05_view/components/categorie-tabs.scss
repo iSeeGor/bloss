@@ -127,3 +127,57 @@
 		transform: translateX(0) rotate(0);
 	}
 }
+
+@include _1024 {
+
+	.categorie-tabs {
+
+		&__list {
+
+			flex-wrap: wrap;
+		}
+
+		&__item {
+
+			margin: 6px;
+			flex: 0 0 calc(100% / 4 - 12px);
+		}
+	}
+
+	.categorie-tab {
+
+		height: 130px;
+
+		&__icon {
+
+			width: 48px;
+    		height: 48px;
+			margin-bottom: 8px;
+    		padding: 4px;
+		}
+	}
+}
+
+@include _768 {
+
+	.categorie-tabs {
+
+		&__item {
+
+			margin: 6px;
+			flex: 0 0 calc(100% / 3 - 12px);
+		}
+	}
+}
+
+@include _485 {
+
+	.categorie-tabs {
+
+		&__item {
+
+			margin: 6px;
+			flex: 1 1 calc(100% / 2 - 12px);
+		}
+	}
+}

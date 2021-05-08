@@ -1,19 +1,19 @@
-window.addEventListener('DOMContentLoaded', function(){
-
+jQuery(document).ready(function($){
 	// COMMON
 	animationInit();
-	anchorSmoothScroll();
+	anchorSmoothScroll($);
+	siteMenus();
 	
 	// MOBILE
 	hamburger();
-	mobileMenu();
+	mobileMenu($);
 
 	// HOME PAGE
 	categorieTabs();
 	customSelect();
 	reviewsSlider();
-	accordionHandler();
-	heroVideo();
+	accordionHandler($);
+	heroVideo($);
 
 	// EXPERT
 	profileTabs();
@@ -106,7 +106,7 @@ const reviewsSlider = () => {
 	})
 }
 
-const accordionHandler = () => {
+const accordionHandler = ($) => {
 
 	$('.accordion-item').on('click', function(){
 
@@ -115,7 +115,9 @@ const accordionHandler = () => {
 	});
 }
 
-const heroVideo = () => {	
+const heroVideo = ($) => {	
+
+	if(!$('.modal-hero__video').length) return; 
 
 	let video = $('.modal-hero__video').get(0);
 	
@@ -167,7 +169,7 @@ const animationInit = () => {
 
 }
 
-const mobileMenu = () => {
+const mobileMenu = ($) => {
 
 	$('.menu-item-has-children > a').on('click', function(){
 
@@ -188,7 +190,7 @@ const hamburger = () => {
 	});
 }
 
-const anchorSmoothScroll = () => {
+const anchorSmoothScroll = ($) => {
 
 	$(document).on('click', 'a[href^="#"]', function (event) {
 	event.preventDefault();
@@ -293,4 +295,13 @@ const reviewStarRaiting = () => {
 			this.classList.add('is-active');
 		})
 	});
-}	
+}
+
+const siteMenus = () => {
+
+	$('.footer-menu').on('click', '.current-menu-item', function(){
+
+		$(this).toggleClass('is-active');
+		$(this).find('> .sub-menu').slideToggle(400);
+	});
+}

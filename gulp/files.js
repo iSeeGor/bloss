@@ -2,6 +2,8 @@ const filesList = [
     'src/index.html',
 	'src/.htaccess',
 	'src/robots.txt',
+	'src/jquery.min.js',
+	'src/intro.mp4',
 ];
 
 module.exports = function(){

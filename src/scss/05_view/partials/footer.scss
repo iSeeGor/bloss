@@ -7,50 +7,12 @@
 
 		display: block;
 		transition: opacity 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+		margin-bottom: 24px;
 
 		&:hover {
 
 			opacity: 0.8;
 		}
-	}
-}
-
-.footer-menu {
-
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-
-	> li {
-
-		margin-bottom: 16px;
-
-		&:last-child {
-
-			margin-bottom: 0;
-		}
-	}
-
-	li a {
-
-		font-size: 18px;
-		font-weight: $regular;
-		line-height: 1.4;
-		color: #8D9AAE;
-		text-decoration: none;
-		display: block;
-
-		transition: color 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-		&:hover {
-
-			color: white;
-		}
-	}
-
-	> li > a {
-
-
 	}
 }
 
@@ -126,8 +88,7 @@
 		color: white;
 		padding-right: 35px;
 
-		&:focus,
-		&:valid {
+		&:focus {
 
 			border-color: $colorPrimary;
 		}
@@ -135,6 +96,7 @@
 
 	&__button {
 
+		position: relative;
 		font-family: $fontSecondary;
 		font-weight: $bold;
 		color: $colorGeneral;
@@ -164,6 +126,7 @@
 	&__inner {
 
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
@@ -172,18 +135,69 @@
 		flex: 0 0 auto;
 	}
 
+	&__button {
+
+		width: 100%;
+	}
+
+	&__menu {
+
+		display: flex;
+	}
+
+	&__nav {
+
+		width: 140px;
+		margin-right: 20px;
+	}
+
 	&__subscribe {
 
 		flex: 0 0 395px;
 		max-width: 395px;
 	}
 
+	&__social {
+
+		margin-top: 16px;
+	}
 }
 
-@include _1024 {
+@media (max-width: 1260px){
 
 	.footer {
-		padding: 60px 0;
+
+		padding-bottom: 60px;
+
+		&__inner {
+
+			max-width: 920px;
+			margin: 0 auto;
+
+			> * {
+
+				margin-bottom: 40px;
+			}
+		}
+
+		&__menu,
+		&__contacts,
+		&__subscribe {
+
+			flex: 0 0 50%;
+		}
+
+		&__menu {
+
+			justify-content: flex-end;
+		}  
+	}
+}
+
+@include _768 {
+
+	.footer {
+		padding: 60px 0 20px;
 
 		&__inner {
 
@@ -200,10 +214,18 @@
 			margin-bottom: 40px;
 		}
 
+		&__menu,
+		&__contacts,
 		&__subscribe {
 
-			margin-top: 40px;
+			flex: 0 0 100%;
 		}
+
+		&__menu {
+
+			justify-content: space-between;
+		}
+
 	}
 }
 
@@ -219,13 +241,6 @@
 
 	}
 
-	.footer-menu {
-
-		li a {
-
-			font-size: 16px;
-		}
-	}
 
 	.subscribe {
 
@@ -251,6 +266,17 @@
 
 			flex: 0 0 100%;
 			max-width: 100%;
+		}
+	}
+}
+
+@include _395 {
+
+	.footer-logo {
+
+		&__link img {
+
+			max-width: 220px;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 const concat = require('gulp-concat');
 
 let jsVendors = [
-	'node_modules/jquery/dist/jquery.js',
+	// 'node_modules/jquery/dist/jquery.js',
 	'src/vendor/**/*.js',
 ];
 
