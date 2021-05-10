@@ -50,13 +50,37 @@
 						</ul>
 					</nav>
 					<div class="header-main__controls">
-						<a href="#a-search" class="button header-main__search">
-							<svg class="icon-search" width="18" height="18" viewBox="0 0 18 18" fill="#264066" xmlns="http://www.w3.org/2000/svg">
-								<path d="M17.4251 16.3951L13.1411 11.9395C14.2426 10.6301 14.8461 8.98262 14.8461 7.26749C14.8461 3.26026 11.5858 0 7.57859 0C3.57136 0 0.311096 3.26026 0.311096 7.26749C0.311096 11.2747 3.57136 14.535 7.57859 14.535C9.08296 14.535 10.5166 14.0812 11.7422 13.2199L16.0588 17.7093C16.2392 17.8967 16.4819 18 16.7419 18C16.9881 18 17.2216 17.9062 17.3989 17.7355C17.7755 17.3731 17.7875 16.7721 17.4251 16.3951ZM7.57859 1.89587C10.5406 1.89587 12.9502 4.30552 12.9502 7.26749C12.9502 10.2295 10.5406 12.6391 7.57859 12.6391C4.61661 12.6391 2.20696 10.2295 2.20696 7.26749C2.20696 4.30552 4.61661 1.89587 7.57859 1.89587Z" />
-							</svg>
-						</a>
-						<a class="button-primary button-primary--dark header-main__button" href="#">Log in</a>
-						<a class="button-primary header-main__button" href="#">Sign up for free</a>
+						<div class="header-main__search header-search">
+							<button class="header-search__button button">
+								<svg class="icon icon-search">
+									<use xlink:href="symbol/sprite.svg#icon-search"></use>
+								</svg>								
+							</button>
+							<form class="header-search__form">
+								<div class="header-search__form-group">
+									<svg class="icon icon-search">
+										<use xlink:href="symbol/sprite.svg#icon-search"></use>
+									</svg>								
+									<input type="text" class="header-search__form-input" placeholder="Search">
+								</div>
+							</form>
+						</div>
+
+						<div class="header-main__controls-buttons">
+							<a class="button-primary button-primary--dark header-main__button" href="#">Log in</a>
+							<a class="button-primary header-main__button" href="#">Sign up for free</a>
+						</div>
+
+						<div class="header-main__header-dashboard header-dashboard"  style="display: none;">
+							<div class="header-dashboard__user">
+								<div class="header-dashboard__avatar">
+									<img src="images/demo/demo-1.jpg" alt="">
+									<!-- <img src="icons/icon-user-profile.svg" alt=""> -->
+								</div>
+								<span class="header-dashboard__msg-count">2</span>
+							</div>
+							<button class="button header-dashboard__logout">Log Out</button>
+						</div>
 					</div>
 					<div class="header-main__social">
 														<div class="social social--dark">
@@ -161,17 +185,35 @@
 						<a href="/" class="footer-logo__link">
 							<img class="lazy-image footer-logo__image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/logo-footer.svg" alt="">
 						</a>
+						<a href="#" class="footer__button button-primary button-primary--white">Become an expert</a>
 					</div>
 					<div class="footer__menu">
-						<nav class="footer__nav">
+						<div class="footer__nav">
 							<ul class="footer-menu">
-								<li><a href="#">Main screen</a></li>
-								<li><a href="#">Video teaser</a></li>
-								<li><a href="#">Why bloss</a></li>
-								<li><a href="#">Testimonial</a></li>
-								<li><a href="#">Contacts</a></li>
+								<li class="current-menu-item">
+									<a href="#">Categories</a>
+
+									<ul class="sub-menu">
+										<li><a href="#">Trying to Conceive</a></li>
+										<li><a href="#">Pregnancy</a></li>
+										<li><a href="#">Life</a></li>
+										<li><a href="#">Nutrition</a></li>
+										<li><a href="#">Wellness</a></li>
+										<li><a href="#">Style</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Experts</a></li>
+								<li><a href="#">Chat</a></li>
+								<li><a href="#">Shop</a></li>
 							</ul>
-						</nav>
+						</div>
+						<div class="footer__nav">
+							<ul class="footer-menu">
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">Terms of Use</a></li>
+							</ul>
+						</div>
 					</div>
 					<div class="footer__contacts footer-contacts">
 						<h4 class="footer-contacts__title">Contacts</h4>
@@ -180,7 +222,31 @@
 								<a class="footer-email" href="mailto:info@bloss.life">info@bloss.life</a>
 							</li>
 							<li class="footer-contacts__item">
-																<div class="social @@class">
+								<a class="footer-email" href="mailto:marketing@bloss.life">marketing@bloss.life</a>
+							</li>
+							<li class="footer-contacts__item">
+								<a class="footer-email" href="mailto:press@bloss.life">press@bloss.life</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__subscribe subscribe">
+						<div class="subscribe__inner">
+							<header class="subscribe__header">
+								<div class="subscribe__title">
+									Want useful parenting advice and to stay in the loop for when we launch? Sign up here
+								</div>
+							</header>
+							<form class="subscribe-form subscribe__form form">
+								<div class="form__row">
+									<div class="form__group">
+										<input type="text" class="form__input" placeholder="bloss@bloss.life" required>
+										<button class="subscribe-form__button button">Send</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="footer__social">
+															<div class="social @@class">
 									<a class="social__item" href="#">
 										<svg class="icon _facebook">
 											<use xlink:href="symbol/sprite.svg#icon-facebook"></use>
@@ -207,24 +273,6 @@
 										</svg>
 									</a>
 								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="footer__subscribe subscribe">
-						<div class="subscribe__inner">
-							<header class="subscribe__header">
-								<div class="subscribe__title">
-									Want useful parenting advice and to stay in the loop for when we launch? Sign up here
-								</div>
-							</header>
-							<form class="subscribe-form subscribe__form form">
-								<div class="form__row">
-									<div class="form__group">
-										<input type="text" class="form__input" placeholder="bloss@bloss.life" required>
-										<button class="subscribe-form__button button">Send</button>
-									</div>
-								</div>
-							</form>
 						</div>
 					</div>
 				</div>
@@ -281,6 +329,7 @@
 
 </div>
 
+	<script src="jquery.min.js"></script>
 	<script src="js/vendor.js"></script>
 	<script src="js/index.js"></script>
 	</body>

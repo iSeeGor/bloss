@@ -50,13 +50,37 @@
 						</ul>
 					</nav>
 					<div class="header-main__controls">
-						<a href="#a-search" class="button header-main__search">
-							<svg class="icon-search" width="18" height="18" viewBox="0 0 18 18" fill="#264066" xmlns="http://www.w3.org/2000/svg">
-								<path d="M17.4251 16.3951L13.1411 11.9395C14.2426 10.6301 14.8461 8.98262 14.8461 7.26749C14.8461 3.26026 11.5858 0 7.57859 0C3.57136 0 0.311096 3.26026 0.311096 7.26749C0.311096 11.2747 3.57136 14.535 7.57859 14.535C9.08296 14.535 10.5166 14.0812 11.7422 13.2199L16.0588 17.7093C16.2392 17.8967 16.4819 18 16.7419 18C16.9881 18 17.2216 17.9062 17.3989 17.7355C17.7755 17.3731 17.7875 16.7721 17.4251 16.3951ZM7.57859 1.89587C10.5406 1.89587 12.9502 4.30552 12.9502 7.26749C12.9502 10.2295 10.5406 12.6391 7.57859 12.6391C4.61661 12.6391 2.20696 10.2295 2.20696 7.26749C2.20696 4.30552 4.61661 1.89587 7.57859 1.89587Z" />
-							</svg>
-						</a>
-						<a class="button-primary button-primary--dark header-main__button" href="#">Log in</a>
-						<a class="button-primary header-main__button" href="#">Sign up for free</a>
+						<div class="header-main__search header-search">
+							<button class="header-search__button button">
+								<svg class="icon icon-search">
+									<use xlink:href="symbol/sprite.svg#icon-search"></use>
+								</svg>								
+							</button>
+							<form class="header-search__form">
+								<div class="header-search__form-group">
+									<svg class="icon icon-search">
+										<use xlink:href="symbol/sprite.svg#icon-search"></use>
+									</svg>								
+									<input type="text" class="header-search__form-input" placeholder="Search">
+								</div>
+							</form>
+						</div>
+
+						<div class="header-main__controls-buttons">
+							<a class="button-primary button-primary--dark header-main__button" href="#">Log in</a>
+							<a class="button-primary header-main__button" href="#">Sign up for free</a>
+						</div>
+
+						<div class="header-main__header-dashboard header-dashboard"  style="display: none;">
+							<div class="header-dashboard__user">
+								<div class="header-dashboard__avatar">
+									<img src="images/demo/demo-1.jpg" alt="">
+									<!-- <img src="icons/icon-user-profile.svg" alt=""> -->
+								</div>
+								<span class="header-dashboard__msg-count">2</span>
+							</div>
+							<button class="button header-dashboard__logout">Log Out</button>
+						</div>
 					</div>
 					<div class="header-main__social">
 														<div class="social social--dark">
@@ -303,13 +327,14 @@
 				<div class="profile-tabs">
 					<div class="profile-tabs__header">
 						<button class="profile-tabs__tab-button button is-active">Expertise</button>
+						<button class="profile-tabs__tab-button button">Bio</button>
 						<button class="profile-tabs__tab-button button">Qualifications</button>
 						<button class="profile-tabs__tab-button button">Location</button>
 						<button class="profile-tabs__tab-button button">Products</button>
 					</div>
 					<div class="profile-tabs__body">
-						<div class="profile-tabs__content-tab profile-tabs__list is-active">
-							<ul class="custom-list">
+						<div class="profile-tabs__content-tab is-active">
+							<ul class="custom-list custom-list--profile">
 								<li class="custom-list__item">
 									<svg class="icon icon-checkmark">
 										<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -334,8 +359,6 @@
 									</svg>
 									<span>Postpartum & parenting support</span>
 								</li>
-							</ul>
-							<ul class="custom-list">
 								<li class="custom-list__item">
 									<svg class="icon icon-checkmark">
 										<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -356,56 +379,65 @@
 								</li>
 							</ul>
 						</div>
-						<div class="profile-tabs__content-tab profile-tabs__list">
-							<ul class="custom-list">
-								<li class="custom-list__item">
-									<svg class="icon icon-checkmark">
-										<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
-									</svg>
-									<span>2 Sleep training</span>
-								</li>
-								<li class="custom-list__item">
-									<svg class="icon icon-checkmark">
-										<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
-									</svg>
-									<span>2 Weaning</span>
-								</li>
-								<li class="custom-list__item">
-									<svg class="icon icon-checkmark">
-										<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
-									</svg>
-									<span>2 Behavioural advice</span>
-								</li>
-								<li class="custom-list__item">
-									<svg class="icon icon-checkmark">
-										<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
-									</svg>
-									<span>2 Postpartum & parenting support</span>
-								</li>
-							</ul>
-							<ul class="custom-list">
-								<li class="custom-list__item">
-									<svg class="icon icon-checkmark">
-										<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
-									</svg>
-									<span>2 IVF, ICSI, IUI</span>
-								</li>
-								<li class="custom-list__item">
-									<svg class="icon icon-checkmark">
-										<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
-									</svg>
-									<span>2 Adoption advise</span>
-								</li>
-								<li class="custom-list__item">
-									<svg class="icon icon-checkmark">
-										<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
-									</svg>
-									<span>2 ADHD, autism </span>
-								</li>
-							</ul>
+						<div class="profile-tabs__content-tab">
+							<div class="profile-tabs__typography typography">
+								<p>Sophie is Registered Nutritionist (RNutr) with a BSc Psychology degree, an MSc in Clinical Nutrition, founder of Sophie’s Healthy Kitchen, co-host of the Forking Wellness podcast and co-author of recently released nutrition book ‘Forking Wellness’. </p>
+
+								<p>	Her non diet approach to nutrition sees her work with individuals to develop a healthy relationship with food as well as specialising in pre and post natal nutrition.</p>
+
+								<p>Sophie has worked with leading brands in the food industry and also works with clients in a 1-1 setting at the Rhitrition clinic on Harley St.</p>
+							</div>
 						</div>
 						<div class="profile-tabs__content-tab">
-							#3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut odio ducimus totam veritatis explicabo assumenda ex distinctio ipsa eligendi officia repellat qui accusantium mollitia et, ab incidunt nemo asperiores. Delectus.
+							<div class="profile-tabs__typography typography">
+								<h3>Courses</h3>
+								<p>Tortor mauris, cursus dignissim egestas diam sit egestas lacinia duis. Nisl leo vel ultrices magnis. Libero morbi sed vel congue odio cursus. Auctor lectus tristique scelerisque arcu.</p>
+								<h3>Courses 2</h3>
+								<p>Tortor mauris, cursus dignissim egestas diam sit egestas lacinia duis. Nisl leo vel ultrices magnis. Libero morbi sed vel congue odio cursus. Auctor lectus tristique scelerisque arcu.</p>
+								<h3>Courses 3</h3>
+								<p>Tortor mauris, cursus dignissim egestas diam sit egestas lacinia duis. Nisl leo vel ultrices magnis. Libero morbi sed vel congue odio cursus. Auctor lectus tristique scelerisque arcu.</p>
+								<h3>Courses 4</h3>
+								<p>Tortor mauris, cursus dignissim egestas diam sit egestas lacinia duis. Nisl leo vel ultrices magnis. Libero morbi sed vel congue odio cursus. Auctor lectus tristique scelerisque arcu.</p>
+							</div>
+						</div>
+						<div class="profile-tabs__content-tab">
+							<div class="profile-location">
+								<header class="profile-location__header">
+									<h3 class="profile-location__title">Fetal Medicine Centre</h3>
+								</header>
+								<div class="profile-location__body">
+									<div class="profile-location__contact-list">
+										<div class="profile-location__item profile-location__item--address">
+											<div class="profile-location__item-title">
+												<svg class="icon icon-marker">
+													<use xlink:href="symbol/sprite.svg#icon-map-marker"></use>
+												</svg>
+												<span>137 Harley St, London W1G 6BG, Great Britain</span>
+											</div>
+										</div>
+										<div class="profile-location__item profile-location__item--phone">
+											<div class="profile-location__item-title">
+												<svg class="icon icon-phone">
+													<use xlink:href="symbol/sprite.svg#icon-phone"></use>
+												</svg>
+												<span>+44 20 7486 0476</span>
+											</div>
+										</div>
+										<div class="profile-location__item profile-location__item--shedule">
+											<div class="profile-location__item-title">
+												<svg class="icon icon-clock">
+													<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+												</svg>
+												<span>Schedule</span>
+											</div>
+											<div class="profile-location__item-body profile-location__item-body--worktime">
+												<span class="_worktime-item">Weekdays — 9am-6pm</span>
+												<span class="_worktime-item">Saturday Sunday — day off</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="profile-tabs__content-tab">
 							<div class="profile-products">
@@ -1568,17 +1600,35 @@
 						<a href="/" class="footer-logo__link">
 							<img class="lazy-image footer-logo__image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/logo-footer.svg" alt="">
 						</a>
+						<a href="#" class="footer__button button-primary button-primary--white">Become an expert</a>
 					</div>
 					<div class="footer__menu">
-						<nav class="footer__nav">
+						<div class="footer__nav">
 							<ul class="footer-menu">
-								<li><a href="#">Main screen</a></li>
-								<li><a href="#">Video teaser</a></li>
-								<li><a href="#">Why bloss</a></li>
-								<li><a href="#">Testimonial</a></li>
-								<li><a href="#">Contacts</a></li>
+								<li class="current-menu-item">
+									<a href="#">Categories</a>
+
+									<ul class="sub-menu">
+										<li><a href="#">Trying to Conceive</a></li>
+										<li><a href="#">Pregnancy</a></li>
+										<li><a href="#">Life</a></li>
+										<li><a href="#">Nutrition</a></li>
+										<li><a href="#">Wellness</a></li>
+										<li><a href="#">Style</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Experts</a></li>
+								<li><a href="#">Chat</a></li>
+								<li><a href="#">Shop</a></li>
 							</ul>
-						</nav>
+						</div>
+						<div class="footer__nav">
+							<ul class="footer-menu">
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">Terms of Use</a></li>
+							</ul>
+						</div>
 					</div>
 					<div class="footer__contacts footer-contacts">
 						<h4 class="footer-contacts__title">Contacts</h4>
@@ -1587,7 +1637,31 @@
 								<a class="footer-email" href="mailto:info@bloss.life">info@bloss.life</a>
 							</li>
 							<li class="footer-contacts__item">
-																<div class="social @@class">
+								<a class="footer-email" href="mailto:marketing@bloss.life">marketing@bloss.life</a>
+							</li>
+							<li class="footer-contacts__item">
+								<a class="footer-email" href="mailto:press@bloss.life">press@bloss.life</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__subscribe subscribe">
+						<div class="subscribe__inner">
+							<header class="subscribe__header">
+								<div class="subscribe__title">
+									Want useful parenting advice and to stay in the loop for when we launch? Sign up here
+								</div>
+							</header>
+							<form class="subscribe-form subscribe__form form">
+								<div class="form__row">
+									<div class="form__group">
+										<input type="text" class="form__input" placeholder="bloss@bloss.life" required>
+										<button class="subscribe-form__button button">Send</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="footer__social">
+															<div class="social @@class">
 									<a class="social__item" href="#">
 										<svg class="icon _facebook">
 											<use xlink:href="symbol/sprite.svg#icon-facebook"></use>
@@ -1614,24 +1688,6 @@
 										</svg>
 									</a>
 								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="footer__subscribe subscribe">
-						<div class="subscribe__inner">
-							<header class="subscribe__header">
-								<div class="subscribe__title">
-									Want useful parenting advice and to stay in the loop for when we launch? Sign up here
-								</div>
-							</header>
-							<form class="subscribe-form subscribe__form form">
-								<div class="form__row">
-									<div class="form__group">
-										<input type="text" class="form__input" placeholder="bloss@bloss.life" required>
-										<button class="subscribe-form__button button">Send</button>
-									</div>
-								</div>
-							</form>
 						</div>
 					</div>
 				</div>
@@ -1688,6 +1744,7 @@
 
 </div>
 
+	<script src="jquery.min.js"></script>
 	<script src="js/vendor.js"></script>
 	<script src="js/index.js"></script>
 	</body>

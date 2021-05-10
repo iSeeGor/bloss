@@ -1,19 +1,20 @@
-window.addEventListener('DOMContentLoaded', function(){
-
+jQuery(document).ready(function($){
 	// COMMON
 	animationInit();
-	anchorSmoothScroll();
+	anchorSmoothScroll($);
+	siteMenus();
+	headerSeachForm();
 	
 	// MOBILE
 	hamburger();
-	mobileMenu();
+	mobileMenu($);
 
 	// HOME PAGE
 	categorieTabs();
 	customSelect();
 	reviewsSlider();
-	accordionHandler();
-	heroVideo();
+	accordionHandler($);
+	heroVideo($);
 
 	// EXPERT
 	profileTabs();
@@ -46,6 +47,24 @@ const fakeSuccess = () => {
 		
 	}, 4000);
 }
+
+const headerSeachForm = () => {
+
+	let searchButton = document.querySelector('.header-search__button'); 
+
+	if(!searchButton) return;
+	
+	searchButton.addEventListener('click', function(){
+
+		this.parentElement.classList.add('is-active');
+	});
+
+	document.addEventListener("click", function(event) {
+		if (event.target.closest(".header-search")) return;
+
+		document.querySelector('.header-search').classList.remove('is-active');
+	});
+};
 
 const categorieTabs = () => {
 
@@ -106,7 +125,7 @@ const reviewsSlider = () => {
 	})
 }
 
-const accordionHandler = () => {
+const accordionHandler = ($) => {
 
 	$('.accordion-item').on('click', function(){
 
@@ -115,7 +134,9 @@ const accordionHandler = () => {
 	});
 }
 
-const heroVideo = () => {	
+const heroVideo = ($) => {	
+
+	if(!$('.modal-hero__video').length) return; 
 
 	let video = $('.modal-hero__video').get(0);
 	
@@ -167,7 +188,7 @@ const animationInit = () => {
 
 }
 
-const mobileMenu = () => {
+const mobileMenu = ($) => {
 
 	$('.menu-item-has-children > a').on('click', function(){
 
@@ -188,7 +209,7 @@ const hamburger = () => {
 	});
 }
 
-const anchorSmoothScroll = () => {
+const anchorSmoothScroll = ($) => {
 
 	$(document).on('click', 'a[href^="#"]', function (event) {
 	event.preventDefault();
@@ -293,7 +314,16 @@ const reviewStarRaiting = () => {
 			this.classList.add('is-active');
 		})
 	});
-}	
+}
+
+const siteMenus = () => {
+
+	$('.footer-menu').on('click', '.current-menu-item', function(){
+
+		$(this).toggleClass('is-active');
+		$(this).find('> .sub-menu').slideToggle(400);
+	});
+}
 window.addEventListener('DOMContentLoaded', function(){
 	
 	// categoryToggle();

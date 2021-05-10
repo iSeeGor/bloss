@@ -3,6 +3,7 @@ jQuery(document).ready(function($){
 	animationInit();
 	anchorSmoothScroll($);
 	siteMenus();
+	headerSeachForm();
 	
 	// MOBILE
 	hamburger();
@@ -46,6 +47,24 @@ const fakeSuccess = () => {
 		
 	}, 4000);
 }
+
+const headerSeachForm = () => {
+
+	let searchButton = document.querySelector('.header-search__button'); 
+
+	if(!searchButton) return;
+	
+	searchButton.addEventListener('click', function(){
+
+		this.parentElement.classList.add('is-active');
+	});
+
+	document.addEventListener("click", function(event) {
+		if (event.target.closest(".header-search")) return;
+
+		document.querySelector('.header-search').classList.remove('is-active');
+	});
+};
 
 const categorieTabs = () => {
 
