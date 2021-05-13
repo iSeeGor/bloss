@@ -80,6 +80,14 @@
 			margin-right: 16px;
 			transition-duration: .4s;
 		}
+
+		&:hover {
+
+			.button-nav {
+
+				box-shadow: 0 0 20px 10px rgba(38, 64, 102, .3);
+			}
+		}
 	}
 
 	&__control {
@@ -201,6 +209,11 @@
 
 .post-content {
 
+	.container {
+
+		position: relative;
+	}
+
 	&__inner {
 
 		display: flex;
@@ -223,7 +236,7 @@
 
 	&__categories {
 
-		margin-bottom: 40px;
+		margin-bottom: 28px;
 	}
 
 	&__typography {
@@ -234,6 +247,7 @@
 	&__main-footer {
 
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 	}
 
@@ -241,13 +255,27 @@
 
 		display: flex;
 	}
+
+	&__deco {
+
+		position: absolute;
+		top: 600px;
+		right: -180px;	
+		width: 760px;
+		height: 760px;
+		border: 72px solid $colorSecondary;
+		opacity: .05;
+		border-radius: 100%;
+		z-index: -1;
+	}
 }
 
 .post-aside {
 
 	&__inner {
 
-		height: 100%;
+		position: sticky;
+		top: 32px;
 	}
 }
 
@@ -265,6 +293,7 @@
 		border-radius: 8px;
 		padding: 11px 10px 9px;
 		margin-right: 12px;
+		margin-bottom: 12px;
 		color: $colorSecondary;
 		font-size: 14px;
 		font-weight: $medium;
@@ -286,6 +315,13 @@
 
 	padding-left: 20px;
 	position: relative;
+	
+	&.fixed {
+
+		position: fixed;
+		top: 40px;
+		
+	}
 
 	&::before {
 
@@ -418,6 +454,135 @@
 
 				margin-bottom: 0;
 			}
+		}
+	}
+}
+
+@include _1024 {
+
+	.post-head {
+
+		&__nav {
+
+			margin-bottom: 16px;
+		}
+
+		&__image {
+
+			height: 365px;
+		}
+	}
+
+	.post-nav {
+
+		padding: 16px 0;
+	}
+
+	.post-title {
+
+		font-size: 38px;
+		line-height: 1.4;
+	}
+
+	.post-content {
+
+		&__main {
+
+			flex: 0 0 100%;
+			padding-right: 0;
+		}
+
+		&__aside {
+
+			margin-top: 40px;
+			padding-top: 40px;
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding-left: 0;
+			border-top: 1px solid $colorC1C1C3;
+		}
+
+		&__deco {
+
+			display: none;
+		}
+
+		&__main-footer {
+			
+			justify-content: flex-start;
+
+			.post-author {
+
+				display: none;
+			}
+		}
+		
+	}
+
+	.author-card {
+
+		padding-left: 0;
+		&::before {
+
+			display: none;
+		}
+	}
+	
+}
+
+@include _768 {
+
+	.post-title {
+
+		font-size: 34px;
+	}
+
+	.post-head {
+
+		&__image {
+			height: 315px;
+		}
+	}
+
+	.post-categories {
+
+		&__item {
+
+			min-width: 106px;
+			padding: 9px 8px 8px;
+			font-size: 12px;
+			margin-right: 8px;
+			margin-bottom: 8px;
+		}
+	} 
+}
+
+@include _485 {
+
+	.post-title {
+
+		font-size: 30px;
+	}
+
+	.post-head {
+
+		&__image {
+			height: 285px;
+		}
+	}
+} 
+
+@include _395 {
+
+	.post-title {
+
+		font-size: 28px;
+	}
+
+	.post-head {
+
+		&__image {
+			height: 225px;
 		}
 	}
 }

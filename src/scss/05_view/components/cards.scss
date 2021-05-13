@@ -24,7 +24,7 @@
 		
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -30px;
+		margin: 0 -8px;
 		margin-bottom: -40px;
 
 		&--persone {
@@ -35,8 +35,8 @@
 	
 	&__col {
 
-		margin: 0 30px;
-		flex: 0 0 calc(100% / 3 - 60px);
+		margin: 0 8px;
+		flex: 0 0 calc(100% / 4 - 16px);
 		margin-bottom: 40px;
 
 		&--persone {
@@ -166,7 +166,7 @@
 	&__media {
 
 		margin: 0;
-		padding-top: 93.5%;
+		padding-top: 74.2%;
 		position: relative;
 		overflow: hidden;
 	}
@@ -192,8 +192,8 @@
 		position: absolute;
 		top: 16px;
 		left: 16px;
-		padding: 10px;
-		min-width: 130px;
+		padding: 7px 10px 6px;
+		min-width: 113px;
 		background: white;
 		border-radius: 8px;
 		text-align: center;
@@ -269,12 +269,14 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+		flex-wrap: wrap;
 	}
 
 	&__info {
 
 		display: flex;
 		// padding: 0 4px;
+		margin-bottom: 16px;
 	}
 
 	&__avatar {
@@ -302,8 +304,8 @@
 		text-decoration: none;
 		color: black;
 		opacity: .8;
-		font-size: 18px;
-		font-weight: $medium;
+		font-size: 16px;
+		font-weight: $regular;
 		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 		&::before {

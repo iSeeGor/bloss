@@ -6,6 +6,7 @@ jQuery(document).ready(function($){
 	headerSeachForm();
 	siteDropdowns();
 	customVideoPlayer($);
+	// siteSecurity();
 	
 	// MOBILE
 	hamburger();
@@ -22,6 +23,9 @@ jQuery(document).ready(function($){
 	profileTabs();
 	profileReviewSlider();
 	reviewStarRaiting();
+
+	// Post Page
+	stickySidebar();
 
 	// Close Outside 
 	document.addEventListener("click", function(event) {
@@ -109,9 +113,12 @@ const customVideoPlayer = ($) => {
 
 	});
 
-	video.onpause = function() {
-		button.show();
-	};
+	if(window.innerWidth >= 768) {
+
+		video.onpause = function() {
+			button.show();
+		};
+	}
 
 	video.onplay = function() {
 		button.hide();
@@ -123,6 +130,13 @@ const customVideoPlayer = ($) => {
 		player.addClass('is-active');
 	});
 
+}
+
+const siteSecurity = () => {
+
+	window.addEventListener('contextmenu', function (e) { 
+		e.preventDefault(); 
+	}, false);
 }
 
 const categorieTabs = () => {
@@ -201,18 +215,31 @@ const popupModals = ($) => {
 		// focus: '#username',
 		// modal: true,
 		showCloseBtn: false,
-		closeOnBgClick: true
-	});
+		closeOnBgClick: true,
+		callbacks: {
+			close : function() {
+
+				videoResset();
+			}
+		}
+
+	});	
 
 	$(document).on('click', '.js-close-modal', function (e) {
 		e.preventDefault();
 		$.magnificPopup.close();
 
-		// if(!$('.video-player__html-player').length) return;
-
-		// $('.video-player__html-player').get(0).pause();
-		// $('.video-player__html-player').get(0).currentTime = 0;
+		videoResset();
 	});
+
+	function videoResset(){
+
+		if(!$('.video-player__html-player').length) return;
+
+		$('.video-player').removeClass('is-active');
+		$('.video-player__html-player').get(0).pause();
+		$('.video-player__html-player').get(0).currentTime = 0;
+	}
 
 }
 
@@ -261,7 +288,7 @@ $('a[href*="#"]').not('a[href^="#modal"]').click(function (event) {
 		location.hostname == this.hostname
 	) {
 		var target = $(this.hash);
-		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
 		if (target.length) {
 			event.preventDefault();
 			$('html, body').animate({
@@ -376,6 +403,11 @@ const reviewStarRaiting = () => {
 			this.classList.add('is-active');
 		})
 	});
+}
+
+const stickySidebar = () => {
+
+
 }
 
 const siteMenus = ($) => {
