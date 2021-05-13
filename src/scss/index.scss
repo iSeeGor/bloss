@@ -47,6 +47,8 @@
 @import '05_view/components/star-rating';
 @import '05_view/components/product-cards';
 @import '05_view/components/profile-review';
+@import '05_view/components/dropdown';
+@import '05_view/components/video-player';
 
 
 /* views
@@ -62,6 +64,8 @@
 
 @import '05_view/pages/home';
 @import '05_view/pages/profile-page';
+@import '05_view/pages/page-categories';
+@import '05_view/pages/post.scss';
 
 // @import '05_view/pages/landing.scss';
 // @import '05_view/pages/landing-expert.scss';

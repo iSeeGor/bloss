@@ -1,17 +1,34 @@
 @@include('partials/header.html')
 
 	<div class="user-profile">
-		<header class="user-profile__header">
-			<div class="user-profile__bg-image">
-				<img src="images/banner.jpg" alt="">
-			</div>
-			<div class="user-profile__breadcrumbs">
-				<div class="container">
-					@@include('components/breadcrumb.html')
-					<button class="button button-report user-profile__report">Report</button>
+		<div class="user-profile__bg-image">
+			<img src="images/banner.jpg" alt="">
+		</div>
+		<div class="user-profile__breadcrumbs">
+			<div class="container">
+				@@include('components/breadcrumb.html')
+				<div class="user-profile__report report dropdown-block">
+					<button class="button button-report">Report</button>
+
+					<div class="report__dropdown dropdown-container" style="min-width: 350px;">
+						<div class="dropdown-container__inner">
+							<div class="dropdown-container__title">
+								Choose a reason
+							</div>
+							<div class="dropdown-container__body">
+								<div class="report__items">
+									<div class="report__item">Hate speech</div>
+									<div class="report__item">Intellectual property violation</div>
+									<div class="report__item">Bullying or harassment</div>
+									<div class="report__item">False information</div>
+									<div class="report__item">Triggering topic (no content warning)</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</header>
+		</div>
 		<div class="user-profile__body">
 			<div class="container">
 				<div class="profile-data">
@@ -27,12 +44,50 @@
 									})
 								</div>
 								<div class="profile-data__head-control">
-									<button class="button button-share">
-										<svg class="icon icon-share">
-											<use xlink:href="symbol/sprite.svg#icon-share"></use>
-										</svg>
-										<span>Share</span>
-									</button>
+									<div class="profile-data__share share dropdown-block">
+										<button class="button button-share">
+											<svg class="icon icon-share">
+												<use xlink:href="symbol/sprite.svg#icon-share"></use>
+											</svg>
+											<span>Share</span>
+										</button>
+
+										<div class="share__dropdown dropdown-container dropdown-container--center">
+											<div class="dropdown-container__inner">
+												<div class="dropdown-container__title">
+													Share
+												</div>
+												<div class="dropdown-container__body">
+													<div class="share__items">
+														<div class="share__item">
+															<svg class="icon icon-facebook">
+																<use xlink:href="symbol/sprite.svg#icon-facebook"></use>
+															</svg>
+															<span>Facebook</span>
+														</div>
+														<div class="share__item">
+															<svg class="icon icon-linkedin">
+																<use xlink:href="symbol/sprite.svg#icon-linkedin"></use>
+															</svg>
+															<span>Linkedin</span>
+														</div>
+														<div class="share__item">
+															<svg class="icon icon-twitter">
+																<use xlink:href="symbol/sprite.svg#icon-twitter"></use>
+															</svg>
+															<span>Twitter</span>
+														</div>
+														<div class="share__item">
+															<svg class="icon icon-link">
+																<use xlink:href="symbol/sprite.svg#icon-link"></use>
+															</svg>
+															<span>Copy link</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 									<button class="button button-wishlist">
 										<svg class="icon">
 											<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
@@ -68,8 +123,14 @@
 								})
 							</div>
 							<div class="profile-data__controls">
-								<button class="profile-data__button-book button-primary button-primary--dark">Book in-person appointment</button>
+								<button class="profile-data__button-book button-primary button-primary--dark">Book in-person</button>
 								<button class="profile-data__button-book button-primary button-primary--dark">Book video call</button>
+								<button class="profile-data__chat button-primary button-primary--icon">
+									<svg class="icon icon-contacts">
+										<use xlink:href="symbol/sprite.svg#icon-contacts"></use>
+									</svg>
+									<span>Contact</span>
+								</button>
 								<button class="profile-data__chat button-primary button-primary--icon">
 									<svg class="icon icon-chating">
 										<use xlink:href="symbol/sprite.svg#icon-chating"></use>
@@ -484,7 +545,7 @@
 	<section class="section section--content-cards">
 		<div class="container">
 			<header class="section__header">
-				<h2 class="section__title">Sophie’s content</h2>
+				<h2 class="section__title section__title--page">Sophie’s content</h2>
 				<a href="#" class="section__header-button button-secondary button-secondary--white">See all</a>
 			</header>
 
@@ -811,7 +872,7 @@
 	<section class="section section--content-cards">
 		<div class="container">
 			<header class="section__header">
-				<h2 class="section__title">Sophie's premium content</h2>
+				<h2 class="section__title section__title--page">Sophie's premium content</h2>
 				<a href="#" class="section__header-button button-secondary button-secondary--white">See all</a>
 			</header>
 
@@ -1135,10 +1196,10 @@
 		</div>
 	</section>
 
-	<section class="section profile-review">
+	<section class="section site-review">
 		<div class="container">
 			<header class="section__header">
-				<h2 class="section__title">See all reviews </h2>
+				<h2 class="section__title section__title--page">See all reviews </h2>
 
 				<div class="slider-control review-slider__control">
 					<button class="button-nav button-nav--prev">
@@ -1159,7 +1220,7 @@
 			</header>
 
 			<div class="section__body">
-				<div class="profile-review__slider swiper-container">
+				<div class="site-review__slider swiper-container review-slider">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="review-card">

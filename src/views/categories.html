@@ -1,0 +1,895 @@
+@@include('partials/header.html')
+
+	<div class="page-header">
+		<div class="container">
+			<div class="page-header__breadcrumbs">
+				@@include('components/breadcrumb.html')
+			</div>
+			<h1 class="page-header__title">
+				All content
+			</h1>
+			<div class="page-header__search">
+				@@include('components/site-search.html')
+			</div>
+			<div class="page-header__categorie-tabs">
+				@@include('components/categorie-tabs.html')
+			</div>
+		</div>
+	</div>
+
+	<main class="main page-main page-categories">
+		<div class="container">
+			<section class="section">
+				<headre class="section__header section__header--sortby">
+					<h2 class="section__title section__title--page">Most popular content</h2>
+					<div class="section__sort-by">
+						<div class="sort-by sort-by--wide">
+							<select class="sort-by__select js-choice">
+								<option value="">Sort by</option>
+								<option value="All">Expert's Name, A-Z</option>
+								<option value="All">Based on Bloss recommendations</option>
+								<option value="All">Most popular</option>
+								<option value="All">Newest</option>
+								<option value="All">All premium</option>
+								<option value="All">Lowest pricing</option>
+								<option value="All">High pricing</option>
+							</select>
+						</div>
+					</div>
+				</headre>
+				<div class="section__body">
+					<div class="cards">
+						<div class="cards__grid">
+							<div class="cards__col cards__col--full">
+								<article class="card card--wide">
+									<figure class="card__media">
+										<a href="#" class="card__image-link">
+											<img src="images/demo/card-1.jpg" alt="" class="card__image">
+										</a>
+										<a href="#" class="card__categorie">Wellbeing</a>
+									</figure>
+									<div class="card__body">
+										<h3 class="card__title">
+											<a href="#" class="card__title-link">
+												We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+											</a>
+										</h3>
+										<div class="card__text">
+											We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+									<div class="card__footer">
+										<div class="card__info">
+											<div class="card__avatar">
+												<img class="card__avatar-image" src="images/demo/user-1.jpg" alt="">
+											</div>
+											<div class="card__meta">
+												<a href="#" class="card__user-name">Jane Foster</a>
+												<div class="card__meta-group">
+													<div class="card__meta-item">
+														<svg class="icon icon-clock">
+															<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+														</svg>
+														<span>14.11.2019</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-comment">
+															<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+														</svg>
+														<span>25</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-heart-small">
+															<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+														</svg>
+														<span>20</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card__tax">Free</div>
+									</div>
+								</article>
+							</div>
+							<div class="cards__col">
+								<article class="card">
+									<figure class="card__media">
+										<a href="#" class="card__image-link">
+											<img src="images/demo/card-3.jpg" alt="" class="card__image">
+										</a>
+										<a href="#" class="card__categorie">Parenting</a>
+									</figure>
+									<div class="card__body">
+										<h3 class="card__title">
+											<a href="#" class="card__title-link">
+												We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+											</a>
+										</h3>
+										<div class="card__text">
+											We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+									<div class="card__footer">
+										<div class="card__info">
+											<div class="card__avatar">
+												<img class="card__avatar-image" src="images/demo/user-3.jpg" alt="">
+											</div>
+											<div class="card__meta">
+												<a href="#" class="card__user-name">Jane Foster</a>
+												<div class="card__meta-group">
+													<div class="card__meta-item">
+														<svg class="icon icon-clock">
+															<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+														</svg>
+														<span>14.11.2019</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-comment">
+															<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+														</svg>
+														<span>25</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-heart-small">
+															<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+														</svg>
+														<span>20</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card__tax">Free</div>
+									</div>
+								</article>
+							</div>
+							<div class="cards__col">
+								<article class="card">
+									<figure class="card__media">
+										<a href="#" class="card__image-link">
+											<img src="images/demo/card-2.jpg" alt="" class="card__image">
+										</a>
+										<a href="#" class="card__categorie">Parenting</a>
+									</figure>
+									<div class="card__body">
+										<h3 class="card__title">
+											<a href="#" class="card__title-link">
+												We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+											</a>
+										</h3>
+										<div class="card__text">
+											We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+									<div class="card__footer">
+										<div class="card__info">
+											<div class="card__avatar">
+												<img class="card__avatar-image" src="images/demo/user-2.jpg" alt="">
+											</div>
+											<div class="card__meta">
+												<a href="#" class="card__user-name">Jane Foster</a>
+												<div class="card__meta-group">
+													<div class="card__meta-item">
+														<svg class="icon icon-clock">
+															<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+														</svg>
+														<span>14.11.2019</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-comment">
+															<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+														</svg>
+														<span>25</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-heart-small">
+															<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+														</svg>
+														<span>20</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card__tax">Free</div>
+									</div>
+								</article>
+							</div>
+							<div class="cards__col">
+								<article class="card">
+									<figure class="card__media">
+										<a href="#" class="card__image-link">
+											<img src="images/demo/card-1.jpg" alt="" class="card__image">
+										</a>
+										<a href="#" class="card__categorie">Parenting</a>
+									</figure>
+									<div class="card__body">
+										<h3 class="card__title">
+											<a href="#" class="card__title-link">
+												We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+											</a>
+										</h3>
+										<div class="card__text">
+											We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+									<div class="card__footer">
+										<div class="card__info">
+											<div class="card__avatar">
+												<img class="card__avatar-image" src="images/demo/user-1.jpg" alt="">
+											</div>
+											<div class="card__meta">
+												<a href="#" class="card__user-name">Jane Foster</a>
+												<div class="card__meta-group">
+													<div class="card__meta-item">
+														<svg class="icon icon-clock">
+															<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+														</svg>
+														<span>14.11.2019</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-comment">
+															<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+														</svg>
+														<span>25</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-heart-small">
+															<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+														</svg>
+														<span>20</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card__tax">Free</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<headre class="section__header">
+					<h2 class="section__title section__title--page">Most popular free content</h2>
+				</headre>
+				<div class="section__body">
+					<div class="cards">
+					<div class="cards__grid">
+						<div class="cards__col">
+							<article class="card">
+								<figure class="card__media">
+									<a href="#" class="card__image-link">
+										<img src="images/demo/card-1.jpg" alt="" class="card__image">
+									</a>
+									<a href="#" class="card__categorie">Parenting</a>
+								</figure>
+								<div class="card__body">
+									<h3 class="card__title">
+										<a href="#" class="card__title-link">
+											We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+										</a>
+									</h3>
+									<div class="card__text">
+										We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+									</div>
+								</div>
+								<div class="card__footer">
+									<div class="card__info">
+										<div class="card__avatar">
+											<img class="card__avatar-image" src="images/demo/user-1.jpg" alt="">
+										</div>
+										<div class="card__meta">
+											<a href="#" class="card__user-name">Jane Foster</a>
+											<div class="card__meta-group">
+												<div class="card__meta-item">
+													<svg class="icon icon-clock">
+														<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+													</svg>
+													<span>14.11.2019</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-comment">
+														<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+													</svg>
+													<span>25</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-heart-small">
+														<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+													</svg>
+													<span>20</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card__tax">Free</div>
+								</div>
+							</article>
+						</div>
+						<div class="cards__col">
+							<article class="card">
+								<figure class="card__media">
+									<a href="#" class="card__image-link">
+										<img src="images/demo/card-3.jpg" alt="" class="card__image">
+									</a>
+									<a href="#" class="card__categorie">Parenting</a>
+								</figure>
+								<div class="card__body">
+									<h3 class="card__title">
+										<a href="#" class="card__title-link">
+											We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+										</a>
+									</h3>
+									<div class="card__text">
+										We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+									</div>
+								</div>
+								<div class="card__footer">
+									<div class="card__info">
+										<div class="card__avatar">
+											<img class="card__avatar-image" src="images/demo/user-3.jpg" alt="">
+										</div>
+										<div class="card__meta">
+											<a href="#" class="card__user-name">Jane Foster</a>
+											<div class="card__meta-group">
+												<div class="card__meta-item">
+													<svg class="icon icon-clock">
+														<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+													</svg>
+													<span>14.11.2019</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-comment">
+														<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+													</svg>
+													<span>25</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-heart-small">
+														<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+													</svg>
+													<span>20</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card__tax">Free</div>
+								</div>
+							</article>
+						</div>
+						<div class="cards__col">
+							<article class="card">
+								<figure class="card__media">
+									<a href="#" class="card__image-link">
+										<img src="images/demo/card-2.jpg" alt="" class="card__image">
+									</a>
+									<a href="#" class="card__categorie">Parenting</a>
+								</figure>
+								<div class="card__body">
+									<h3 class="card__title">
+										<a href="#" class="card__title-link">
+											We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+										</a>
+									</h3>
+									<div class="card__text">
+										We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+									</div>
+								</div>
+								<div class="card__footer">
+									<div class="card__info">
+										<div class="card__avatar">
+											<img class="card__avatar-image" src="images/demo/user-2.jpg" alt="">
+										</div>
+										<div class="card__meta">
+											<a href="#" class="card__user-name">Jane Foster</a>
+											<div class="card__meta-group">
+												<div class="card__meta-item">
+													<svg class="icon icon-clock">
+														<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+													</svg>
+													<span>14.11.2019</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-comment">
+														<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+													</svg>
+													<span>25</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-heart-small">
+														<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+													</svg>
+													<span>20</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card__tax">Free</div>
+								</div>
+							</article>
+						</div>
+						<div class="cards__col">
+							<article class="card">
+								<figure class="card__media">
+									<a href="#" class="card__image-link">
+										<img src="images/demo/card-1.jpg" alt="" class="card__image">
+									</a>
+									<a href="#" class="card__categorie">Parenting</a>
+								</figure>
+								<div class="card__body">
+									<h3 class="card__title">
+										<a href="#" class="card__title-link">
+											We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+										</a>
+									</h3>
+									<div class="card__text">
+										We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+									</div>
+								</div>
+								<div class="card__footer">
+									<div class="card__info">
+										<div class="card__avatar">
+											<img class="card__avatar-image" src="images/demo/user-1.jpg" alt="">
+										</div>
+										<div class="card__meta">
+											<a href="#" class="card__user-name">Jane Foster</a>
+											<div class="card__meta-group">
+												<div class="card__meta-item">
+													<svg class="icon icon-clock">
+														<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+													</svg>
+													<span>14.11.2019</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-comment">
+														<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+													</svg>
+													<span>25</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-heart-small">
+														<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+													</svg>
+													<span>20</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card__tax">Free</div>
+								</div>
+							</article>
+						</div>
+						<div class="cards__col">
+							<article class="card">
+								<figure class="card__media">
+									<a href="#" class="card__image-link">
+										<img src="images/demo/card-3.jpg" alt="" class="card__image">
+									</a>
+									<a href="#" class="card__categorie">Parenting</a>
+								</figure>
+								<div class="card__body">
+									<h3 class="card__title">
+										<a href="#" class="card__title-link">
+											We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+										</a>
+									</h3>
+									<div class="card__text">
+										We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+									</div>
+								</div>
+								<div class="card__footer">
+									<div class="card__info">
+										<div class="card__avatar">
+											<img class="card__avatar-image" src="images/demo/user-3.jpg" alt="">
+										</div>
+										<div class="card__meta">
+											<a href="#" class="card__user-name">Jane Foster</a>
+											<div class="card__meta-group">
+												<div class="card__meta-item">
+													<svg class="icon icon-clock">
+														<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+													</svg>
+													<span>14.11.2019</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-comment">
+														<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+													</svg>
+													<span>25</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-heart-small">
+														<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+													</svg>
+													<span>20</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card__tax">Free</div>
+								</div>
+							</article>
+						</div>
+						<div class="cards__col">
+							<article class="card">
+								<figure class="card__media">
+									<a href="#" class="card__image-link">
+										<img src="images/demo/card-2.jpg" alt="" class="card__image">
+									</a>
+									<a href="#" class="card__categorie">Parenting</a>
+								</figure>
+								<div class="card__body">
+									<h3 class="card__title">
+										<a href="#" class="card__title-link">
+											We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+										</a>
+									</h3>
+									<div class="card__text">
+										We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+									</div>
+								</div>
+								<div class="card__footer">
+									<div class="card__info">
+										<div class="card__avatar">
+											<img class="card__avatar-image" src="images/demo/user-2.jpg" alt="">
+										</div>
+										<div class="card__meta">
+											<a href="#" class="card__user-name">Jane Foster</a>
+											<div class="card__meta-group">
+												<div class="card__meta-item">
+													<svg class="icon icon-clock">
+														<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+													</svg>
+													<span>14.11.2019</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-comment">
+														<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+													</svg>
+													<span>25</span>
+												</div>
+												<div class="card__meta-item">
+													<svg class="icon icon-heart-small">
+														<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+													</svg>
+													<span>20</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card__tax">Free</div>
+								</div>
+							</article>
+						</div>
+					</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<headre class="section__header">
+					<h2 class="section__title section__title--page">Most popular premium content</h2>
+				</headre>
+				<div class="section__body">
+					<div class="cards">
+						<div class="cards__grid">
+							<div class="cards__col">
+								<article class="card">
+									<figure class="card__media">
+										<a href="#" class="card__image-link">
+											<img src="images/demo/card-1.jpg" alt="" class="card__image">
+										</a>
+										<a href="#" class="card__categorie">Parenting</a>
+									</figure>
+									<div class="card__body">
+										<h3 class="card__title">
+											<a href="#" class="card__title-link">
+												We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+											</a>
+										</h3>
+										<div class="card__text">
+											We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+									<div class="card__footer">
+										<div class="card__info">
+											<div class="card__avatar">
+												<img class="card__avatar-image" src="images/demo/user-1.jpg" alt="">
+											</div>
+											<div class="card__meta">
+												<a href="#" class="card__user-name">Jane Foster</a>
+												<div class="card__meta-group">
+													<div class="card__meta-item">
+														<svg class="icon icon-clock">
+															<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+														</svg>
+														<span>14.11.2019</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-comment">
+															<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+														</svg>
+														<span>25</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-heart-small">
+															<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+														</svg>
+														<span>20</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card__tax card__tax--pink">£22</div>
+									</div>
+								</article>
+							</div>
+							<div class="cards__col">
+								<article class="card">
+									<figure class="card__media">
+										<a href="#" class="card__image-link">
+											<img src="images/demo/card-3.jpg" alt="" class="card__image">
+										</a>
+										<a href="#" class="card__categorie">Parenting</a>
+									</figure>
+									<div class="card__body">
+										<h3 class="card__title">
+											<a href="#" class="card__title-link">
+												We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+											</a>
+										</h3>
+										<div class="card__text">
+											We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+									<div class="card__footer">
+										<div class="card__info">
+											<div class="card__avatar">
+												<img class="card__avatar-image" src="images/demo/user-3.jpg" alt="">
+											</div>
+											<div class="card__meta">
+												<a href="#" class="card__user-name">Jane Foster</a>
+												<div class="card__meta-group">
+													<div class="card__meta-item">
+														<svg class="icon icon-clock">
+															<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+														</svg>
+														<span>14.11.2019</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-comment">
+															<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+														</svg>
+														<span>25</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-heart-small">
+															<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+														</svg>
+														<span>20</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card__tax card__tax--pink">$200</div>
+									</div>
+								</article>
+							</div>
+							<div class="cards__col">
+								<article class="card">
+									<figure class="card__media">
+										<a href="#" class="card__image-link">
+											<img src="images/demo/card-2.jpg" alt="" class="card__image">
+										</a>
+										<a href="#" class="card__categorie">Parenting</a>
+									</figure>
+									<div class="card__body">
+										<h3 class="card__title">
+											<a href="#" class="card__title-link">
+												We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+											</a>
+										</h3>
+										<div class="card__text">
+											We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+									<div class="card__footer">
+										<div class="card__info">
+											<div class="card__avatar">
+												<img class="card__avatar-image" src="images/demo/user-2.jpg" alt="">
+											</div>
+											<div class="card__meta">
+												<a href="#" class="card__user-name">Jane Foster</a>
+												<div class="card__meta-group">
+													<div class="card__meta-item">
+														<svg class="icon icon-clock">
+															<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+														</svg>
+														<span>14.11.2019</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-comment">
+															<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+														</svg>
+														<span>25</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-heart-small">
+															<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+														</svg>
+														<span>20</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card__tax card__tax--pink">£22</div>
+									</div>
+								</article>
+							</div>
+							<div class="cards__col">
+								<article class="card">
+									<figure class="card__media">
+										<a href="#" class="card__image-link">
+											<img src="images/demo/card-1.jpg" alt="" class="card__image">
+										</a>
+										<a href="#" class="card__categorie">Parenting</a>
+									</figure>
+									<div class="card__body">
+										<h3 class="card__title">
+											<a href="#" class="card__title-link">
+												We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+											</a>
+										</h3>
+										<div class="card__text">
+											We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+									<div class="card__footer">
+										<div class="card__info">
+											<div class="card__avatar">
+												<img class="card__avatar-image" src="images/demo/user-1.jpg" alt="">
+											</div>
+											<div class="card__meta">
+												<a href="#" class="card__user-name">Jane Foster</a>
+												<div class="card__meta-group">
+													<div class="card__meta-item">
+														<svg class="icon icon-clock">
+															<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+														</svg>
+														<span>14.11.2019</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-comment">
+															<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+														</svg>
+														<span>25</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-heart-small">
+															<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+														</svg>
+														<span>20</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card__tax card__tax--pink">£22</div>
+									</div>
+								</article>
+							</div>
+							<div class="cards__col">
+								<article class="card">
+									<figure class="card__media">
+										<a href="#" class="card__image-link">
+											<img src="images/demo/card-3.jpg" alt="" class="card__image">
+										</a>
+										<a href="#" class="card__categorie">Parenting</a>
+									</figure>
+									<div class="card__body">
+										<h3 class="card__title">
+											<a href="#" class="card__title-link">
+												We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+											</a>
+										</h3>
+										<div class="card__text">
+											We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+									<div class="card__footer">
+										<div class="card__info">
+											<div class="card__avatar">
+												<img class="card__avatar-image" src="images/demo/user-3.jpg" alt="">
+											</div>
+											<div class="card__meta">
+												<a href="#" class="card__user-name">Jane Foster</a>
+												<div class="card__meta-group">
+													<div class="card__meta-item">
+														<svg class="icon icon-clock">
+															<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+														</svg>
+														<span>14.11.2019</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-comment">
+															<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+														</svg>
+														<span>25</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-heart-small">
+															<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+														</svg>
+														<span>20</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card__tax card__tax--pink">£22</div>
+									</div>
+								</article>
+							</div>
+							<div class="cards__col">
+								<article class="card">
+									<figure class="card__media">
+										<a href="#" class="card__image-link">
+											<img src="images/demo/card-2.jpg" alt="" class="card__image">
+										</a>
+										<a href="#" class="card__categorie">Parenting</a>
+									</figure>
+									<div class="card__body">
+										<h3 class="card__title">
+											<a href="#" class="card__title-link">
+												We give expert advice and support to parents and parents-to-be who need help starting lorem ipsum
+											</a>
+										</h3>
+										<div class="card__text">
+											We give you the experts, tools and community to help navigate your parenthood journey across all stages including trying to conceive Lorem ipsum dolor sit amet.
+										</div>
+									</div>
+									<div class="card__footer">
+										<div class="card__info">
+											<div class="card__avatar">
+												<img class="card__avatar-image" src="images/demo/user-2.jpg" alt="">
+											</div>
+											<div class="card__meta">
+												<a href="#" class="card__user-name">Jane Foster</a>
+												<div class="card__meta-group">
+													<div class="card__meta-item">
+														<svg class="icon icon-clock">
+															<use xlink:href="symbol/sprite.svg#icon-clock"></use>
+														</svg>
+														<span>14.11.2019</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-comment">
+															<use xlink:href="symbol/sprite.svg#icon-comment"></use>
+														</svg>
+														<span>25</span>
+													</div>
+													<div class="card__meta-item">
+														<svg class="icon icon-heart-small">
+															<use xlink:href="symbol/sprite.svg#icon-heart-small"></use>
+														</svg>
+														<span>20</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card__tax card__tax--pink">£22</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="page-main__deco">
+				<span class="_item rellax"></span>
+				<span class="_item rellax"></span>
+			</div>
+		</div>
+	</main>
+
+@@include('partials/footer.html')

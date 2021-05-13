@@ -1,0 +1,423 @@
+/*============================================================================
+	#Post Page
+==============================================================================*/
+.post {
+
+	&__article {
+
+		margin-bottom: 60px;
+	}
+}
+
+.post-article {
+
+	// padding-bottom: 60px;
+}
+
+.post-head {
+
+	&__nav {
+
+		margin-bottom: 24px;
+	}
+
+	&__title {
+
+		margin-bottom: 24px;
+	}
+
+	&__author {
+
+		margin-bottom: 43px;
+	}
+
+	&__meta {
+		
+		margin-bottom: 16px;
+	}
+
+	&__media {
+
+		margin: 16px 0;
+	}
+
+	&__image {
+
+		border-radius: 16px;
+		overflow: hidden;
+		margin: 0;
+		height: 405px;
+		
+		img {
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.post-nav {
+
+	padding: 22px 0;
+
+	&__inner {
+
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__prev-post {
+
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: $colorSecondary;
+		@include Text18_Desktop;
+
+		.button-nav {
+
+			margin-right: 16px;
+			transition-duration: .4s;
+		}
+	}
+
+	&__control {
+
+		display: flex;
+	}
+	
+	&__share {
+
+		margin-right: 16px
+	}
+}
+
+.post-title {
+
+	@include H2_Desktop;
+	color: $colorSecondary;
+}
+
+.post-author {
+
+	&__inner {
+
+		display: flex;
+	}
+
+	&__media {
+
+		margin: 0;
+		padding: 0;
+		width: 48px;
+		height: 48px;
+		overflow: hidden;
+		border-radius: 100%;
+		margin-right: 12px;
+
+		img {
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__name {
+
+		position: relative;
+		display: inline-block;
+		text-decoration: none;
+		color: $colorSecondary;
+		font-size: 18px;
+		font-weight: $medium;
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+		&::before {
+
+			content: '';
+			position: absolute;
+			bottom: 1px;
+			height: 1px;
+			width: 0;
+			background: black;
+			opacity: .8;
+			transition: all .8s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+		}
+
+		&:hover {
+
+			// color: $colorPrimary;
+
+			&::before {
+
+				width: 100%;
+			}
+
+		}
+	}
+
+	&__categories {
+
+		display: flex;
+		color: $color8D9AAE;
+		
+		span { margin-right: 2px; }
+	}
+}
+
+.post-meta {
+
+	&__items {
+
+		display: flex;
+	}
+
+	&__item {
+
+		display: flex;
+		align-items: center;
+		line-height: 1;
+		font-size: 16px;
+		color: $color8D9AAE;
+		margin-right: 24px;
+
+		&:last-child {
+
+			margin-right: 0;
+		}
+
+		.icon {
+
+			width: 16px;
+			height: 16px;
+			fill: $color8D9AAE;
+			margin-right: 8px;
+		}
+	}
+}
+
+.post-content {
+
+	&__inner {
+
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 60px;
+		border-bottom: 1px solid $colorC1C1C3;
+	}
+
+	&__main {
+
+		flex: 0 0 76%;
+		padding-right: 28px;
+	}
+
+	&__aside {
+
+		flex: 0 0 24%;
+		padding-left: 28px;
+	}
+
+	&__categories {
+
+		margin-bottom: 40px;
+	}
+
+	&__typography {
+
+		margin-bottom: 40px;
+	}
+
+	&__main-footer {
+
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__control {
+
+		display: flex;
+	}
+}
+
+.post-aside {
+
+	&__inner {
+
+		height: 100%;
+	}
+}
+
+.post-categories {
+
+	display: flex;
+	flex-wrap: wrap;
+	
+	&__item {
+
+		text-decoration: none;
+		min-width: 128px;
+		background: $colorF4F5F7;
+		text-align: center;
+		border-radius: 8px;
+		padding: 11px 10px 9px;
+		margin-right: 12px;
+		color: $colorSecondary;
+		font-size: 14px;
+		font-weight: $medium;
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+		&:hover {
+
+			background: $colorC1C1C3;
+		}
+
+		&:last-child{
+
+			margin-right: 0px;
+		}
+	}
+}
+
+.author-card {
+
+	padding-left: 20px;
+	position: relative;
+
+	&::before {
+
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1px;
+		height: 85%;
+		background-color: $colorC1C1C3;
+	}
+
+	&__inner {
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__avatar {
+
+		margin: 0;
+		width: 100px;
+		height: 100px;
+		border-radius: 100%;
+		overflow: hidden;
+		margin-bottom: 24px;
+
+		img {
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__body {
+
+		margin-bottom: 24px;
+	}
+
+	&__name {
+
+		@include H4_Desktop;
+		color: $colorSecondary;
+		text-decoration: none;
+		margin-bottom: 4px;
+		display: inline-block;
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+		&:hover {
+
+			color: $colorPrimary;
+		}
+	}
+
+	&__categories {
+
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		color: black;
+		opacity: .7;
+		margin-bottom: 8px;
+
+		span {
+
+			margin-right: 4px;
+			@include Text18_Desktop;
+
+			&:last-child {
+				margin-right: none;
+			}
+		}
+	}
+
+	&__meta {
+
+		display: flex;
+		justify-content: center;
+	}
+
+	&__meta-item {
+
+		display: flex;
+		align-items: center;
+		margin-right: 16px;
+
+		&:last-child {
+
+			// margin-right: 0;
+		}
+
+		.icon {
+
+			width: 17px;
+			height: 17px;
+			fill: $colorSecondary;
+		}
+
+		.icon-heart {
+
+			width: 16px;
+			height: 16px;
+		}
+
+		.icon-star {
+
+			margin-top: -2px;
+		}
+
+		span {
+			font-size: 16px;
+			color: $colorSecondary;
+			// line-height: 1;
+			margin-right: 4px;
+		}
+	}
+
+	&__control {
+
+		button {
+
+			margin-bottom: 16px;
+			width: 100%;
+			min-width: inherit;
+
+			&:last-child {
+
+				margin-bottom: 0;
+			}
+		}
+	}
+}

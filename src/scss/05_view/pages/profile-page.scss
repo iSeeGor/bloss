@@ -3,12 +3,13 @@
 ==============================================================================*/
 .user-profile {
 
-	padding-bottom: 60px;
+	padding-bottom: 40px;
+	position: relative;
 
 	&__header {
 
 		height: 280px;
-		overflow: hidden;
+		// overflow: hidden;
 		position: relative;
 		z-index: 1;
 	}
@@ -18,7 +19,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 100%;
+		height: 280px;
 		width: 100%;
 		z-index: -1;
 
@@ -43,7 +44,7 @@
 	&__body {
 		position: relative;
 		z-index: 1;
-		margin-top: -47px;
+		margin-top: 160px;
 		margin-bottom: 60px;
 	}
 
@@ -114,12 +115,13 @@
 		right: 0;
 		display: flex;
 		bottom: -50px;
-
-		.button {
-
-			margin-left: 16px;
-		}
 	}
+
+	&__share {
+
+		margin-right: 16px;
+	}
+	
 
 	&__bio {
 
@@ -191,20 +193,27 @@
 		> * {
 
 			margin-right: 12px;
+			
+			&:last-child {
+
+				margin-right: 0;
+			}
 		}
 	}
 
 	&__button-book {
 
 		font-family: $fontPrimary;
-		max-width: 322px;
+		max-width: 245px;
+		flex: 1 1 245px;
 		width: 100%;
 		color: white;
 	}
 
 	&__chat {
 
-		max-width: 215px;
+		max-width: 214px;
+		flex: 1 2 214px;
 		width: 100%;
 	}
 }
@@ -399,19 +408,76 @@
 	}
 }
 
-@include _1400 {
+.report {
 
-	.profile-data {
+	&__items {
+		
+		margin: 0 -24px;
+	}
 
-		&__button-book,
-		&__chat {
+	&__item {
 
-			max-width: inherit;
-			width: auto;
-			flex: 0 0 auto;
-			padding-left: 40px;
-			padding-right: 40px;
-		} 
+		padding: 12px 24px;
+		cursor: pointer;
+
+		&:hover {
+
+			background: $colorF4F5F7;
+		}
+	}
+}
+
+.share {
+
+	&__items {
+
+
+	}
+
+	&__item {
+
+		display: flex;
+		align-items: center;
+		@include Text18_Desktop;
+		color: $colorSecondary;
+		fill: $colorSecondary;
+		transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+		cursor: pointer;
+		padding: 16px 0;
+
+		&:hover {
+
+			color: $colorPrimary;
+			fill: $colorPrimary;
+		}
+
+		.icon {
+
+			width: 32px;
+			height: 32px;
+			fill: inherit;
+			margin-right: 16px;
+			transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+		}
+		
+		&:last-child {
+
+			padding-bottom: 0;
+		}
+	}
+
+	&.is-active {
+
+		.button-share {
+
+			background: $colorSecondary;
+			color: white;
+
+			.icon {
+
+				fill: white;
+			}
+		}
 	}
 }
 
@@ -419,11 +485,15 @@
 
 	.user-profile {
 
-		&__header {
+		&__bg-image {
 
 			height: 240px;
 		}
 		
+		&__body {
+
+			margin-top: 120px;
+		} 
 		
 	}
 
@@ -449,6 +519,7 @@
 
 			position: static;
 		}
+
 
 		&__controls {
 
@@ -480,10 +551,15 @@
 
 	.user-profile {
 
-		&__header {
+		&__bg-image {
 
 			height: 200px;
 		}
+		
+		&__body {
+
+			margin-top: 100px;
+		} 
 	}
 
 	.profile-data {
@@ -507,18 +583,31 @@
 	}
 }
 
+@include _892 {
+
+	.profile-data {
+
+		&__button-book,
+		&__chat {
+
+			flex: 0 0 calc(50% - 12px);
+			max-width: calc(50% - 12px);
+		}
+	}
+}
+
 @include _768 {
 
 	.user-profile {
 
-		&__header {
+		&__bg-image {
 
 			height: 170px;
 		}
 
 		&__body {
 
-			margin-top: -100px;
+			margin-top: 30px;
 		}
 	}
 
@@ -619,11 +708,18 @@
 		&__button-book,
 		&__chat {
 
-			width: 100%;
+			flex: 0 1 320px;
+			max-width: 320px;
+			margin-right: 0;
 		}
 	}
 
 	.user-profile {
+
+		&__body {
+
+			margin-top: 10px;
+		}
 
 		&__breadcrumbs {
 			

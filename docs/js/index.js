@@ -2,8 +2,10 @@ jQuery(document).ready(function($){
 	// COMMON
 	animationInit();
 	anchorSmoothScroll($);
-	siteMenus();
+	siteMenus($);
 	headerSeachForm();
+	siteDropdowns();
+	customVideoPlayer($);
 	
 	// MOBILE
 	hamburger();
@@ -20,6 +22,15 @@ jQuery(document).ready(function($){
 	profileTabs();
 	profileReviewSlider();
 	reviewStarRaiting();
+
+	// Close Outside 
+	document.addEventListener("click", function(event) {
+		if (event.target.closest(".header-search")) return;
+		if (event.target.closest(".dropdown-block")) return;
+
+		document.querySelectorAll('.header-search').forEach(item => item.classList.remove('is-active'));
+		document.querySelectorAll('.dropdown-block').forEach(item => item.classList.remove('is-active'));
+	});
 
 });
 
@@ -50,21 +61,69 @@ const fakeSuccess = () => {
 
 const headerSeachForm = () => {
 
-	let searchButton = document.querySelector('.header-search__button'); 
+	let searchButtons = document.querySelectorAll('.header-search__button'); 
 
-	if(!searchButton) return;
+	if(!searchButtons) return;
+
+	searchButtons.forEach(button => {
+
+			button.addEventListener('click', function(){
+
+				this.parentElement.classList.add('is-active');
+			});
+	});
 	
-	searchButton.addEventListener('click', function(){
-
-		this.parentElement.classList.add('is-active');
-	});
-
-	document.addEventListener("click", function(event) {
-		if (event.target.closest(".header-search")) return;
-
-		document.querySelector('.header-search').classList.remove('is-active');
-	});
 };
+
+const siteDropdowns = () => {
+
+	let blocks = document.querySelectorAll('.dropdown-block');
+	if(!blocks) return;
+
+	blocks.forEach( item => dropdownInit(item) );
+
+	function dropdownInit(block){
+		
+		block.addEventListener('click', function(){
+
+			this.classList.toggle('is-active');
+		});
+		
+	}
+}
+
+const customVideoPlayer = ($) => {
+
+	let player = $('.video-player');
+	let button = player.find('.button-play');
+
+	if(!player.length) return; 
+
+	let video = $('.video-player__html-player').get(0);
+	
+	$('.video-player__thumb').on('click', function(){
+
+		player.addClass('is-active');
+		video.play();
+		button.hide();
+
+	});
+
+	video.onpause = function() {
+		button.show();
+	};
+
+	video.onplay = function() {
+		button.hide();
+	};
+
+	button.on('click', function(){
+
+		video.play();
+		player.addClass('is-active');
+	});
+
+}
 
 const categorieTabs = () => {
 
@@ -252,7 +311,7 @@ const profileReviewSlider = () => {
 
 	let slider;
 
-	slider = new Swiper('.profile-review__slider', {
+	slider = new Swiper('.review-slider', {
 
 		slidesPerView: 2,
 		spaceBetween: 30,
@@ -316,7 +375,7 @@ const reviewStarRaiting = () => {
 	});
 }
 
-const siteMenus = () => {
+const siteMenus = ($) => {
 
 	$('.footer-menu').on('click', '.current-menu-item', function(){
 

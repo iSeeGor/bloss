@@ -95,11 +95,13 @@
 		}
 	}
 
+
 	&--icon {
 
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding: 11px 20px 10px 20px;
 
 		.icon {
 
@@ -144,6 +146,29 @@
 		// color: white;
 		box-shadow: 0 0 20px 6px rgba(245, 193, 188, 0.4);
 	}
+
+	&--icon {
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px 20px 9px 20px;
+		
+
+		.icon {
+
+			margin-right: 16px;
+			transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+
+		&:hover {
+
+			.icon {
+
+				fill: white;
+			}
+		}
+	} 
 }
 
 .button-secondary--white {
@@ -303,6 +328,21 @@
 	
 		box-shadow: 0 0 20px 10px rgba(245, 193, 188, 0.3) ;
 	}
+
+	&--blue {
+
+		background: $colorSecondary;
+
+		.icon {
+
+			fill: white;
+		}
+
+		&:not(.is-disabled):hover {
+
+			box-shadow: 0 0 20px 10px rgba(38, 64, 102, 0.3);
+		}
+	}
 }
 
 .swiper-button {
@@ -352,6 +392,7 @@
 	border-radius: 16px;
 	border: 1px solid $colorSecondary;
 	transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	background: white;
 
 	.icon {
 
@@ -387,6 +428,25 @@
 		.icon {
 
 			fill: $colorPrimary;
+		}
+	}
+
+	&--stroke {
+
+		.icon {
+
+			fill: transparent;
+			stroke: $colorSecondary;
+			stroke-width: 1;
+
+		}
+
+		&:hover {
+
+			.icon {
+
+				fill: $colorSecondary;
+			}
 		}
 	}
 }

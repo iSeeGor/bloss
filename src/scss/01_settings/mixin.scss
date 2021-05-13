@@ -6,6 +6,14 @@
     line-height: 1.23;
 }
 
+@mixin H2_Desktop() {
+	
+    font-family: $fontHeadings;
+    font-size: 42px;
+    font-weight: $regular;
+    line-height: 1.5;
+}
+
 @mixin H4_Desktop() {
 	
     font-family: $fontHeadings;
@@ -48,7 +56,7 @@
 }
 
 @mixin _892 {
-    @media (max-width: 892px){
+    @media (max-width: 891.98px){
         @content;
     }
 }

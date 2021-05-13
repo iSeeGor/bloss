@@ -21,6 +21,29 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+
+	&__control {
+
+		display: flex;
+		align-items: center;
+	}
+
+	&__header-search {
+
+		margin-right: 8px;
+		padding: 0 !important;
+	}
+
+	&__dashboard {
+
+		margin-right: 16px;
+	}
+
+	.header-search__button .icon {
+	
+		width: 24px;
+		height: 24px;
+	}
 }
 
 @include _1024 {

@@ -144,15 +144,40 @@
 						<img src="images/logo.svg" alt="Bloss Logo">
 					</a>
 				</div>
-				<div class="mobile-header__hambuger hamburger hamburger--collapse">
-					<div class="hamburger-box">
-						<div class="hamburger-inner"></div>
+				<div class="mobile-header__control">
+					<div class="mobile-header__header-search header-search">
+						<button class="header-search__button button">
+							<svg class="icon icon-search">
+								<use xlink:href="symbol/sprite.svg#icon-search"></use>
+							</svg>								
+						</button>
+						<form class="header-search__form">
+							<div class="header-search__form-group">
+								<svg class="icon icon-search">
+									<use xlink:href="symbol/sprite.svg#icon-search"></use>
+								</svg>								
+								<input type="text" class="header-search__form-input" placeholder="Search">
+							</div>
+						</form>
+					</div>
+					<div class="mobile-header__dashboard header-dashboard header-dashboard--mobile"  style="display: block;">
+						<div class="header-dashboard__user">
+							<div class="header-dashboard__avatar">
+								<img src="images/demo/demo-1.jpg" alt="">
+								<!-- <img src="icons/icon-user-profile.svg" alt=""> -->
+							</div>
+							<span class="header-dashboard__msg-count">2</span>
+						</div>
+					</div>
+					<div class="mobile-header__hambuger hamburger hamburger--collapse">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
-
-		
 
 		
 
@@ -769,7 +794,7 @@
 					<div class="footer__menu">
 						<div class="footer__nav">
 							<ul class="footer-menu">
-								<li class="current-menu-item">
+								<li class="menu-item-has-children">
 									<a href="#">Categories</a>
 
 									<ul class="sub-menu">
