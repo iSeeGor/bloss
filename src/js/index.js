@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
 	customSelect();
 	reviewsSlider();
 	accordionHandler($);
-	heroVideo($);
+	popupModals($);
 
 	// EXPERT
 	profileTabs();
@@ -193,39 +193,25 @@ const accordionHandler = ($) => {
 	});
 }
 
-const heroVideo = ($) => {	
+const popupModals = ($) => {	
 
-	if(!$('.modal-hero__video').length) return; 
-
-	let video = $('.modal-hero__video').get(0);
-	
-	$('.modal-hero__play').on('click', function(){
-
-		video.play();
-		$(this).hide()
-	});
-
-	video.onpause = function() {
-		$('.modal-hero__play').show();
-	};
-
-	video.onplay = function() {
-		$('.modal-hero__play').hide();
-	};
-
-	$('.js-hero-modal').magnificPopup({
+	$('.js-video-modal').magnificPopup({
 		type: 'inline',
 		preloader: false,
 		// focus: '#username',
-		modal: true
+		// modal: true,
+		showCloseBtn: false,
+		closeOnBgClick: true
 	});
 
 	$(document).on('click', '.js-close-modal', function (e) {
 		e.preventDefault();
 		$.magnificPopup.close();
 
-		video.pause();
-		video.currentTime = 0;
+		// if(!$('.video-player__html-player').length) return;
+
+		// $('.video-player__html-player').get(0).pause();
+		// $('.video-player__html-player').get(0).currentTime = 0;
 	});
 
 }
@@ -269,14 +255,31 @@ const hamburger = () => {
 }
 
 const anchorSmoothScroll = ($) => {
+$('a[href*="#"]').not('a[href^="#modal"]').click(function (event) {
+	if (
+		location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+		location.hostname == this.hostname
+	) {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+		if (target.length) {
+			event.preventDefault();
+			$('html, body').animate({
+				scrollTop: target.offset().top
+			}, 1000, function () {
 
-	$(document).on('click', 'a[href^="#"]', function (event) {
-	event.preventDefault();
-
-	$('html, body').animate({
-			scrollTop: $($.attr(this, 'href')).offset().top
-		}, 1400);
-	});
+				var $target = $(target);
+				$target.focus();
+				if ($target.is(":focus")) { 
+					return false;
+				} else {
+					$target.attr('tabindex', '-1'); 
+					$target.focus(); 
+				};
+			});
+		}
+	}
+});
 }
 
 const profileTabs = () => {

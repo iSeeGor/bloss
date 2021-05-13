@@ -5,49 +5,31 @@
 	display: none;
 }
 
-.modal-hero {
+.modal-video {
 
-	position: relative;
-	max-width: 1410px;
-	max-height: 780px;
+	max-width: 1380px;
 	margin: 0 auto;
-	padding: 0 15px;
-	
+	position: relative;
+	padding-top: 52px;
+	padding-bottom: 52px;
 
-	&__container {
-		border-radius: 20px;
-		overflow: hidden;
-	}
-
-	&__video {
-
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-	}
-
-	&__play {
+	.button-close {
 
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	&__close {
-
-		position: absolute;
+		top: 0px;
 		right: 0;
-		top: -52px;
 	}
 }
 
 @include _1024 {
 
-	.modal-hero__play {
+	.modal-video {
 
-		visibility: hidden;
-		display: none;
+		// .button-play {
+
+		// 	visibility: hidden;
+		// 	display: none;
+		// }
 	}
 }
 

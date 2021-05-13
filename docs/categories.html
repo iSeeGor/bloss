@@ -1276,19 +1276,22 @@
 	<div class="modals site__modals">
 
 	<!-- Hero Video Modal -->
-	<div id="modal-hero" class="modal-hero">
-		<div class="modal-hero__container">
-			<video class="modal-hero__video" controls preload="metadata" poster="images/hero-video-image.jpg">
-				<source src="intro.mp4" type="video/mp4">
-			</video>
-			<button class="modal-hero__play button button-play button-play--white"></button>
-		</div> 
 
-		<button class="modal-hero__close button-close js-close-modal"></button>
+	<div id="modal-video" class="modal modal-video">
+		<div class="modal__container">
+			<div class="post-head__video video-player">
+				<div class="video-player__thumb">
+					<img src="images/demo/poster-1.jpg" alt="">
+				</div>
+				<video class="video-player__html-player" preload="metadata" src="/intro.mp4" controls ></video>
+				<button class="button button-play button-play--white" ></button>
+			</div>
+			<button class="button-close js-close-modal"></button>
+		</div>
 	</div>
 
 	<!-- Feedback -->
-	<div class="modal-main" id="modal-main">
+	<!-- <div class="modal-main" id="modal-main">
 		<div class="modal-main__container">
 			<div class="modal-main__header">
 				<div class="modal-main__title">Перезвоните мне</div>
@@ -1317,7 +1320,7 @@
 				<use xlink:href="symbol/sprite.svg#plus"></use>
 			</svg>
 		</button>
-	</div>
+	</div> -->
 
 </div>
 

@@ -6117,36 +6117,16 @@ ul.menu-categoties > li.current-menu-item > a:hover::after {
 .site__modals {
   display: none; }
 
-.modal-hero {
-  position: relative;
-  max-width: 1410px;
-  max-height: 780px;
+.modal-video {
+  max-width: 1380px;
   margin: 0 auto;
-  padding: 0 15px; }
-  .modal-hero__container {
-    border-radius: 20px;
-    overflow: hidden; }
-  .modal-hero__video {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover; }
-  .modal-hero__play {
+  position: relative;
+  padding-top: 52px;
+  padding-bottom: 52px; }
+  .modal-video .button-close {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  .modal-hero__close {
-    position: absolute;
-    right: 0;
-    top: -52px; }
-
-@media (max-width: 1024px) {
-  .modal-hero__play {
-    visibility: hidden;
-    display: none; } }
+    top: 0px;
+    right: 0; }
 
 @media (max-width: 485.98px) {
   .modal-hero {
