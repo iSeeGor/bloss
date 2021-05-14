@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
 	mobileMenu($);
 
 	// HOME PAGE
-	categorieTabs();
+	categorieCards();
 	customSelect();
 	reviewsSlider();
 	accordionHandler($);
@@ -139,9 +139,9 @@ const siteSecurity = () => {
 	}, false);
 }
 
-const categorieTabs = () => {
+const categorieCards = () => {
 
-	document.querySelectorAll('.categorie-tab').forEach( tab => {
+	document.querySelectorAll('.categorie-cards__item').forEach( tab => {
 
 		tab.addEventListener('click', tabsToggle)
 	});
@@ -223,7 +223,34 @@ const popupModals = ($) => {
 			}
 		}
 
-	});	
+	});
+
+	$('.js-modal-alert').magnificPopup({
+
+		type: 'inline',
+		preloader: false,
+		// focus: '#username',
+		// modal: true,
+		showCloseBtn: false,
+		closeOnBgClick: true,
+		mainClass: 'mfp-modal-alert',
+
+		callbacks: {
+
+			open: function() {
+
+				$('.site').addClass('glass-overflow-in');
+			},
+
+			close: function(){
+				$('.site').addClass('glass-overflow-out');
+
+				setTimeout(() => {
+					$('.site').removeClass('glass-overflow-in glass-overflow-out');
+				}, 800);
+			}
+		}
+	});
 
 	$(document).on('click', '.js-close-modal', function (e) {
 		e.preventDefault();
@@ -262,8 +289,8 @@ const animationInit = () => {
 
 const mobileMenu = ($) => {
 
-	$('.menu-item-has-children > a').on('click', function(){
-
+	$('.menu-item-has-children > a').on('click', function(e){
+		e.preventDefault();
 		$(this).parent().toggleClass('is-collapsed');
 		$(this).parent().find('.sub-menu').slideToggle(400);
 	})

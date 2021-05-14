@@ -32,3 +32,16 @@
 		opacity: .3;
 	}
 }
+
+@keyframes mfp-bg-animation-in {
+
+	0% {
+
+		opacity: 0;
+	}
+
+	100% {
+
+		opacity: 0.8;
+	}
+}

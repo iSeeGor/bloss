@@ -275,49 +275,56 @@
 					<h2 class="home-categories__title block-title">Pick any categories that you need help in</h2>
 				</header>
 
-				<div class="categorie-cards">
+								<div class="categorie-cards">
 					<div class="categorie-cards__list">
 						<a href="#" class="categorie-cards__item">
 							<svg class="categorie-cards__item-icon icon-conceive">
 								<use xlink:href="symbol/sprite.svg#icon-conceive"></use>
 							</svg>
 							<span class="categorie-cards__item-title">Trying to Conceive</span>
+							<span class="categorie-cards__close"></span>
 						</a>
 						<a href="#" class="categorie-cards__item">
 							<svg class="categorie-cards__item-icon icon-pregnacy">
 								<use xlink:href="symbol/sprite.svg#icon-pregnacy"></use>
 							</svg>
 							<span class="categorie-cards__item-title">Pregnancy</span>
+							<span class="categorie-cards__close"></span>
 						</a>
 						<a href="#" class="categorie-cards__item">
 							<svg class="categorie-cards__item-icon icon-family">
 								<use xlink:href="symbol/sprite.svg#icon-family"></use>
 							</svg>
 							<span class="categorie-cards__item-title">Parenting</span>
+							<span class="categorie-cards__close"></span>
 						</a>
 						<a href="#" class="categorie-cards__item">
 							<svg class="categorie-cards__item-icon icon-hands">
 								<use xlink:href="symbol/sprite.svg#icon-hands"></use>
 							</svg>
 							<span class="categorie-cards__item-title">Life</span>
+							<span class="categorie-cards__close"></span>
 						</a>
 						<a href="#" class="categorie-cards__item">
 							<svg class="categorie-cards__item-icon icon-apple">
 								<use xlink:href="symbol/sprite.svg#icon-apple"></use>
 							</svg>
 							<span class="categorie-cards__item-title">Nutrition</span>
+							<span class="categorie-cards__close"></span>
 						</a>
 						<a href="#" class="categorie-cards__item">
 							<svg class="categorie-cards__item-icon icon-life">
 								<use xlink:href="symbol/sprite.svg#icon-life"></use>
 							</svg>
 							<span class="categorie-cards__item-title">Wellness</span>
+							<span class="categorie-cards__close"></span>
 						</a>
 						<a href="#" class="categorie-cards__item">
 							<svg class="categorie-cards__item-icon icon-style">
 								<use xlink:href="symbol/sprite.svg#icon-style"></use>
 							</svg>
 							<span class="categorie-cards__item-title">Style</span>
+							<span class="categorie-cards__close"></span>
 						</a>
 					</div>
 				</div>
@@ -1013,8 +1020,8 @@
 
 			<div class="section__body">
 				<div class="cards">
-					<div class="cards__grid">
-						<div class="cards__col">
+					<div class="cards__grid cards__grid--xl">
+						<div class="cards__col cards__col--xl">
 							<div class="info-card">
 								<div class="info-card__inner">
 									<div class="info-card__icon">
@@ -1027,7 +1034,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="cards__col">
+						<div class="cards__col cards__col--xl">
 							<div class="info-card">
 								<div class="info-card__inner">
 									<div class="info-card__icon">
@@ -1040,7 +1047,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="cards__col">
+						<div class="cards__col cards__col--xl">
 							<div class="info-card">
 								<div class="info-card__inner">
 									<div class="info-card__icon">
@@ -1401,6 +1408,45 @@
 			</div>
 			<button class="button-close js-close-modal"></button>
 		</div>
+	</div>
+	
+	<div id="modal-chat" class="modal modal-alert">
+		<div class="modal-alert__inner">
+			<div class="modal-alert__title">
+				Ask an expert
+			</div>
+			<div class="modal-alert__text">
+				Short on time? Need some expert<br> advice? Click below to ask your expert a<br> question for only £4.99.
+			</div>
+			<a href="#" class="button-primary button-primary--dark">Start chat</a>
+		</div>
+		<button class="button modal__close js-close-modal"></button>
+	</div>
+
+	<div id="modal-contact" class="modal modal-alert">
+		<div class="modal-alert__inner">
+			<div class="modal-alert__title">
+				Need to ask a question <br> before booking?
+			</div>
+			<div class="modal-alert__text">
+				Contact your expert here with <br> any general questions about <br> your booking for free
+			</div>
+			<a href="#" class="button-primary button-primary--dark">Start chat</a>
+		</div>
+		<button class="button modal__close js-close-modal"></button>
+	</div>
+
+	<div id="modal-chat" class="modal modal-alert">
+		<div class="modal-alert__inner">
+			<div class="modal-alert__title">
+				Ask an expert
+			</div>
+			<div class="modal-alert__text">
+				Short on time? Need some expert<br> advice? Click below to ask your expert a<br> question for only £4.99.
+			</div>
+			<button class="button-primary button-primary--dark">Start chat</button>
+		</div>
+		<button class="button modal__close js-close-modal"></button>
 	</div>
 
 	<!-- Feedback -->
