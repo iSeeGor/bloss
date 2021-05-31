@@ -1,0 +1,287 @@
+/*============================================================================
+	#Audio Player
+==============================================================================*/
+
+.mejs-custom-player .mejs-container, .mejs-custom-player .mejs-container .mejs-controls {
+
+	background: transparent;
+	// background: #ccc;
+}
+
+.mejs-custom-player {
+
+	border-bottom: 1px solid #D4D9E0;
+	padding-bottom: 16px;
+	margin-bottom: 16px;
+
+	.mejs-audio-title {
+
+		// margin-top: 32px;
+		display: block;
+		color: #264066;
+		font-weight: 500;
+		margin-bottom: 4px;
+	}
+
+	.mejs-container * {
+
+		outline: none;
+		font-family: "Gotham", sans-serif;
+		color: #8D9AAE;
+	}
+	
+
+	.mejs-container + .mejs-offscreen + .mejs-container {
+
+		border-bottom: none;
+	}
+
+	.mejs-inner {
+
+		height: 40px;
+	}
+
+	.mejs-controls {
+
+		padding: 0 0;
+		align-items: center;
+	}
+
+	.mejs-playpause-button,
+	.mejs-volume-button {
+
+		height: auto;
+	}
+
+	.mejs-playpause-button {
+
+		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+		&:hover {
+
+			opacity: 0.8;
+		}
+	}
+
+	.mejs-play>button,
+	.mejs-pause>button {
+
+		margin: 0;
+		border: 2px solid #264066;
+		border-radius: 100%;
+		width: 32px;
+		height: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: none;
+		position: relative;
+
+		&:hover {
+
+			border: 2px solid #264066;
+		}
+	}
+
+	.mejs-play>button {
+
+		&::before {
+
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6.5px 0 6.5px 11px;
+			border-color: transparent transparent transparent #264066;
+			top: 50%;
+			left: 55%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.mejs-pause>button {
+
+		&::before,
+		&::after {
+
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 12px;
+			width: 2px;
+			background: #264066;
+		}
+
+		&::before {
+
+			left: calc(50% - 3px);
+		}
+
+		&::after {
+
+			left: calc(50% + 2px);
+		}
+	}
+
+	.mejs-mute>button,
+	.mejs-unmute>button {
+
+		margin: 0;
+		width: 26px;
+		height: 26px;
+		position: static;
+	}
+
+	.mejs-mute>button {
+
+		background: url('../icons/icon-volume.svg') no-repeat center left;
+	}
+
+	.mejs-unmute>button {
+
+		background: url('../icons/icon-mute.svg') no-repeat center left;
+	}
+
+
+	.mejs-time {
+
+		font-size: 16px;
+		line-height: 16px;
+		font-weight: normal;
+		height: auto;
+	}
+
+	.mejs-currenttime-container {
+
+		padding: 2px 0 0 0;
+		margin: 0 12px;
+		min-width: 72px;
+	}
+
+	.mejs-duration-container {
+
+		padding: 2px 0 0 0;
+		margin: 0 12px;
+		min-width: 72px;
+		display: none;
+	}
+
+	.mejs-time-buffering, 
+	.mejs-time-current, 
+	.mejs-time-float, 
+	.mejs-time-float-corner, 
+	.mejs-time-float-current, 
+	.mejs-time-hovered, 
+	.mejs-time-loaded, 
+	.mejs-time-marker, 
+	.mejs-time-total {
+
+		margin: 0;
+		height: 5px;
+		border-radius: 10px !important;
+	}
+
+	.mejs-controls .mejs-time-rail .mejs-time-current {
+
+		background: #264066;
+	}
+	
+	.mejs-time-rail {
+
+		margin: 0 32px 0 16px;
+		padding: 0;
+		height: 5px;
+	}
+
+	.mejs-time-float {
+
+		display: none !important;
+	}
+
+	.mejs-time-handle-content {
+
+		width: 16px;
+		height: 16px;
+		background: #264066;
+		border: none;
+		border-radius: 50% !important;
+		top: -9px;
+		// transform: scale(1);
+	}
+
+	.mejs-controls .mejs-time-rail .mejs-time-total,
+	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+
+		background: rgba(38, 64, 102, 0.2);
+	}
+
+	.mejs-controls .mejs-time-rail .mejs-time-loaded {
+
+		background: rgba(38, 64, 102, 0.4);
+	}
+
+	.mejs-controls .mejs-time-rail .mejs-time-hovered {
+
+		background: rgba(38, 64, 102, 0.6);
+	}
+
+	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+
+		background: #264066;
+	}
+
+	.mejs-horizontal-volume-slider {
+
+		width: 140px;
+	}
+
+	.mejs-horizontal-volume-total {
+
+		height: 5px;
+		width: 136px;
+	}
+
+	.mejs-horizontal-volume-handle {
+
+		display: block;
+		width: 16px;
+		height: 16px;
+		background: #264066;
+		border: none;
+		border-radius: 50% !important;
+		top: -5px;
+		z-index: 20;
+		position: absolute;
+	}
+}
+
+@media (max-width: 767.98px) {
+
+	.mejs-custom-player .mejs-time {
+
+		font-size: 14px;
+		line-height: 14px;
+		min-width: 60px;
+	}
+
+	.mejs-custom-player .mejs-currenttime-container {
+
+		margin: 0 8px;
+	}
+
+	.mejs-custom-player .mejs-time-rail {
+
+		margin: 0;
+	}
+}
+
+@media (max-width: 375.98px) {
+
+	.mejs-custom-player .mejs-audio-title {
+
+		font-size: 14px;
+	}
+}

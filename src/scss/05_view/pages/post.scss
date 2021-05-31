@@ -135,6 +135,7 @@
 		overflow: hidden;
 		border-radius: 100%;
 		margin-right: 12px;
+		flex: 0 0 auto;
 
 		img {
 
@@ -182,6 +183,7 @@
 	&__categories {
 
 		display: flex;
+		flex-wrap: wrap;
 		color: $color8D9AAE;
 		
 		span { margin-right: 2px; }
@@ -568,6 +570,7 @@
 		&__main {
 
 			flex: 0 0 100%;
+			max-width: 100%;
 			padding-right: 0;
 		}
 

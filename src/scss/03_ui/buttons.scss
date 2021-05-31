@@ -380,7 +380,8 @@
 	
 }
 
-.button-share {
+.button-share,
+.button-filter {
 
 	padding: 7px 42px 7px;
 	font-size: 18px;
@@ -410,6 +411,26 @@
 
 		color: white;
 		background: $colorSecondary;
+	}
+}
+
+.button-filter {
+
+	cursor: pointer;
+	text-decoration: none;
+	max-width: 120px;
+	width: 100%;
+	padding:6px 5px 5px;
+	display: flex;
+	justify-content: center;
+	border-radius: 8px;
+	font-size: 16px;
+
+
+	.icon {
+
+		width: 18px;
+		height: 18px;
 	}
 }
 

@@ -122,6 +122,8 @@
 	padding: 100px 0 100px;
 	background: $colorGeneral;
 	color: white;
+	position: relative;
+	z-index: 1;
 
 	&__inner {
 

@@ -1,9 +1,212 @@
-@@include('partials/header.html')
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Bloss</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!--== Preload Fonts -->
+	<link rel="preload" href="fonts/Gotham-Book.woff2" as="font" type="font/woff" crossorigin="">
+	<link rel="preload" href="fonts/BalooBhaijaan-Regular.woff2" as="font" type="font/woff" crossorigin="">
+	<link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" type="font/woff" crossorigin="">
+
+	<!--== favicon  -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#264066">
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="body" id="body">
+	<div class="site">
+
+		<header class="header site__header">
+			<div class="container">
+				<div class="header-main header__main">
+					<div class="header-main__logo">
+						<a href="/" class="site-logo">
+							<img src="images/logo.svg" alt="Bloss Logo">
+						</a>
+					</div>
+					<nav class="header-main__menu">
+						<ul class="menu header-menu">
+							<li class="current-menu-item"><a href="#">Experts</a></li>
+							<li><a href="#">Chat</a></li>
+							<li><a href="#">Shop</a></li>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">About Us</a></li>
+						</ul>
+					</nav>
+					<div class="header-main__controls">
+						<div class="header-main__search header-search">
+							<button class="header-search__button button">
+								<svg class="icon icon-search">
+									<use xlink:href="symbol/sprite.svg#icon-search"></use>
+								</svg>								
+							</button>
+							<form class="header-search__form">
+								<div class="header-search__form-group">
+									<svg class="icon icon-search">
+										<use xlink:href="symbol/sprite.svg#icon-search"></use>
+									</svg>								
+									<input type="text" class="header-search__form-input" placeholder="Search">
+								</div>
+							</form>
+						</div>
+
+						<div class="header-main__controls-buttons">
+							<a class="button-primary button-primary--dark header-main__button" href="#">Log in</a>
+							<a class="button-primary header-main__button" href="#">Sign up for free</a>
+						</div>
+
+						<div class="header-main__header-dashboard header-dashboard"  style="display: none;">
+							<div class="header-dashboard__user">
+								<div class="header-dashboard__avatar">
+									<img src="images/demo/demo-1.jpg" alt="">
+									<!-- <img src="icons/icon-user-profile.svg" alt=""> -->
+								</div>
+								<span class="header-dashboard__msg-count">2</span>
+							</div>
+							<button class="button header-dashboard__logout">Log Out</button>
+						</div>
+					</div>
+					<div class="header-main__social">
+														<div class="social social--dark">
+									<a class="social__item" href="#">
+										<svg class="icon _facebook">
+											<use xlink:href="symbol/sprite.svg#icon-facebook"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _instagram">
+											<use xlink:href="symbol/sprite.svg#icon-instagram"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _twitter">
+											<use xlink:href="symbol/sprite.svg#icon-twitter"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _linkedin">
+											<use xlink:href="symbol/sprite.svg#icon-linkedin"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _youtube">
+											<use xlink:href="symbol/sprite.svg#icon-youtube"></use>
+										</svg>
+									</a>
+								</div>
+					</div>
+				</div>
+				<div class="header-bottom header__bottom">
+					<nav class="header-bottom__nav">
+						<ul class="menu menu-categoties">
+							<li class="current-menu-item"><a href="#">Trying to Conceive</a></li>
+							<li class="menu-item-has-children">
+								<a href="http://google.com">Pregnancy</a>
+
+								<ul class="sub-menu">
+									<li><a href="#">Trying to Conceive</a></li>
+									<li><a href="#">Pregnancy</a></li>
+									<li><a href="#">Parenting</a></li>
+									<li><a href="#">Life</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Parenting</a></li>
+							<li><a href="#">Life</a></li>
+							<li><a href="#">Nutrition</a></li>
+							<li><a href="#">Wellbeing</a></li>
+							<li><a href="#">Style</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		
+		<div class="mobile-header">
+			<div class="container">
+				<div class="mobile-header__logo">
+					<a href="/" class="site-logo site-logo--mobile">
+						<img src="images/logo.svg" alt="Bloss Logo">
+					</a>
+				</div>
+				<div class="mobile-header__control">
+					<div class="mobile-header__header-search header-search">
+						<button class="header-search__button button">
+							<svg class="icon icon-search">
+								<use xlink:href="symbol/sprite.svg#icon-search"></use>
+							</svg>								
+						</button>
+						<form class="header-search__form">
+							<div class="header-search__form-group">
+								<svg class="icon icon-search">
+									<use xlink:href="symbol/sprite.svg#icon-search"></use>
+								</svg>								
+								<input type="text" class="header-search__form-input" placeholder="Search">
+							</div>
+						</form>
+					</div>
+					<div class="mobile-header__dashboard header-dashboard header-dashboard--mobile"  style="display: block;">
+						<div class="header-dashboard__user">
+							<div class="header-dashboard__avatar">
+								<img src="images/demo/demo-1.jpg" alt="">
+								<!-- <img src="icons/icon-user-profile.svg" alt=""> -->
+							</div>
+							<span class="header-dashboard__msg-count">2</span>
+						</div>
+					</div>
+					<div class="mobile-header__hambuger hamburger hamburger--collapse">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		
+
+
 
 	<div class="post">
 		<div class="post__bredcrumbs">
 			<div class="container">
-				@@include('components/breadcrumb.html')
+				<nav class="breadcrumb">
+	<div class="breadcrumb__list">
+		<a class="breadcrumb__item" href="/">
+			<svg class="icon icon-home">
+				<use xlink:href="symbol/sprite.svg#icon-home"></use>
+			</svg>
+		</a>
+		<span class="breadcrumb__separator">
+			<svg class="icon icon-arrow">
+				<use xlink:href="symbol/sprite.svg#icon-arrow"></use>
+			</svg>
+		</span>
+		<a class="breadcrumb__item" href="#">Experts</a>
+		<span class="breadcrumb__separator">
+			<svg class="icon icon-arrow">
+				<use xlink:href="symbol/sprite.svg#icon-arrow"></use>
+			</svg>
+		</span>
+		<span class="breadcrumb__item breadcrumb__item--current">Jane Foster</span>
+	</div>
+</nav>
 			</div>
 		</div>
 
@@ -47,12 +250,11 @@
 													</svg>
 													<span>Twitter</span>
 												</div>
-												<div class="share__item js-copy-link">
+												<div class="share__item">
 													<svg class="icon icon-link">
 														<use xlink:href="symbol/sprite.svg#icon-link"></use>
 													</svg>
 													<span>Copy link</span>
-													<input class="share__input-hidden" type="text" value="http://google.com">
 												</div>
 											</div>
 										</div>
@@ -104,22 +306,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="post-head__media">
-						<!-- Post -->
-
-						<!-- <figure class="post-head__image">
-							<img src="images/demo/poster-2.jpg" alt="">
-						</figure> -->
-
-						<!-- Post Type Video  -->
-						<div class="post-head__video video-player">
-							<div class="video-player__thumb">
-								<img src="images/demo/poster-1.jpg" alt="">
-							</div>
-							<video class="video-player__html-player" preload="metadata" src="/intro.mp4" controls ></video>
-							<button class="button button-play button-play--white" ></button>
-						</div>
-					</div>
 				</div>
 			</div>
 
@@ -127,11 +313,191 @@
 				<div class="container">
 					<div class="post-content__inner">
 						<main class="post-content__main">
+
+							<!-- post audio start -->
+							<div class="post-content__audio post-audio">
+								<h2 class="post-audio__title">Audio #1</h2>
+								<div class="post-audio__items">
+									<div class="post-audio__item">
+										<div class="post-audio__track post-track">
+											<div class="post-track__inner">
+												<button class="post-track__control-button post-track__control-button--play"></button>
+												<div class="post-track__count">01</div>
+												<button class="post-track__wishlist">
+													<svg class="icon">
+														<use xlink:href="symbol/sprite.svg#icon-heart-track"></use>
+													</svg>
+												</button>
+												<div class="post-track__timeline-control">
+													<div class="post-track__timeline">
+														<div class="post-track__timeline-background"></div>
+														<div class="post-track__timeline-current" style="width: 70%;"></div>
+														<div class="post-track__timeline-button" style="left: 70%;"></div>
+													</div>
+													<div class="post-track__track-times">
+														<div class="post-track__time post-track__time--current">00:00</div>
+														<div class="post-track__time post-track__time--remains">-2:43</div>
+													</div>
+												</div>
+												<div class="post-track__actions">
+													<div class="post-track__price post-track__price--free">
+														Free
+													</div>
+													<a href="#" class="button post-track__control-button post-track__control-button--download">
+														<svg class="icon">
+															<use xlink:href="symbol/sprite.svg#icon-arrow-download"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="post-audio__item">
+										<div class="post-audio__track post-track">
+											<div class="post-track__inner">
+												<button class="post-track__control-button post-track__control-button--play"></button>
+												<div class="post-track__count">02</div>
+												<button class="post-track__wishlist">
+													<svg class="icon">
+														<use xlink:href="symbol/sprite.svg#icon-heart-track"></use>
+													</svg>
+												</button>
+												<div class="post-track__timeline-control">
+													<div class="post-track__timeline">
+														<div class="post-track__timeline-background"></div>
+														<div class="post-track__timeline-current" "></div>
+														<div class="post-track__timeline-button" style="display: none;"></div>
+													</div>
+													<div class="post-track__track-times">
+														<div class="post-track__time post-track__time--current">00:00</div>
+														<div class="post-track__time post-track__time--remains">-2:43</div>
+													</div>
+												</div>
+												<div class="post-track__actions">
+													<div class="post-track__price post-track__price--in">
+														$100
+													</div>
+													<a href="#" class="button post-track__control-button post-track__control-button--download">
+														<svg class="icon">
+															<use xlink:href="symbol/sprite.svg#icon-arrow-download"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="post-audio__item">
+										<div class="post-audio__track post-track">
+											<div class="post-track__inner">
+												<button class="post-track__control-button post-track__control-button--play"></button>
+												<div class="post-track__count">03</div>
+												<button class="post-track__wishlist">
+													<svg class="icon">
+														<use xlink:href="symbol/sprite.svg#icon-heart-track"></use>
+													</svg>
+												</button>
+												<div class="post-track__timeline-control">
+													<div class="post-track__timeline">
+														<div class="post-track__timeline-background"></div>
+														<div class="post-track__timeline-current" "></div>
+														<div class="post-track__timeline-button" style="display: none;"></div>
+													</div>
+													<div class="post-track__track-times">
+														<div class="post-track__time post-track__time--current">00:00</div>
+														<div class="post-track__time post-track__time--remains">-2:43</div>
+													</div>
+												</div>
+												<div class="post-track__actions">
+													<div class="post-track__price post-track__price--in">
+														$100
+													</div>
+													<a href="#" class="button post-track__control-button post-track__control-button--download">
+														<svg class="icon">
+															<use xlink:href="symbol/sprite.svg#icon-arrow-download"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="post-audio__item">
+										<div class="post-audio__track post-track">
+											<div class="post-track__inner">
+												<button class="post-track__control-button post-track__control-button--play"></button>
+												<div class="post-track__count">04</div>
+												<button class="post-track__wishlist">
+													<svg class="icon">
+														<use xlink:href="symbol/sprite.svg#icon-heart-track"></use>
+													</svg>
+												</button>
+												<div class="post-track__timeline-control">
+													<div class="post-track__timeline">
+														<div class="post-track__timeline-background"></div>
+														<div class="post-track__timeline-current" "></div>
+														<div class="post-track__timeline-button"style="display: none;"></div>
+													</div>
+													<div class="post-track__track-times">
+														<div class="post-track__time post-track__time--current">00:00</div>
+														<div class="post-track__time post-track__time--remains">-2:43</div>
+													</div>
+												</div>
+												<div class="post-track__actions">
+													<div class="post-track__price post-track__price--in">
+														$100
+													</div>
+													<a href="#" class="button post-track__control-button post-track__control-button--download">
+														<svg class="icon">
+															<use xlink:href="symbol/sprite.svg#icon-arrow-download"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="post-audio__item">
+										<div class="post-audio__track post-track">
+											<div class="post-track__inner">
+												<button class="post-track__control-button post-track__control-button--play"></button>
+												<div class="post-track__count">05</div>
+												<button class="post-track__wishlist">
+													<svg class="icon">
+														<use xlink:href="symbol/sprite.svg#icon-heart-track"></use>
+													</svg>
+												</button>
+												<div class="post-track__timeline-control">
+													<div class="post-track__timeline">
+														<div class="post-track__timeline-background"></div>
+														<div class="post-track__timeline-current" "></div>
+														<div class="post-track__timeline-button"style="display: none;"></div>
+													</div>
+													<div class="post-track__track-times">
+														<div class="post-track__time post-track__time--current">00:00</div>
+														<div class="post-track__time post-track__time--remains">-2:43</div>
+													</div>
+												</div>
+												<div class="post-track__actions">
+													<div class="post-track__price post-track__price--in">
+														$100
+													</div>
+													<a href="#" class="button post-track__control-button post-track__control-button--download">
+														<svg class="icon">
+															<use xlink:href="symbol/sprite.svg#icon-arrow-download"></use>
+														</svg>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- post audio end -->
+
 							<div class="post-content__categories post-categories">
 								<a href="#" class="post-categories__item">Parenting</a>
 								<a href="#" class="post-categories__item">Wellness</a>
 								<a href="#" class="post-categories__item">Style</a>
 							</div>
+
 							<div class="post-content__typography typography">
 								<h1>Lorem ipsum dolor sit.</h1>
 								<h2>Lorem ipsum dolor sit.</h2>
@@ -162,18 +528,18 @@
 									<div class="swiper-container">
 										<div class="swiper-wrapper">
 											<div class="post-slider__slide swiper-slide">
-												<img src="images/demo/demo-1.jpg" alt="">
+												<img src="images/demo/card-1.jpg" alt="">
 											</div>
 											<div class="post-slider__slide swiper-slide">
-												<img src="images/demo/demo-2.jpg" alt="">
+												<img src="images/demo/card-2.jpg" alt="">
 											</div>
 											<div class="post-slider__slide swiper-slide">
-												<img src="images/demo/demo-3.jpg" alt="">
+												<img src="images/demo/card-3.jpg" alt="">
 											</div>
 										</div>
 
 										<div class="slider-control post-slider__control">
-											<button class="button-nav button-nav--prev">
+											<button class="button-nav button-nav--blue button-nav--prev">
 												<svg class="icon">
 													<use xlink:href="symbol/sprite.svg#icon-arrow"></use>
 												</svg>
@@ -182,7 +548,7 @@
 											<div class="slider-control__counter">
 											</div>
 
-											<button class="button-nav button-nav--next">
+											<button class="button-nav button-nav--blue button-nav--next">
 												<svg class="icon">
 													<use xlink:href="symbol/sprite.svg#icon-arrow"></use>
 												</svg>
@@ -260,12 +626,11 @@
 															</svg>
 															<span>Twitter</span>
 														</div>
-														<div class="share__item js-copy-link">
+														<div class="share__item">
 															<svg class="icon icon-link">
 																<use xlink:href="symbol/sprite.svg#icon-link"></use>
 															</svg>
 															<span>Copy link</span>
-															<input class="share__input-hidden" type="text" value="http://google2.com">
 														</div>
 													</div>
 												</div>
@@ -718,4 +1083,170 @@
 		</section>
 	</div>
 
-@@include('partials/footer.html')
+		<footer class="footer site__footer" >
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__logo footer-logo">
+						<a href="/" class="footer-logo__link">
+							<img class="lazy-image footer-logo__image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/logo-footer.svg" alt="">
+						</a>
+						<a href="#" class="footer__button button-primary button-primary--white">Become an expert</a>
+					</div>
+					<div class="footer__menu">
+						<div class="footer__nav">
+							<ul class="footer-menu">
+								<li class="menu-item-has-children">
+									<a href="#">Categories</a>
+
+									<ul class="sub-menu">
+										<li><a href="#">Trying to Conceive</a></li>
+										<li><a href="#">Pregnancy</a></li>
+										<li><a href="#">Life</a></li>
+										<li><a href="#">Nutrition</a></li>
+										<li><a href="#">Wellness</a></li>
+										<li><a href="#">Style</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Experts</a></li>
+								<li><a href="#">Chat</a></li>
+								<li><a href="#">Shop</a></li>
+							</ul>
+						</div>
+						<div class="footer__nav">
+							<ul class="footer-menu">
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">Terms of Use</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__contacts footer-contacts">
+						<h4 class="footer-contacts__title">Contacts</h4>
+						<ul class="footer-contacts__list-items">
+							<li class="footer-contacts__item">
+								<a class="footer-email" href="mailto:info@bloss.life">info@bloss.life</a>
+							</li>
+							<li class="footer-contacts__item">
+								<a class="footer-email" href="mailto:marketing@bloss.life">marketing@bloss.life</a>
+							</li>
+							<li class="footer-contacts__item">
+								<a class="footer-email" href="mailto:press@bloss.life">press@bloss.life</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__subscribe subscribe">
+						<div class="subscribe__inner">
+							<header class="subscribe__header">
+								<div class="subscribe__title">
+									Want useful parenting advice and to stay in the loop for when we launch? Sign up here
+								</div>
+							</header>
+							<form class="subscribe-form subscribe__form form">
+								<div class="form__row">
+									<div class="form__group">
+										<input type="text" class="form__input" placeholder="bloss@bloss.life" required>
+										<button class="subscribe-form__button button">Send</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="footer__social">
+															<div class="social @@class">
+									<a class="social__item" href="#">
+										<svg class="icon _facebook">
+											<use xlink:href="symbol/sprite.svg#icon-facebook"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _instagram">
+											<use xlink:href="symbol/sprite.svg#icon-instagram"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _twitter">
+											<use xlink:href="symbol/sprite.svg#icon-twitter"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _linkedin">
+											<use xlink:href="symbol/sprite.svg#icon-linkedin"></use>
+										</svg>
+									</a>
+									<a class="social__item" href="#">
+										<svg class="icon _youtube">
+											<use xlink:href="symbol/sprite.svg#icon-youtube"></use>
+										</svg>
+									</a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<div class="modals site__modals">
+
+	<!-- Hero Video Modal -->
+
+	<div id="modal-video" class="modal modal-video">
+		<div class="modal__container">
+			<div class="post-head__video video-player">
+				<div class="video-player__thumb">
+					<img src="images/demo/poster-1.jpg" alt="">
+				</div>
+				<video class="video-player__html-player" preload="metadata" src="intro.mp4" controls ></video>
+				<button class="button button-play button-play--white" ></button>
+			</div>
+			<button class="button-close js-close-modal"></button>
+		</div>
+	</div>
+	
+	<div id="modal-advice" class="modal modal-alert">
+		<div class="modal-alert__inner">
+			<div class="modal-alert__title">
+				Ask an expert
+			</div>
+			<div class="modal-alert__text">
+				Short on time? Need some expert<br> advice? Click below to ask your expert a<br> question for only £4.99.
+			</div>
+			<a href="#" class="button-primary button-primary--dark">Start chat</a>
+		</div>
+		<button class="button modal__close js-close-modal"></button>
+	</div>
+
+	<div id="modal-message" class="modal modal-alert">
+		<div class="modal-alert__inner">
+			<div class="modal-alert__title">
+				Need to ask a question <br> before booking?
+			</div>
+			<div class="modal-alert__text">
+				Contact your expert here with <br> any general questions about <br> your booking for free
+			</div>
+			<a href="#" class="button-primary button-primary--dark">Start chat</a>
+		</div>
+		<button class="button modal__close js-close-modal"></button>
+	</div>
+
+	<div id="modal-chat" class="modal modal-alert">
+		<div class="modal-alert__inner">
+			<div class="modal-alert__title">
+				Ask an expert
+			</div>
+			<div class="modal-alert__text">
+				Short on time? Need some expert<br> advice? Click below to ask your expert a<br> question for only £4.99.
+			</div>
+			<button class="button-primary button-primary--dark">Start chat</button>
+		</div>
+		<button class="button modal__close js-close-modal"></button>
+	</div>
+
+</div>
+
+	<script src="jquery.min.js"></script>
+	<script src="js/vendor.js"></script>
+	<script src="js/index.js"></script>
+	</body>
+
+</html>

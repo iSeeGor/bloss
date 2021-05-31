@@ -7,11 +7,14 @@ jQuery(document).ready(function($){
 	siteDropdowns();
 	customVideoPlayer($);
 	postSlider();
+	shareCopyLink();
+	productQuantity($);
 	// siteSecurity();
 	
 	// MOBILE
 	hamburger();
 	mobileMenu($);
+	mobileFilter($);
 
 	// HOME PAGE
 	categorieCards();
@@ -165,6 +168,90 @@ const postSlider = () => {
 		},
 	});	
 }
+
+const shareCopyLink = () => {
+
+	let copyButton = document.querySelectorAll('.js-copy-link');
+	if(!copyButton.length) return;
+
+	copyButton.forEach(button => {
+
+		buttonCopyHandler(button);
+
+	});
+
+	function buttonCopyHandler(button){
+
+		let activeText = 'Copied';
+		let defultText = button.querySelector('span').innerHTML;
+		let textBlock = button.querySelector('span');
+		let input = button.querySelector('input');
+
+		button.addEventListener('click',function(e){
+
+			e.preventDefault();
+			e.stopPropagation();
+
+			input.select();
+  			input.setSelectionRange(0, 99999);
+  			document.execCommand("copy");
+			textBlock.innerHTML = activeText;
+
+			setTimeout(() => {
+				textBlock.innerHTML = defultText;
+				document.querySelector('.dropdown-block.is-active').classList.remove('is-active');
+			}, 1000);
+		});
+
+	}
+
+}
+
+const productQuantity = ($) => {
+
+	if ( ! String.prototype.getDecimals ) {
+            String.prototype.getDecimals = function() {
+                var num = this,
+                    match = ('' + num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+                if ( ! match ) {
+                    return 0;
+                }
+                return Math.max( 0, ( match[1] ? match[1].length : 0 ) - ( match[2] ? +match[2] : 0 ) );
+            }
+        }
+        // Quantity "plus" and "minus" buttons
+        $( document.body ).on( 'click', '.plus, .minus', function() {
+            var $qty        = $( this ).closest( '.quantity' ).find( '.qty'),
+                currentVal  = parseFloat( $qty.val() ),
+                max         = parseFloat( $qty.attr( 'max' ) ),
+                min         = parseFloat( $qty.attr( 'min' ) ),
+                step        = $qty.attr( 'step' );
+
+            // Format values
+            if ( ! currentVal || currentVal === '' || currentVal === 'NaN' ) currentVal = 0;
+            if ( max === '' || max === 'NaN' ) max = '';
+            if ( min === '' || min === 'NaN' ) min = 0;
+            if ( step === 'any' || step === '' || step === undefined || parseFloat( step ) === 'NaN' ) step = 1;
+
+            // Change the value
+            if ( $( this ).is( '.plus' ) ) {
+                if ( max && ( currentVal >= max ) ) {
+                    $qty.val( max );
+                } else {
+                    $qty.val( ( currentVal + parseFloat( step )).toFixed( step.getDecimals() ) );
+                }
+            } else {
+                if ( min && ( currentVal <= min ) ) {
+                    $qty.val( min );
+                } else if ( currentVal > 0 ) {
+                    $qty.val( ( currentVal - parseFloat( step )).toFixed( step.getDecimals() ) );
+                }
+            }
+
+            // Trigger change event
+            $qty.trigger( 'change' );
+        });
+};
 
 const siteSecurity = () => {
 
@@ -323,11 +410,6 @@ const animationInit = () => {
 
 const mobileMenu = ($) => {
 
-	// $('.menu-item-has-children > a').on('click', function(e){
-	// 	e.preventDefault();
-	// 	$(this).parent().toggleClass('is-collapsed');
-	// 	$(this).parent().find('.sub-menu').slideToggle(400);
-	// })
 
 	if(window.innerWidth <= 1024) {
 
@@ -341,6 +423,23 @@ const mobileMenu = ($) => {
 		$(this).parents('.menu-item-has-children').toggleClass('is-collapsed');
 		$(this).parents('.menu-item-has-children').find('.sub-menu').slideToggle(400);
 	});
+}
+
+const mobileFilter = () => {
+
+	let filterButton = document.querySelector('.button-filter');
+	if(!filterButton) return;
+
+	let activeClass = 'is-active';
+
+	filterButton.addEventListener('click', filterToggle);
+	document.querySelector('.aside-filter__hambuger').addEventListener('click', filterToggle);
+
+	function filterToggle(){
+
+		document.querySelector('.aside-filter').classList.toggle(activeClass);
+		document.querySelector('.aside-filter__hambuger').classList.toggle(activeClass);
+	}
 }
 
 const hamburger = () => {
@@ -420,6 +519,7 @@ const profileReviewSlider = () => {
 		slidesPerView: 2,
 		spaceBetween: 30,
 		speed: 1400,
+		autoHeight: true,
 
 		navigation : {
 
