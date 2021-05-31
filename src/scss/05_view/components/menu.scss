@@ -42,7 +42,7 @@ ul.menu {
 		
 	}
 
-	> li.current-menu-item a {
+	> li.current-menu-item > a {
 
 		color: $colorPrimary;
 	} 
@@ -285,40 +285,53 @@ ul.menu-categoties {
 			font-size: 18px;
 			padding: 8px 30px;
 			display: inline-block;
+			overflow: visible;
 		}
 
 		li.menu-item-has-children > a {
 
 			position: relative;
 
+		}
+
+		.sub-menu-toggle {
+			display: inline-block;
+			position: absolute;
+			right: -10px;
+			top: 12px;
+			width: 20px;
+			height: 20px;
+			// background: red;
+
 			&::after,
 			&::before {
 
 				content: '';
 				position: absolute;
-				right: 0;
+				right: 50%;
 				left: auto;
 				bottom: auto;
 				top: 50%;
 				height: 2px;
 				width: 10px;
 				opacity: 1;
+				transform: translate(50%, -50%);
 				background: $colorSecondary;
 				transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 			}
 
 			&::after {
 
-				transform: rotate(90deg);
+				transform: translate(50%, -50%) rotate(90deg);
 			}
 		}
 	}
 
-	ul.menu-categoties li.menu-item-has-children.is-collapsed > a {
+	ul.menu-categoties li.menu-item-has-children.is-collapsed .sub-menu-toggle {
 
 		&::after {
 
-			transform: rotate(0);
+			transform: translate(50%, -50%) rotate(0) ;
 		}
 
 	}

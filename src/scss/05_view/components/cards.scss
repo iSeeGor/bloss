@@ -268,10 +268,6 @@
 	&__footer {
 
 		padding: 0 16px 16px;
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		flex-wrap: wrap;
 	}
 
 	&__info {
@@ -373,6 +369,7 @@
 		padding: 4px 10px;
 		border: 1px solid $colorSecondary;
 		border-radius: 8px;
+		display: inline-block;
 
 		&--pink {
 

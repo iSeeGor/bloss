@@ -171,13 +171,13 @@ p {
 	a {
 
 		text-decoration: none;
-		color: $colorGeneral;
-		transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		color: $colorPrimary;
+		// transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 		&:hover {
 
 			text-decoration: underline;
-			color: $colorPrimary;
+			// color: $colorPrimary;
 		}
 	}
 

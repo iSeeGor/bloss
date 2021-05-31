@@ -6,6 +6,7 @@ jQuery(document).ready(function($){
 	headerSeachForm();
 	siteDropdowns();
 	customVideoPlayer($);
+	postSlider();
 	// siteSecurity();
 	
 	// MOBILE
@@ -130,6 +131,39 @@ const customVideoPlayer = ($) => {
 		player.addClass('is-active');
 	});
 
+}
+
+const postSlider = () => {
+
+	let slider; 
+
+	slider = new Swiper('.post-slider .swiper-container', {
+	
+		spaceBetween: 60,
+		speed : 1600,
+
+		navigation : {
+
+			prevEl: '.post-slider .button-nav--prev',
+			nextEl: '.post-slider .button-nav--next',
+			disabledClass: 'is-disabled'
+		},
+
+		pagination: {
+
+			el: '.slider-control__counter',
+			type: 'custom',
+			renderCustom: function (swiper, current, total) {
+				
+				(current <= 9) ? current = '0' + current : current;
+				(total <= 9) ? total = '0' + total : total;
+
+				return '<span class="_current">' + current + '</span><span class="_total">/ ' + total + '</span>';
+			}
+
+			
+		},
+	});	
 }
 
 const siteSecurity = () => {
@@ -289,11 +323,24 @@ const animationInit = () => {
 
 const mobileMenu = ($) => {
 
-	$('.menu-item-has-children > a').on('click', function(e){
+	// $('.menu-item-has-children > a').on('click', function(e){
+	// 	e.preventDefault();
+	// 	$(this).parent().toggleClass('is-collapsed');
+	// 	$(this).parent().find('.sub-menu').slideToggle(400);
+	// })
+
+	if(window.innerWidth <= 1024) {
+
+		$('.menu-item-has-children > a').append('<span class="sub-menu-toggle"></span>')
+	}
+
+	$('.sub-menu-toggle').on('click', function(e){
 		e.preventDefault();
-		$(this).parent().toggleClass('is-collapsed');
-		$(this).parent().find('.sub-menu').slideToggle(400);
-	})
+		e.stopPropagation();
+		
+		$(this).parents('.menu-item-has-children').toggleClass('is-collapsed');
+		$(this).parents('.menu-item-has-children').find('.sub-menu').slideToggle(400);
+	});
 }
 
 const hamburger = () => {
@@ -433,8 +480,8 @@ const reviewStarRaiting = () => {
 }
 
 const stickySidebar = () => {
-
-
+	if(!document.querySelector('.js-sticky-widget')) return;
+	var stickyEl = new Sticksy('.js-sticky-widget', {topSpacing: 32})	
 }
 
 const siteMenus = ($) => {

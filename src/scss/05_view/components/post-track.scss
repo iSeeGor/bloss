@@ -1,0 +1,236 @@
+/*============================================================================
+	#Post Track
+==============================================================================*/
+.post-track {
+	padding: 8px 0;
+
+	&__inner {
+
+		display: flex;
+		align-items: center;
+	}
+
+	&__control-button {
+
+		display: block;
+		background: none;
+		border: 2px solid $colorSecondary;
+		border-radius: 100%;
+		width: 32px;
+		height: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		padding: 0;
+		cursor: pointer;
+		// transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+		&:hover {
+
+			background: $colorSecondary;
+
+			&::after,
+			&::before {
+
+				background: white;
+			}
+
+			.icon {
+
+				fill:white;
+			}
+		}
+
+		&--play {
+
+			margin-right: 20px;
+
+			&::before {
+
+				content: '';
+				position: absolute;
+				display: inline-block;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 6px 0 6px 10px;
+				border-color: transparent transparent transparent $colorSecondary;
+				margin-right: -2px;
+			}
+
+			&:hover {
+
+				&::before {
+
+					border-color: $colorSecondary $colorSecondary $colorSecondary white;
+				}
+			}
+			
+		} 
+
+		&--pause {
+
+			margin-right: 20px;
+
+			&::after,
+			&::before {
+
+				content: '';
+				position: absolute;
+				width: 2px;
+				height: 12px;
+				background: $colorSecondary;
+			}
+
+			&::after {
+
+				transform: translateX(-2px);
+			}
+
+			&::before {
+
+				transform: translateX(2px);
+			}
+		}
+
+		&--download {
+
+			margin-left: 14px;
+
+			.icon {
+
+				width: 14px;
+				height: 15px;
+				fill: $colorSecondary;
+			}
+		}
+
+	}
+
+	&__count {
+
+		color: $color8D9AAE;
+		font-size: 16px;
+		line-height: 1;
+		margin-right: 8px;
+		min-width: 32px;
+		text-align: center;
+		// background: #ccc;
+	}
+
+	&__wishlist {
+
+		margin: 0;
+		padding: 0;
+		border: none;
+		background: none;
+		cursor: pointer;
+
+
+		.icon {
+
+			fill: transparent;
+			stroke: $color8D9AAE;
+			width: 24px;
+			height: 24px;
+			stroke-width: 4;
+			transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+
+		&:not(.is-active):hover {
+
+			.icon {
+
+				fill: $color8D9AAE;
+			}
+		}
+
+		&.is-active {
+
+			.icon {
+
+				fill: $colorSecondary;
+				stroke: $colorSecondary;
+			}	
+		}
+	}
+
+	&__timeline-control {
+
+		flex: 1 1 auto;
+		margin: 24px 24px 0 32px;
+	}
+
+	&__timeline {
+		
+		position: relative;
+		margin-bottom: 6px;
+
+		&-background {
+
+			height: 5px;
+			border-radius: 16px;
+			background: $colorSecondary;
+			opacity: 0.2;
+		}
+
+		&-current {
+
+			// width: 50%;
+			height: 5px;
+			border-radius: 16px;
+			background: $colorSecondary;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&-button {
+
+			width: 17px;
+			height: 17px;
+			background: $colorSecondary;
+			border-radius: 50%;
+			top: 50%;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			cursor: pointer;
+		}
+	}
+
+	&__track-times {
+
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__time {
+
+		color: $color8D9AAE;
+	}
+
+	&__price {
+
+		font-size: 18px;
+		font-weight: 500;
+		color: #264066;
+		text-align: center;
+		min-width: 95px;
+		padding: 4px 10px;
+		border: 1px solid #264066;
+		border-radius: 8px;
+
+		&--in {
+
+			background: #F5C1BC;
+    		border-color: #F5C1BC;
+		}
+	}
+
+	&__actions {
+
+		display: flex;
+		align-items: center;
+	}
+}

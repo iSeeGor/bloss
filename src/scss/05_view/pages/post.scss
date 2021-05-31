@@ -24,7 +24,19 @@
 	&__title {
 
 		margin-bottom: 24px;
+		display: flex;
+		justify-content: space-between;
+
 	}
+
+	&__control {
+
+		display: flex;
+		align-items: center;
+		margin-left: 20px;
+		height: 100%;
+		padding: 11px 0;
+	} 
 
 	&__author {
 
@@ -225,6 +237,7 @@
 	&__main {
 
 		flex: 0 0 76%;
+		max-width: 76%;
 		padding-right: 28px;
 	}
 
@@ -242,6 +255,12 @@
 	&__typography {
 
 		margin-bottom: 40px;
+	}
+
+	&__audio {
+
+		margin-top: 10px;
+		margin-bottom: 16px;
 	}
 
 	&__main-footer {
@@ -267,6 +286,50 @@
 		opacity: .05;
 		border-radius: 100%;
 		z-index: -1;
+	}
+}
+
+.post-slider {
+	
+	display: block;
+	width: 100%;
+
+	.swiper-slide {
+
+		height: 405px;
+
+
+		img {
+
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__control {
+
+		justify-content: center;
+		padding: 40px 0
+	}
+}
+
+.post-audio {
+
+	&__title {
+
+		@include H4_Desktop;
+	}
+
+	&__item {
+
+		border-bottom: 1px solid $colorC1C1C3;
+		padding: 6px 0 14px;
+
+		&:last-child {
+
+			border-bottom: none ;
+		}
 	}
 }
 
@@ -467,11 +530,27 @@
 			margin-bottom: 16px;
 		}
 
+		&__title {
+
+			flex-wrap: wrap;
+		}
+
+		&__control {
+
+			margin-left: auto;
+			width: 100%;
+			padding: 0;
+			justify-content: flex-end;
+			order: -1;
+			margin-bottom: 16px;
+		}
+
 		&__image {
 
 			height: 365px;
 		}
 	}
+	
 
 	.post-nav {
 

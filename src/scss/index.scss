@@ -49,6 +49,7 @@
 @import '05_view/components/profile-review';
 @import '05_view/components/dropdown';
 @import '05_view/components/video-player';
+@import '05_view/components/post-track';
 
 
 /* views
@@ -66,6 +67,8 @@
 @import '05_view/pages/profile-page';
 @import '05_view/pages/page-categories';
 @import '05_view/pages/post.scss';
+@import '05_view/pages/page.scss';
+@import '05_view/pages/404.scss';
 
 // @import '05_view/pages/landing.scss';
 // @import '05_view/pages/landing-expert.scss';

@@ -289,11 +289,24 @@ const animationInit = () => {
 
 const mobileMenu = ($) => {
 
-	$('.menu-item-has-children > a').on('click', function(e){
+	// $('.menu-item-has-children > a').on('click', function(e){
+	// 	e.preventDefault();
+	// 	$(this).parent().toggleClass('is-collapsed');
+	// 	$(this).parent().find('.sub-menu').slideToggle(400);
+	// })
+
+	if(window.innerWidth <= 1024) {
+
+		$('.menu-item-has-children > a').append('<span class="sub-menu-toggle"></span>')
+	}
+
+	$('.sub-menu-toggle').on('click', function(e){
 		e.preventDefault();
-		$(this).parent().toggleClass('is-collapsed');
-		$(this).parent().find('.sub-menu').slideToggle(400);
-	})
+		e.stopPropagation();
+		
+		$(this).parents('.menu-item-has-children').toggleClass('is-collapsed');
+		$(this).parents('.menu-item-has-children').find('.sub-menu').slideToggle(400);
+	});
 }
 
 const hamburger = () => {
@@ -434,7 +447,7 @@ const reviewStarRaiting = () => {
 
 const stickySidebar = () => {
 
-
+	var stickyEl = new Sticksy('.js-sticky-widget', {topSpacing: 32})	
 }
 
 const siteMenus = ($) => {

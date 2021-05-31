@@ -140,6 +140,11 @@
 		text-overflow: ellipsis;
 		overflow: hidden;
 		-webkit-line-clamp: 4;
+
+		p {
+
+			margin: 0;
+		}
 	}
 
 }
